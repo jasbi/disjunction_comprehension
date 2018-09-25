@@ -34,3 +34,15 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+.Rproj.user
+
+# Mac files
+.DS_Store
+
+# Tex Files
+*.fff
+Jasbi-Frank-2019_files/
+
+# R project file
+*.Rproj
+
