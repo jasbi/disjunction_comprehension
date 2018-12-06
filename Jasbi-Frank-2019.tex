@@ -1,4 +1,4 @@
-\documentclass[man]{apa6}
+\documentclass[floatsintext,man]{apa6}
 
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -39,12 +39,6 @@
   {\begin{landscape}\begin{center}\begin{ThreePartTable}}
   {\end{ThreePartTable}\end{center}\end{landscape}}
 
-  \usepackage{ifthen} % Only add declarations when endfloat package is loaded
-  \ifthenelse{\equal{\string man}{\string man}}{%
-   \DeclareDelayedFloatFlavor{ThreePartTable}{table} % Make endfloat play with longtable
-   % \DeclareDelayedFloatFlavor{ltable}{table} % Make endfloat play with lscape
-   \DeclareDelayedFloatFlavor{lltable}{table} % Make endfloat play with lscape & longtable
-  }{}%
 
 
 
@@ -64,6 +58,15 @@
 \endgroup}
 
 
+  \usepackage{graphicx}
+  \makeatletter
+  \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+  \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+  \makeatother
+  % Scale images if necessary, so that they will not overflow the page
+  % margins by default, and it is still possible to overwrite the defaults
+  % using explicit options in \includegraphics[width, height, ...]{}
+  \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \ifxetex
   \usepackage[setpagesize=false, % page size defined by xetex
               unicode=false, % unicode breaks when used with xetex
@@ -73,7 +76,7 @@
 \fi
 \hypersetup{breaklinks=true,
             pdfauthor={},
-            pdftitle={Adults' and Children's Comprehension of Disjunction in a Guessing Game},
+            pdftitle={Adults' and Children's Comprehension of Disjunction in a Guessing Game: The role of measurement},
             colorlinks=true,
             citecolor=blue,
             urlcolor=blue,
@@ -104,12 +107,13 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Essential manuscript parts
-  \title{Adults' and Children's Comprehension of Disjunction in a Guessing Game}
+  \title{Adults' and Children's Comprehension of Disjunction in a Guessing Game:
+The role of measurement}
 
   \shorttitle{The Comprehension of Disjunction}
 
 
-  \author{Masoud Jasbi\textsuperscript{1}~\& Michael C. Frank\textsuperscript{1,2}}
+  \author{Masoud Jasbi\textsuperscript{1}~\& Michael C. Frank\textsuperscript{2}}
 
   % \def\affdep{{"", ""}}%
   % \def\affcity{{"", ""}}%
@@ -120,10 +124,11 @@
           \textsuperscript{2} Stanford University  }
 
   \authornote{
-    Add complete departmental affiliations for each author here. Each new
-    line herein must be indented, like this line.
-    
-    Enter author note here.
+    All the experimental materials, data, randomization code, and analysis
+    code for the studies reported in this paper are available in the
+    following online repository:
+    \href{https://github.com/jasbi/disjunction_comprehension}{https://github.com/jasbi/jasbi\_dissertation\_LearningDisjunction}.
+    The repository also includes instructions for reproducing this research.
     
     Correspondence concerning this article should be addressed to Masoud
     Jasbi, Postal address. E-mail:
@@ -131,8 +136,17 @@
   }
 
 
-  \abstract{Enter abstract here. Each new line herein must be indented, like this
-line.}
+  \abstract{Previous research suggests that adults and children might differ in
+their interpretation of linguistic disjunction in two ways. First,
+children might interpret \emph{or} as inclusive disjunction when adults
+interpret it as exclusive (Crain, 2012). Second, unlike adults, children
+might interpret a disjunction as logical conjunction (Singh, Wexler,
+Astle-Rahim, Kamawar, \& Fox, 2016; Tieu et al., 2016). Here, we present
+three studies that assess adults and children's understanding of
+\emph{and} and \emph{or} using three different measures: binary
+forced-choice judgments, ternary forced-choice judgments, and free-form
+verbal feedback. Issues of measurement. Implications for pragmatic
+development.}
   \keywords{conjunction, disjunction, implicatures, semantics, pragmatics, logical
 connectives, language, acquisition, development, children \\
 
@@ -167,18 +181,16 @@ connectives, language, acquisition, development, children \\
 
 \subsection{Introduction}\label{introduction}
 
-In this chapter, I examine the proposed differences between adults and
-children's interpretation of the disjunction word \emph{or}. Previous
-research has suggested that adults and children might differ in their
-interpretation of \emph{or} in two ways. First, unlike adults, children
-might interpret \emph{or} as logical conjunction, akin to \emph{and}
-(Singh, Wexler, Astle-Rahim, Kamawar, \& Fox, 2016; Tieu et al., 2016).
-Second, children might interpret \emph{or} as inclusive disjunction
-while adults interpret it as exclusive (Crain, 2012). In this chapter, I
-present three studies that assess adults and children's understanding of
-\emph{and} and \emph{or} in a guessing game paradigm. These studies show
-that four-year-olds' interpretation of conjunction and disjunction may
-not be as different from adults as previously supposed.
+Previous research has suggested that adults and children might differ in
+their interpretation of \emph{or} in two ways. First, children might
+interpret \emph{or} as inclusive disjunction when adults interpret it as
+exclusive (Crain, 2012). Second, unlike adults, children might interpret
+\emph{or} as logical conjunction, akin to \emph{and} (Singh et al.,
+2016; Tieu et al., 2016). Here, we present three studies that assess
+adults and children's understanding of \emph{and} and \emph{or} in a
+guessing game paradigm. These studies show that four-year-olds'
+interpretation of conjunction and disjunction may not be as different
+from adults as previously supposed.
 
 Study 1 tested adults' interpretations of logical connectives in the
 context of a guessing game using Two and Three-Alternative Forced Choice
@@ -195,7 +207,7 @@ provide a better opportunity to express nuances of linguistic
 interpretation.
 
 Study 2 investigated children's judgments in the same guessing game as
-study 1 using a 3AFC task. I used three alternatives to give children a
+study 1 using a 3AFC task. We used three alternatives to give children a
 better chance of expressing their pragmatic knowledge and judgments of
 felicity (Katsos \& Bishop, 2011). The study also analyzed and
 categorized children's open-ended spontaneous feedback to the guesser.
@@ -227,7 +239,7 @@ The studies reported here build on previous studies, and fill two gaps
 in the literature as well. First, most previous research focused on
 children's interpretation of \emph{or} in complex sentences -- for
 example with other logical words such as quantifiers \emph{every} and
-\emph{none}. Here, I test children and adults' understanding of
+\emph{none}. Here, we test children and adults' understanding of
 \emph{and} and \emph{or} in simple existential sentences like
 \enquote{\emph{There is a cat or a dog}.} To my knowledge, only Braine
 and Rumain (1981) used simple existential constructions before, but
@@ -236,39 +248,386 @@ paradigm used here. As discussed before, simplifying the paradigm is an
 important step in reducing conjunctive interpretations that arise due to
 non-linguistic strategies. Second, most previous research tested
 children and adults using 2AFC truth value judgment tasks (Crain \&
-Thornton, 1998). Here, I report adults and children's judgments on both
-2AFC and 3AFC tasks. I also use children's open-ended spontaneous
-feedback to develop relevant analytical response categories and I
+Thornton, 1998). Here, we report adults and children's judgments on both
+2AFC and 3AFC tasks. We also use children's open-ended spontaneous
+feedback to develop relevant analytical response categories and we
 replicate the findings in a following pre-registered study. Katsos \&
 Bishop (2011) argued that 3AFC judgment tasks are better suited for
-assessing children's pragmatic competence. I present results that
+assessing children's pragmatic competence. We present results that
 suggest even a 3AFC task can underestimate children's pragmatic
 knowledge and that children's spontaneous and open-ended elicited
 responses provide valuable insights not available in forced choice
 judgments.
 
-\subsection{Study 1: Adult Judgments}\label{study-1-adult-judgments}
+\subsection{Previous Research}\label{previous-research}
+
+Research on children's comprehension of logical connectives such as
+\emph{and} and \emph{or} divides into two periods. The first period
+(1960s-80s) was inspired by Piaget's developmental theory (Inhelder \&
+Piaget, 1958). Researchers in this period sought to discover the
+development of basic logical concepts such as negation, conjunction, and
+disjunction. Following Inhelder and Piaget (1958), they predicted that
+children first form concrete concepts for conjunction and disjunction
+between the ages of 7-11 years (concrete operational stage) and only
+after 11 (formal operational stage) do they develop an abstract and
+logical understanding of these words. While later research in this
+period rejected this timeline, it confirmed the idea that a logical
+(inclusive) understanding of disjunction develops late. The second
+period (since late 90s) is inspired by Grice's theory of meaning,
+specifically his distinction between semantics and pragmatics.
+Researchers in this period argue that previous studies conflated
+semantic and pragmatic knowledge and used methods that vastly
+underestimated children' semantic competence. By controlling for the
+role of pramgatics and focusing on children's truth judgments, they show
+that children have early and adult-like semantics for logical words such
+as \emph{or}. Based on these results, they argue that the understanding
+of logical concepts and their role in language is likely innate (Crain
+\& Khlentzos, 2008, 2010). In what follows, I review the highlights of
+these two traditions and end with a note on how the research presented
+here contributes to this vast literature.
+
+To examine the Piagetian theory, Nitta and Nagano (1966) tested 679
+Japanese students (grades K, 2, 4, 6, and 8) and Neimark and Slotnick
+(1970) conducted a similar study on 455 English-speaking children in
+grades 3-8 and 58 college students. Participants were tested on
+negation, conjunction, and disjunction. Each question provided six
+response options; for example a fish, a bird, and a flower, each with a
+white and a black version. Participants were asked to \enquote{circle
+all the items} described by statements such as: \enquote{flower},
+\enquote{not bird}, \enquote{bird and flower}, \enquote{bird or flower},
+\enquote{black and bird}, \enquote{black or flower}, etc. These studies
+concluded that the majority of the participants understood negation and
+conjunction, but only college students correctly answered statements
+containing a disjunction. They reported that participants made two types
+of errors. First across all ages, some participants interpreted
+disjunction as conjunction. For example they circled black birds when
+the instruction said \enquote{black or bird}. Second, some selected only
+one of the two categories. Based on these results Neimark (1970)
+concluded that a \enquote{correct} (i.e.~inclusive) understanding of
+disjunction only develops in the high school years and depends on the
+attainment of formal operations as defined in the Piagetian theory.
+
+Paris (1973) used a similar in-classroom setup to test children's
+comprehension of connectives in Grades 2, 5, 8, 11, and college. Two
+hundred participants (40 per grade) were asked to judge the truth of
+sentences with the connectives \emph{and}, \emph{or}, and
+\emph{either-or}. The experimenter showed participants slides of
+pictures, for example a bird in a nest, with descriptions such as
+\enquote{the bird is in the nest or the shoe is on the foot.} The
+participants were asked to judge the statement as true or false. Paris
+found that statements with \emph{and} were almost always judged
+correctly, but this was not the case with disjunction. First, he
+reported that older participants produced more errors when both
+disjuncts were true, presumably because they interpreted disjunctions as
+exclusive and not inclusive. Second, the majority of younger children,
+and even around a fifth of college students considered a disjunction
+false when only one of the disjuncts was true. The combination of these
+two trends suggested that initially, children did not differentiate
+\emph{or} from \emph{and}, interpreting both as conjunction. Finally,
+Paris also found that there were fewer errors with \emph{either-or}
+statements compared to \emph{or} statements. He suggested that the word
+\emph{either} could provide further cue on how disjunction should be
+interpreted. Paris (1973) attributed the conjunctive interpretations of
+\emph{or} to children applying non-linguistic strategies when an
+utterance is hard to interpret (See Clark, 1973 for a discussion of
+nonlinguistic strategies in child language acquisition). He suggested
+that children in his task were \enquote{comparing visual and auditory
+information with little regard for the implied logical relationship in
+the verbal description.} In other words, children responded with
+\enquote{true} if the individual disjuncts matched the pictures and
+false otherwise. Such a non-linguistic strategy would yield correct
+answers for conjunction but incorrect (conjunctive) answers for
+disjunction. This explains why conjunctive readings reduce with age and
+why using the word \emph{either} helps reduce conjunctive
+interpretations further.
+
+It was understood that the in-class tests were not suitable for testing
+participants' linguistic competence and certainly not suitable for
+younger children. Therefore, Johansson and Sjolin (1975) set out to
+examine the interpretaiton of disjunction in a simpler Give-item task.
+They tested preschool Swedish-speaking children's comprehension of
+conjunction and disjunction in present tense sentences (e.g.
+\enquote{Richard wants to drink lemonade or milk. Show me what he
+drank!}) and imperative sentences (e.g. \enquote{Put up the car or the
+doll!}). They reported that starting (at least) at age four, children
+interpreted the Swedish equivalents of \emph{and} and \emph{or} as
+conjunction and exclusive disjunction. They argued that the linguistic
+\emph{and} and \emph{or} should be kept separate from the logical
+notions of conjunction and (inclusive) disjunction. While linguistic
+understanding of \emph{and} and \emph{or} develops early and in
+preschool years (as conjunction and exclusive disjunction), the logical
+understanding of them develops late.
+
+Braine and Rumain (1981) is the only study that tested the same
+participants with both Give-item and Truth Value Judgment Tasks. They
+tested 22 children in each of the age groups 5-6, 7-8, and 9-10 years,
+as well as 22 adults. In the give-item task, 14 wooden blocks with
+varying shapes, colors, and sizes were used (a replication of Suppes \&
+Feldman, 1969). Experimenters asked participants the following: 1)
+\enquote{Give me all the green things or give me all the round things}
+and 2) \enquote{Give me all those things that are either blue or round.}
+They reported that for both commands and in both children and adults,
+the most likely response was to give all the objects that had only one
+of the properties. They considered these results as evidence for a
+\enquote{choose-one} (i.e.~exclusive) interpretation of disjunction in
+the context of imperatives.
+
+In the truth value judgment task, a puppet described the contents of
+four boxes that each contained four animal toys. For example, the puppet
+said \enquote{Either there is a horse or a duck in the box.} The first
+box had both animals, the second had only a horse, the third only a
+duck, and the last had neither. Participants were asked if the puppet
+was right. The results showed that adults were split between an
+inclusive and an exclusive interpretation of disjunction. The 7-8 and
+9-10 year-olds were more likely to consider the disjunction as
+inclusive. However, the youngest group (5-6 years old) was most likely
+to interpret a disjunction similar to a conjunction: they said the
+puppet was right when both animals were in the box and not right or
+partly right if only one of the animals was in the box. Following Paris
+(1973), Braine and Rumain (1981) argued that younger chidren do not take
+the contribution of the connective \emph{or} into account. Instead, they
+use a non-linguistic strategy in which the disjunction is right if both
+propositions are true, partly right if only one is true, and wrong if
+neither is true.
+
+Braine and Rumain (1981) concluded that children's ability to interpret
+a disjunction in a command develops earlier than their ability to judge
+truth values. It is important to note that in Braine and Rumain (1981)'s
+truth value judgment task, the puppet uses a disjunction even though the
+content of the box was known to both the puppet and the participant
+(lack of ignorance). Such uses of disjunction are infelicitous. More
+generally, a disjunction such as \enquote{A or B} is infelicitious when
+discourse participants already know which proposition is true. Later
+truth value judgment studies such as Chierchia, Crain, Guasti, and
+Thornton (1998) controlled for this effect of disjunction by making the
+puppet utter disjunction as a prediction of an unknown event, and let
+participants judge the prediction after they see the outcome of the
+event.
+
+Chierchia et al. (1998) kicked off the second period of inquiry into
+children's comprehension of disjunciton. Following Grice (1989), they
+differentiated between semantic knowledge, which includes the knowledge
+of truth values, and pragmatic knowledge, which includes the knowldge
+that conversational contributions ought to be truthful, informative,
+relevant, and concise. They contended that interpreting logical
+connectives involves a semantic and a pragmatic component, and that the
+semantics of logical connectives cannot be assessed if the role of
+pragmatics is not controlled for. More specifically, they argued that
+felicitous use of a disjunction requires: (i) a set of alternatives (ii)
+evidence that one of them holds (iiia) evdience that not all of them
+hold, or (iiib) uncertainty as to whether all of them hold. While the
+semantics of \emph{or} is inclusive, a variety of factors including
+pragmatic reasoning can provide evidence that not all alternatives hold.
+For example, we may reason that given speaker's knowledge of the
+situation, she could have used the connective \emph{and} if all
+alternative were true. Therefore, to understand the semantic
+contribution of disjunction, we should test participants in contexts
+which are stripped from pragmatic factors that contribute to
+exclusivity.
+
+They tested 23 English-speaking and 10 Italian-speaking children in two
+conditions: description mode and prediction mode. In both conditions, a
+troll considered whether to eat a hamburger, a piece of pizza, or an
+ice-cream for lunch and went ahead to eat a piece of pizza and an
+ice-cream but not a hamburger. In description mode, Kermit described
+what happened as \enquote{A troll ate a piece of pizza or an ice cream}
+while in prediction mode, Kermit used the same sentence as a prediction
+before the troll eats his lunch. They reported that in the description
+mode, children accepted Kermit's statement when both disjuncts were true
+less than one-third of the time. However, in prediction mode, they
+accepted such sentences 100\% of the time. They argued that when we
+control for the effect of pragmatics on interpretation, children
+understand disjunction as inclusive, and conform to the semantics of
+disjunciton in classical logic.
+
+Following Chierchia et al. (1998), several studies have argued that
+preschool children's knowledge of disjunction conforms to the
+predictions of classical logic and formal semantics in environments as
+varied as negative sentences (Crain, Gualmini, \& Meroni, 2000),
+conditional sentences (Gualmini, Crain, \& Meroni, 2000), restriction
+and nuclear scope of the universal quantifeir \emph{every} (Chierchia,
+Crain, Guasti, Gualmini, \& Meroni, 2001; Chierchia et al., 2004),
+nuclear scope of the negative quantifier \emph{none} (Gualmini \& Crain,
+2002), restriction and nuclear scope of \emph{not every} (Notley,
+Thornton, \& Crain, 2012), and prepositional phrases headed by
+\emph{before} (Notley, Zhou, Jensen, \& Crain, 2012), as well as similar
+environments in other languages such as Mandarin Chinese and Japanese
+(Goro \& Akiba, 2004; Su, 2014; Su \& Crain, 2013). These studies also
+commonly reported that in linguistic environments where adults consider
+a disjunction exclusive, children are more likely to consider it
+inclusive. Since under the Gricean account, exclusive interpretation of
+disjunction is the result of pragmatic (scalar) implicaatures, these
+findings are considered as further evidence for the hypothesis that
+young children do not compute implicatures at the rate that adults do
+({\textbf{???}}; Noveck, 2001).
+
+It is important to note that all the studies mentioned above in the
+Gricean period use the Truth Value Judgment Task as specified in (Crain
+\& Thornton, 1998). As mentioned earlier, Braine and Rumain (1981) found
+that the same children were more likely to interpret a disjunction as
+exclusvive in a give-item task and inclusive/conjunctive in a truth
+value judgment task. Therefore, it is possible that truth value judgment
+tasks are simply not suitable for capturing children' knowledge of
+exclusivity implicatures. Furthermore, several studies listed above test
+children's knowledge of disjunction in environments that largely
+collapse the distinction between \emph{and} and \emph{or}. For example,
+in the restriction of \emph{every}, a conjunction and a disjunction can
+result in the same interpretation (e.g. \emph{Every man or woman is
+happy} vs. \emph{Every man and woman is happy}). Therefore, successful
+interpretation in these studies can also be achieved by applying the
+nonlinguistic strategies that result in conjunctive interpretations, as
+discussed by the early studies in the Piagetian period.
+
+More recently, some studies have revived the earlier findings that
+preschool children may interpret disjunction as conjunction. Singh et
+al. (2016) tested 56 English-speaking children (M=4;11, 3;9-6;4) and 26
+adults in a truth value judgment task. The experiment involved four
+pictures: a boy holding a banana, a boy holding an apple and a banana,
+three boys holding either an apple or a banana, and three boys holding
+both apples and bananas. In each trial, participants saw one of the
+pictures and a puppet described the pictures with four possible
+utterances: \enquote{The/every boy is holding an apple or/and a banana.}
+Participants were asked: \enquote{Was {[}the puppet{]} right or wrong
+about this picture?} They found that children were more likely to say
+the puppet was right when both disjuncts were true than when only one
+was. They concluded that \enquote{many preschool children - the majority
+in {[}the study's{]} sample - understand disjunctive sentences \ldots{}
+as if they were conjunctions.}
+
+Tieu et al. (2016) also found evidence for conjunctive interpretations
+of disjunction in preschool children. They tested 28 French-speaking
+children (3;7-6;6, M=4;5) and 18 Japanese-speaking children (4;7-6;6,
+M=5;5) as well as 20 French-speaking and 21 Japanese-speaking adults.
+They used the \enquote{prediction mode} of the Truth Value Judgment
+Task, in which the puppet provides a prediction or guess, an event
+occurs, and participants are asked if the prediction was right. For
+example, there was a chicken on the screen, next to a toy bus and a toy
+plane. The puppet appeared on the screen and predicted that \enquote{the
+chicken pushed the bus or the plane.} Then the chicken pushed either one
+or both of the objects. Participants stamped on a happy face or a sad
+face to show whether the puppet's guess was right or wrong. Like Singh
+et al. (2016), they reported that unlike adults, children were more
+likely to consider the disjunctive guess right when both disjuncts were
+true, rather than only one. They concluded that children - the majority
+of them in their sample - interpreted disjunction as conjunction.
+
+However, a recent replication of Tieu et al. (2016) by Skordos, Feiman,
+Bale, and Barner (2018) suggests that the high rate of conjunctive
+interpretations were most likely due to experimental design. They tested
+126 preschoolers in three conditions: replication (N=43, 4;0-5;9,
+M=5;0), modified script (N=41, 4;0-5;10, M=5;0), and three-alternatives
+(N=42, 4;0-5;11, M=5;0). The first condition was a direct replication of
+Tieu et al. (2016). The second, modified script, removed some
+experimenter comments right after the puppet's guess that could
+potentially confuse children. The comments were: \enquote{Look! The
+chicken pushed that! She didn't want to break that one. So she didn't
+touch it. So was {[}the puppet{]} right?} The third condition,
+three-alternatives, was similar to modified-script but provided three
+objects; for example a plane, a bus, and a bicycle. The reasoning was
+that if there are only two alternatives, a disjunction is trivially
+true, and consequently children may consider that unacceptable. The
+results replicated Tieu et al. (2016)'s findings in the replication
+condition, but showed that conjunctive interpretations of disjunction
+disappeared almost completely in the third condition with three
+alternatives. Skordos et al. (2018) concluded that children's
+conjunctive interpretations are most likely due to non-linguistic
+strategies applied when they are uncertain about some aspect of the
+experimental task. This conclusion is similar to that of earlier studies
+on conjunctive interpretations of disjunction in the 70s and 80s.
+
+To summarize, previous studies show that the design of experimental
+tasks can have a big impact on our conclusions regarding children's
+comprehension of disjunction. Early in-class tasks suggested that even
+high-schoolers do not interpret a disjunction correctly and confuse it
+with \emph{and}. Improving on task design, Braine and Rumain (1981)
+argued that this is only the case in preschool children. They also
+showed that the same children can have different interpretations of
+disjunction in different tasks: in a give-item task they interpret it as
+exclusive while in a truth-value judgment task they interpret it as
+conjunctive or inclusive. Using various versions of the truth value
+judgment task, research in the Gricean tradition has argued that
+preschool children understand the semantics of disjunciton and interpret
+it as inclusive. However, this line of research has largely suggested
+that children are insensitive to the exclusivity implicature of
+disjunciton. While some recent studies have argued that preschool
+children may interprete disjunction as conjunctive, a replication study
+has argued that conjunctive interpretations were largely due to task
+demands.
+
+Here we improve on previous studies by first controling for various
+factors that had proven problematic for previous studies, and second
+investigating the role of measurement in preschool children's
+interpretation of disjunction. As explained above, previous research has
+shown that in studying children's interpretation of disjunction, it is
+important to control for the following factors:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  complexity of the linguistic stimuli,
+\item
+  complexity of the task,
+\item
+  ignorance of the speaker with respect to the truth of the disjunts,
+\item
+  interpretation of the conjunction word (e.g. \emph{and}) in the same
+  task
+\item
+  interpretation of adults in the same task.
+\item
+  Discernibility of conjunctive and disjunctive interpretations in the
+  task
+\end{enumerate}
+
+Some previous studies used complex linguistic stimuli or relatively
+complex designs that may have increased the application of
+non-linguistic strategies. Some studies violated \enquote{speaker
+ignorance}; i.e.~had the speaker utter the disjunction when the truth of
+the propositions were known to the speaker. Some studies did not use the
+conjunction word (e.g. \emph{and}) in control trials, or did not use
+adults as control participants. Finally, some studies tested the
+disjunction word in linguistic environments that collapse interpretive
+differences between the conjunction and disjunction words. The
+experimental paradigm reported here builds and improves on previous
+studies by controlling for all these factors.
+
+In the studies reported here, we used simple existential sentences (e.g.
+\emph{there is a cat or a dog}) and tested the interpretation of
+participants in a simple and easy to understand guessing game. The
+guessing game provided a context in which the speaker was ignorance with
+respect to to which alternatives actually hold. The game is essentially
+a variant of the truth value judgment task. The study used conjunction
+trials as well as adult participants as controls. The conjunction word
+\emph{and} and the disjunction word \emph{or} resulted in different
+interpretations in the task. Furthermore, we tested children's
+interpretations in two different ways, using forced choice tasks with 2
+and 3 options, as well as free form verbal responses.
+
+\subsection{Study 1: Adult's 2AFC and 3AFC
+Judgments}\label{study-1-adults-2afc-and-3afc-judgments}
 
 The goal of this study was to examine adults' interpretations of
 \emph{and} and \emph{or} as a benchmark for children's interpretations.
-I designed the study as a guessing game. Participants saw a card, read a
-description, and had to evaluate the description with respect to what
+We designed the study as a guessing game. Participants saw a card, read
+a description, and had to evaluate the description with respect to what
 they saw on the card. In test trials, the descriptions contained the
-conjunction word \emph{and} and the disjunction word \emph{or}. I tested
-adults in both two-alternative and three-alternative forced choice tasks
-(2AFC and 3AFC). The results suggested that adults interpreted
-\emph{and} as a conjunction and \emph{or} as an inclusive disjunction.
-Adults also considered statements with \emph{or} infelicitous when both
-disjuncts were true. The study also found that the 2AFC and 3AFC tasks
-registered different aspects of adult interpretations: the 2AFC task
-captured adult intuitions on the basic semantics of the connectives
-while the 3AFC task was sensitive to pragmatic infelicities as well.
+conjunction word \emph{and} and the disjunction word \emph{or}. We
+tested adults in both two-alternative and three-alternative forced
+choice tasks (2AFC and 3AFC). The results suggested that adults
+interpreted \emph{and} as conjunction and \emph{or} as inclusive
+disjunction. Adults also considered statements with \emph{or}
+infelicitous when both disjuncts were true. The study also found that
+the 2AFC and 3AFC tasks registered different aspects of adult
+interpretations: the 2AFC task captured adult intuitions on the basic
+semantics of the connectives while the 3AFC task was sensitive to
+pragmatic infelicities as well.
 
 \subsubsection{Methods}\label{methods}
 
 \paragraph{Materials and Design}\label{materials-and-design}
 
-\begin{figure}[t]
+\begin{figure}[!h]
 
 {\centering \includegraphics{figs/stimuli-1} 
 
@@ -277,10 +636,10 @@ while the 3AFC task was sensitive to pragmatic infelicities as well.
 \caption{Cards used in the connective guessing game.}\label{fig:stimuli}
 \end{figure}
 
-The study used six cards with cartoon images of a cat, a dog, and an
-elephant (Figure \ref{fig:stimuli}). There were two types of cards:
-cards with only one animal and cards with two animals. There were three
-types of guesses: simple (e.g. \emph{There is a cat}), conjunctive (e.g.
+We used six cards with cartoon images of a cat, a dog, and an elephant
+(Figure \ref{fig:stimuli}). There were two types of cards: cards with
+only one animal and cards with two animals. There were three types of
+guesses: simple (e.g. \emph{There is a cat}), conjunctive (e.g.
 \emph{There is a cat and a dog}), and disjunctive (e.g. \emph{There is a
 cat or a dog}). In each guess, the animal labels used in the guess and
 the animal images on the card could have no overlap (e.g.~Image: dog,
@@ -289,12 +648,12 @@ Guess: \emph{There is a cat or an elephant}), partial overlap
 overlap (e.g.~Image: cat and elephant, Guess: \emph{There is a cat or an
 elephant}). Crossing the number of animals on the card, the types of
 guesses, and the overlap between the guess and the card yields 12
-different possible trial types. I chose 8 trial types (Figure
+different possible trial types. We chose 8 trial types (Figure
 \ref{fig:trials}), to balance the number of one-animal vs.~two-animal
 cards, simple vs.~connective guesses, and expected true vs.~false
 trials.
 
-\begin{figure}[t]
+\begin{figure}[!h]
 
 {\centering \includegraphics{figs/trials-1} 
 
@@ -305,7 +664,7 @@ trials.
 
 \paragraph{Participants and Procedure}\label{participants-and-procedure}
 
-\begin{figure}[t]
+\begin{figure}[!h]
 
 {\centering \includegraphics{figs/exampleTrial-1} 
 
@@ -314,7 +673,7 @@ trials.
 \caption{An example trial in Study 1.}\label{fig:exampleTrial}
 \end{figure}
 
-I used Amazon's Mechanical Turk (MTurk) for recruitment and the online
+We used Amazon's Mechanical Turk (MTurk) for recruitment and the online
 platform Qualtrics for data collection and survey design. The task took
 about 5 minutes on average to complete. 109 English speaking adults
 participated. 57 of them were assigned to a 2AFC judgment task and 52 to
@@ -323,25 +682,26 @@ the options \enquote{wrong} and \enquote{right}. In the 3AFC task they
 had to choose between \enquote{wrong}, \enquote{kinda right}, and
 \enquote{right}. The two conditions were otherwise identical. There are
 many possible labels for the middle option \enquote{kinda right},
-including \enquote{kinda wrong} or \enquote{neither}. In a later
-experiment (not reported in this dissertation) I tested different
-intermediate labels and found that adults consider \enquote{kinda right}
-to be the most suitable option for capturing pragmatic infelicity
-(Jasbi, Waldon, \& Degen, submitted). I expect similar behavior from
-labels like \enquote{a bit right} and \enquote{a little right} which
-refer to non-maximal degrees of being right.
+including \enquote{kinda wrong} or \enquote{neither}. A later
+experiment, tested different intermediate labels and found that adults
+consider \enquote{kinda right} to be a more suitable option for
+capturing pragmatic infelicities (see Jasbi, Waldon, \& Degen,
+submitted). We expect similar behavior from labels like \enquote{a bit
+right} and \enquote{a little right} which refer to non-maximal degrees
+of being \enquote{right}.
 
 The experiment had three phases: introduction, instruction, and test. In
 the introduction, participants saw the six cards and read that they
 would play a guessing game. Then a blindfolded cartoon character named
 Bob appeared on the screen. Participants were told that in each round of
 the game, they would see a card and Bob was going to guess what animal
-was on the card. I emphasized that Bob could not see anything. I asked
-participants to judge whether Bob's guess was right. In the instruction
-phase, participants saw an example trial where a card with the image of
-a dog was shown with the following sentence written above Bob's head:
-\emph{There is a cat on the card}. All participants, who correctly
-responded with \enquote{wrong}, proceeded to the test phase.
+was on the card. The study emphasized that Bob could not see anything.
+Participants were asked to judge whether Bob's guess was right. In the
+instruction phase, participants saw an example trial where a card with
+the image of a dog was shown with the following sentence written above
+Bob's head: \emph{There is a cat on the card}. All participants
+correctly responded with \enquote{wrong} and proceeded to the test
+phase.
 
 In the test phase, participants saw one trial per trial type. Within
 each trial type, the specific card-guess scenario was chosen at random.
@@ -350,7 +710,8 @@ participants received \$0.4 as compensation. Figure
 \ref{fig:exampleTrial} shows an example test trial.
 
 \begin{longtable}[]{@{}lllll@{}}
-\caption{\label{tab:study1info} Summary of Study 1 Methods}\tabularnewline
+\caption{\label{tab:study1info}Summary of study 1 methods with adults
+participants}\tabularnewline
 \toprule
 Study & N & Age & Mode & Response Options\tabularnewline
 \midrule
@@ -368,21 +729,19 @@ Right\tabularnewline
 
 \subsubsection{Results}\label{results}
 
-In this section, I first present the results of the 2AFC and 3AFC tasks
-with adults. Then I discuss how these results can be interpreted with
+In this section, we first present the results of the 2AFC and 3AFC tasks
+with adults. Then we discuss how these results can be interpreted with
 respect to the semantics and pragmatics of disjunction in the context of
 the guessing game.
 
 \paragraph{Judgments with Two Alternatives
 (2AFC)}\label{judgments-with-two-alternatives-2afc}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/binaryAdultsPlot-1} 
-
-}
-
-\caption{Adults' two-alternative forced choice judgments.}\label{fig:binaryAdultsPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/binaryAdultsPlot-1.pdf}
+\caption{\label{fig:binaryAdultsPlot}Adults' two-alternative forced choice
+judgments.}
 \end{figure}
 
 Figure \ref{fig:binaryAdultsPlot} shows the results for the adult 2AFC
@@ -392,33 +751,34 @@ not on the card (e.g., elephant), participants judged the guess to be
 \enquote{wrong}; if the animal was on the card (e.g., cat), participants
 judged the guess to be \enquote{right}. The next two columns of Figure
 \ref{fig:binaryAdultsPlot} show the results for the test conditions,
-namely conjunction and disjunction. They match the expectations for
-logical conjunction and (inclusive) disjunction: an \emph{and}-guess
-(e.g.~cat and dog) is \enquote{wrong} if only one of the animals is
-shown on the card, and \enquote{right} if both are on the card. An
-\emph{or}-guess (e.g.~cat or dog) is \enquote{right} whether one or both
-animals are depicted on the card.
+namely conjunction and disjunction. An \emph{and}-guess (e.g.~cat and
+dog) was considered \enquote{wrong} if only one of the animals was on
+the card, and \enquote{right} if both were. An \emph{or}-guess (e.g.~cat
+or dog) was \enquote{right} whether one or both animals were on the
+card. The patterns of \enquote{right} and \enquote{wrong} responses in
+the binary task match the expectations for truth and falsehood of
+logical conjunction and (inclusive) disjunction.
 
 \paragraph{Judgments with Three Alternatives
 (3AFC)}\label{judgments-with-three-alternatives-3afc}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/ternaryAdultsPlot-1} 
-
-}
-
-\caption{Adults' three-alternative forced choice judgments in the connective guessing game.}\label{fig:ternaryAdultsPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/ternaryAdultsPlot-1.pdf}
+\caption{\label{fig:ternaryAdultsPlot}Adults' three-alternative forced
+choice judgments in the connective guessing game.}
 \end{figure}
 
 Figure \ref{fig:ternaryAdultsPlot} shows the results for the 3AFC
-judgment task. For four trial types, the results are identical to the
-2AFC task: if the animal mentioned in the guess was not on the card
-(e.g.~elephant), participants judged the guess \enquote{wrong}. If the
-animal mentioned (e.g.~cat) was the only animal on the card,
-participants judged the guess \enquote{right}. Finally, if there were
-two animals and the puppet mentioned them using \emph{and} (e.g.~cat and
-dog), all participants considered the guess \enquote{right}.
+judgment task. For four trial types, the results were identical to the
+2AFC task. In the first and second trial types, if the animal mentioned
+was not on the card (e.g.~elephant), participants judged the guess as
+\enquote{wrong}, regardless of wether one animal was on the card or two.
+In the third trial type, if the animal mentioned (e.g.~cat) was the only
+animal on the card, participants judged the guess as \enquote{right}.
+Finally, if there were two animals on the card and the puppet mentioned
+them using \emph{and} (e.g.~cat and dog), all participants considered
+the guess \enquote{right}.
 
 The four remaining trial types showed different patterns of judgments
 than the ones in the 2AFC task. If the animal mentioned (e.g.~cat) was
@@ -429,11 +789,8 @@ considered a conjunctive guess (e.g.~cat and dog) \enquote{wrong}, when
 only one of the animals was on the card (Table \ref{tab:binomStats}, row
 2). However, some considered it \enquote{kinda right}, perhaps
 suggesting that the intermediate option was used to express the notion
-of \enquote{partial truth}. When both animals were on the card everyone
-agreed that the conjunctive guess was \enquote{right}.
-
-With respect to disjunctive guesses like \enquote{cat or dog}, if the
-card had only one of the animals, most adults considers the guess
+of partial truth. With respect disjunctive guesses (e.g.~cat or dog), if
+the card had only one of the animals, most adults considers the guess
 \enquote{right} while some considered it \enquote{kinda right} (Table
 \ref{tab:binomStats}, row 3). It is possible that the adults who
 considered such guesses \enquote{kinda right} were sensitive to the
@@ -445,8 +802,8 @@ choice of \enquote{kinda right} over \enquote{right} in such trials can
 be interpreted as a sign that adults were sensitive to the infelicity of
 a disjunction when conjunction was more appropriate. However, the scalar
 reasoning with \emph{and} and \emph{or} is subtle and in section
-\ref{implicature}, I discuss the nature of this reasoning in the context
-of this guessing game.
+\ref{implicature}, we discuss the nature of this reasoning in the
+context of this guessing game.
 
 \begin{longtable}[]{@{}lllllll@{}}
 \caption{\label{tab:binomStats} Exact One-Sided Binomial
@@ -628,13 +985,11 @@ adult pragmatic reasoning in the guessing game.
 
 \paragraph{The Pragmatics of AND and OR}\label{implicature}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/exclusivity-1} 
-
-}
-
-\caption{Example of cards referred to by a conjunction, inclusive disjunction, and exclusive disjunction.}\label{fig:exclusivity}
+\begin{figure}
+\centering
+\includegraphics{figs/exclusivity-1.pdf}
+\caption{\label{fig:exclusivity}Example of cards referred to by a
+conjunction, inclusive disjunction, and exclusive disjunction.}
 \end{figure}
 
 A disjunctive assertion like \enquote{cat or dog} gives rise to an
@@ -642,19 +997,18 @@ ignorance inference and an exclusivity inference. The ignorance
 inference is the inference that the speaker does not know which disjunct
 actually holds. For example in figure \ref{fig:exclusivity}, the
 disjunctive guess is uncertain between three outcomes: cards 1, 2, and
-3. As pointed out in Chapter \ref{sempragLit}, a disjunction is
-infelicitous when the outcome is known to discourse participants. For
-example, Tarski mentioned that a disjunction like \enquote{the grass is
-green or blue} is odd because we already know that it is green. The
-guessing game in this study controls for this ignorance effect by
-keeping the guesser blindfolded. Therefore, all the disjunctive guesses
-are evaluated in a context where participants know that the guesser is
-ignorant of the animals on the cards - both the number of them on the
-card and their identity. The exclusivity inference is the inference that
-only one of the disjuncts holds and \textbf{not both}. In figure
-\ref{fig:exclusivity}, a disjunction like \enquote{cat or dog} only
-refers to cards 2 and 3 if it is accompanied by an exclusivity
-inference.
+3. A disjunction is infelicitous when the outcome is known to discourse
+participants. For example, Tarski (1941) mentioned that a disjunction
+like \enquote{the grass is green or blue} is odd because we already know
+that the grass is green. The guessing game in this study controls for
+this ignorance effect by keeping the guesser blindfolded. Therefore, all
+the disjunctive guesses are evaluated in a context where participants
+know that the guesser is ignorant of the animals on the cards - both the
+number of them on the card and their identity. The exclusivity inference
+is the inference that only one of the disjuncts holds and \textbf{not
+both}. In figure \ref{fig:exclusivity}, a disjunction like \enquote{cat
+or dog} only refers to cards 2 and 3 if it is accompanied by an
+exclusivity inference.
 
 Since Grice (1989), this exclusive interpretation of \emph{or} has been
 (at least partly) attributed to pragmatic reasoning about the speaker's
@@ -664,27 +1018,27 @@ possible. In the context of making predictions and guessing, a guesser
 is required to make any guess as specific (i.e.~informative) as
 possible.\footnote{When you ask someone to predict the outcome of a coin
   toss, a guess like \enquote{it will be heads or tails} does not count
-  as a felicitous guess or prediction, presumably because it will always
-  be true.} A conjunction is more specific and informative than a
-disjunction (Horn, 1989). For example in Figure \ref{fig:exclusivity},
-\enquote{cat and dog} picks card 1 while \enquote{cat or dog} refers to
-cards 1, 2, and 3. If speakers intend to refer to card 1, they should
-use \emph{and} and say \enquote{cat and dog}. If they use \emph{or}
-instead of \emph{and}, they probably do not intend to refer to card 1.
-Following this line of reasoning, I can exclude the possibility that a
-speaker intends to refer to card 1. The term \enquote{exclusivity
-implicature} captures this pragmatic reasoning that results in excluding
-the possibility of both disjuncts being true.
+  as a felicitous guess or prediction, presumably because it is not
+  informative, ie.e. it will always be true.} A conjunction is more
+specific and informative than a disjunction (Horn, 1989). For example in
+Figure \ref{fig:exclusivity}, \emph{cat and dog} picks card 1 while
+\emph{cat or dog} refers to cards 1, 2, and 3. If speakers intend to
+refer to card 1, they should use \emph{and} and say \emph{cat and dog}.
+If they use \emph{or} instead of \emph{and}, they probably do not intend
+to refer to card 1. Following this line of reasoning, we can exclude the
+possibility that a speaker intends to refer to card 1. The term
+\enquote{exclusivity implicature} captures this pragmatic reasoning that
+results in excluding the possibility of both disjuncts being true.
 
-My goal here is to lay out the structure of pragmatic reasoning in the
-experimental setup and explain how it is manifested in the results of
-the experimental studies. There are three main components to the
-pragmatic reasoning in the guessing game: 1. the assumptions of the
+Our goal here is to lay out the structure of the exclusivity reasoning
+in the experimental setup and explain how it may be manifested in the
+results of the experimental studies. There are three main components to
+the pragmatic reasoning in the guessing game: 1. the assumptions of the
 game. 2. sensitivity to (under)informativity, and 3. the pragmatic
 reasoning about the speaker's choice of connectives. Like Katsos \&
-Bishop (2011), I have considered \enquote{sensitivity to
+Bishop (2011), we have considered \enquote{sensitivity to
 informativeness} as a precondition for \enquote{derivation of scalar
-implicatures}. I begin with the assumptions of the guessing game.
+implicatures}. We begin with the assumptions of the guessing game.
 
 \begin{itemize}
 \tightlist
@@ -697,7 +1051,7 @@ implicatures}. I begin with the assumptions of the guessing game.
     \textbf{Ignorance}: the guesser does not know the number or identity
     of the animals on the card.
   \item
-    \textbf{Specificity}: A guesser is required to be as specific as
+    \textbf{Specificity}: the guesser is required to be as specific as
     possible, ideally referring to a single card.
   \end{itemize}
 \end{itemize}
@@ -709,25 +1063,19 @@ assumption\footnote{Making this assumption explicit is both hard for
   used. Disjunctive guesses are always underinformative and never pick
   out a specific card.}. All the guesses used in the experiment can pick
 a single card except for disjunctive ones. Conjunctive guesses like
-\enquote{cat and dog} pick specific cards. The simple ones like
-\enquote{cat} can be strengthened pragmatically to mean \enquote{only a
-cat}, and pick a specific card. However, Disjunctive ones like
-\enquote{cat or dog} pick two cards in their most specific (exclusive)
-sense. Therefore, they are always under-informative and violate the
-specificity assumption.
+\emph{cat and dog} pick specific cards. The simple ones like \emph{cat}
+can be strengthened pragmatically to mean \enquote{only a cat}, and pick
+a specific card. However, Disjunctive ones like \emph{cat or dog} pick
+two cards in their most specific (exclusive) sense. Therefore, they are
+always under-informative and violate the specificity assumption.
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{Sensitivity to Informativeness}: The guesser said \enquote{cat
-  or dog} which is under-informative and picks card 1, 2, and 3.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Violation Assumption}: the guesser is violating the
-    specificity requirement.
-  \end{itemize}
+  \textbf{Sensitivity to Informativeness}: The guesser said \emph{cat or
+  dog} which is under-informative and picks cards 1, 2, and 3.
+\item
+  \textbf{Violation Assumption}: the guesser is violating the
+  specificity requirement.
 \end{itemize}
 
 Participants can detect the underinformativity of disjunctive guesses,
@@ -750,13 +1098,11 @@ disjunctive guesses and there are almost no \enquote{wrong} responses.
 With three alternatives, \enquote{kinda right} responses pop up. Adult
 responses are split between \enquote{kinda right} and \enquote{right}.
 
-\begin{figure}[tb]
-
-{\centering \includegraphics{figs/implicaturePlot-1} 
-
-}
-
-\caption{Adult responses to disjunction guesses like \textit{cat or dog} with 2 and 3 options.}\label{fig:implicaturePlot}
+\begin{figure}
+\centering
+\includegraphics{figs/implicaturePlot-1.pdf}
+\caption{\label{fig:implicaturePlot}Adult responses to disjunction guesses
+like \textit{cat or dog} with 2 and 3 options.}
 \end{figure}
 
 If detecting and reacting to underinformativity is the whole story, then
@@ -769,34 +1115,23 @@ in the 3AFC task, participants were more likely to choose \enquote{kinda
 right} than \enquote{right} when both animals were on the card
 (\(\beta\)=-1.22, \(z\)=-2.25, \(p\)=0.02). In other words, participants
 judged further infelicity with disjunctive guesses that had both
-disjuncts as true. Therefore, it is possible that when both disjuncts
-were true, some participants went through the following pragmatic
-reasoning:
+disjuncts as true. Therefore, it is possible that in some trials when
+both disjuncts were true, some participants went through the following
+pragmatic reasoning:
 
 \begin{itemize}
-\tightlist
 \item
   \textbf{Reasoning on Alternatives}: Why did the guesser choose the
   under-informative connective \emph{or} rather than the more
   informative \emph{and}?
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Resolution Assumption}: speaker is trying to be as specific
-    as possible by resolving the issue of how many animals are on the
-    card.
-
-    \begin{itemize}
-    \tightlist
-    \item
-      \textbf{Exclusivity Implicature}: Given the resolution hypothesis,
-      if the speaker had decided that two animals were on the card, they
-      should have said \enquote{cat \emph{and} dog}. They did not, so
-      they had decided that only one animal is on the card and
-      \textbf{not both}.
-    \end{itemize}
-  \end{itemize}
+\item
+  \textbf{Resolution Assumption}: speaker is trying to be as specific as
+  possible by resolving the issue of how many animals are on the card.
+\item
+  \textbf{Exclusivity Implicature}: Given the resolution hypothesis, if
+  the speaker had decided that two animals were on the card, they should
+  have said \emph{cat and dog}. They did not, so they had decided that
+  only one animal is on the card and not both.
 \end{itemize}
 
 How does the exclusivity implicature affect participant judgments in the
@@ -814,40 +1149,40 @@ incorrect pragmatics less than incorrect semantics. This conclusion is
 supported by the response patterns across trial types (figure
 \ref{fig:ternaryAdultsPlot}). Trial types that received a
 \enquote{wrong} response were those that were false. Pragmatically
-infelicitous trial types, namely simple guesses like \enquote{cat} or
-disjunctive guesses like \enquote{cat or dog} when both animals are on
-the card, receive \enquote{kinda right} responses. In other words,
-adults consider false utterances as \enquote{wrong} guesses but
-infelicitous utterances do not reach the level of being \enquote{wrong};
-they are still right even though not completely right. This would
-explain why the rates of infelicity (avoiding the \enquote{right}
-alternative) differ between 2AFC and 3AFC tasks in disjunctive trials
-with true disjuncts (0.18 vs.~0.62).
+infelicitous trial types, namely simple guesses like \emph{cat} or
+disjunctive guesses like \emph{cat or dog} when both animals are on the
+card, receive \enquote{kinda right} responses. In other words, adults
+consider false utterances as \enquote{wrong} guesses but infelicitous
+utterances do not reach the level of being \enquote{wrong}; they are
+still right even though not completely right. This would explain why the
+rates of infelicity (avoiding the \enquote{right} alternative) differ
+between 2AFC and 3AFC tasks in disjunctive trials with true disjuncts
+(0.18\% vs.~0.62\%).
 
-\subsection{Study 2: Children's three-alternative judgments and
-open-ended
-feedback}\label{study-2-childrens-three-alternative-judgments-and-open-ended-feedback}
+\subsection{Study 2: Children's 3AFC judgments and open-ended verbal
+feedback}\label{study-2-childrens-3afc-judgments-and-open-ended-verbal-feedback}
 
 The goal of this study was to examine children's interpretations of
 \emph{and} and \emph{or} in the guessing game and compare them to those
 of the adults. Since the 3AFC judgment task in study 1 proved better at
-capturing the nuances in adults' pragmatic reasoning, I decided to first
-test children using three alternatives. I also analyzed children's
-open-ended comments about the guesses in the experimental context. Both
-three-alternative judgments and the analysis of children's open-ended
-responses showed that children differentiate \emph{and} and \emph{or}
-statements. The judgment task suggested that children do not consider
-disjunctive guesses with true disjuncts as infelicitous. Yet, the
-analysis of their open-ended feedback suggests otherwise. Children took
-issue with such guesses and corrected them. I conclude that the 3AFC
-judgment task may have underestimated children's pragmatic competence.
+capturing the nuances of adults' pragmatic reasoning, we decided to
+first test children using the 3AFC task. We also analyzed children's
+open-ended verbal feedback about the guesses in the experimental
+context. Both 3AFC judgments and the analysis of children's open-ended
+feedback showed that children differentiate existential sentences with
+\emph{and} from those with \emph{or}. While the 3AFC task suggested that
+children consider disjunctive guesses with true disjuncts as felicitous,
+the analysis of their verbal feedback showed otherwise. Children took
+issue with such guesses and corrected them, often by mentioning the
+stronger alternative \emph{and}. We conclude that the 3AFC task may have
+underestimated children's pragmatic competence.
 
 \subsubsection{Methods}\label{methods-1}
 
 \begin{longtable}[]{@{}lllll@{}}
 \caption{\label{tab:study2info} Summary of Study 2 Methods}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
+\begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
 Study\strut
 \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
 N\strut
@@ -861,7 +1196,7 @@ Response Option\strut
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
+\begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
 Study\strut
 \end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright\strut
 N\strut
@@ -874,7 +1209,7 @@ Response Option\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
+\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
 Study 2\strut
 \end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright\strut
 42\strut
@@ -890,24 +1225,24 @@ Circle (wrong), Little Star (little right), Big Star (right)\strut
 
 \paragraph{Materials and Design}\label{materials-and-design-1}
 
-I used the same set of cards and linguistic stimuli as the ones in study
-1. There were 8 trial types and 2 trials per trial type for a total of
-16 trials. I made two changes to make the experiment more suitable for
-children. First, instead of the fictional character Bob, a puppet named
-Jazzy played the guessing game with them. Jazzy wore a sleeping mask
-over his eyes during the game (Figure \ref{fig:jazzy}). Second, a pilot
-study showed that a scale with three alternatives is better understood
-and used by children if it is presented in the form of rewards to the
-puppet rather than verbal responses such as \enquote{wrong}, \enquote{a
-little bit right}, and \enquote{right}, or even hand gestures such as
-thumbs up, middle, and down. Therefore, I placed a set of red circles,
-small blue stars, and big blue stars in front of the children. These
-tokens were used to reward the puppet after each guess. During the
-introduction, the experimenter explained that if the puppet is right,
-the child should give him a big star, if he is a little bit right, a
-little star, and if he is not right, a red circle.
+We used the same set of cards and linguistic stimuli as the ones in
+study 1. There were 8 trial types and 2 trials per trial type for a
+total of 16 trials. We made two changes to make the experiment more
+suitable for children. First, instead of the fictional character Bob, a
+puppet named Jazzy played the guessing game with them. Jazzy wore a
+sleeping mask over his eyes during the game (Figure \ref{fig:jazzy}).
+Second, a pilot study showed that a scale with three alternatives is
+better understood and used by children if it is presented in the form of
+rewards to the puppet rather than verbal responses such as
+\enquote{wrong}, \enquote{a little bit right}, and \enquote{right}, or
+even hand gestures such as thumbs up, middle, and down. Therefore, we
+placed a set of red circles, small blue stars, and big blue stars in
+front of the children. These tokens were used to reward the puppet after
+each guess. During the introduction, the experimenter explained that if
+the puppet is right, the child should give him a big star, if he is a
+little bit right, a little star, and if he is not right, a red circle.
 
-\begin{figure}[tb]
+\begin{figure}[!h]
 
 {\centering \includegraphics{figs/jazzy-1} 
 
@@ -919,11 +1254,11 @@ little star, and if he is not right, a red circle.
 \paragraph{Participants and
 Procedure}\label{participants-and-procedure-1}
 
-I recruited 42 English speaking children from the Bing Nursery School at
-Stanford University. Children were between 3;1 and 5;2 years old (Mean =
-4;3). The experiment was carried out in a quiet room and all sessions
-were videotaped. There was a small table and two chairs in the room.
-Children sat on one side of the table and the experimenter and the
+We recruited 42 English speaking children from the Bing Nursery School
+at Stanford University. Children were between 3;1 and 5;2 years old
+(Mean = 4;3). The experiment was carried out in a quiet room and all
+sessions were videotaped. There was a small table and two chairs in the
+room. Children sat on one side of the table and the experimenter and the
 puppet on the other side facing the child. The groups of circles, small
 stars, and big stars were placed in front of the child from left to
 right. A deck of six cards was in front of the experimenter. As in study
@@ -936,26 +1271,26 @@ names. The experimenter showed the cards to the children and asked them
 to label each animal. All children recognized the animals and could
 label them correctly. In the instruction phase, children went through
 three example trials. The experimenter explained that he was going to
-play with Jazzy (the puppet) first, so that the child could learn the
-game. He removed the six introduction cards and placed a deck of three
-cards face-down on the table. From top to bottom (first to last), the
-cards had the following images: cat, elephant, cat and dog. He put the
-sleeping mask on the Jazzy's eyes and explained that the puppet is going
-to guess what animal is on the cards. He then picked the first card and
-asked the puppet: \enquote{\emph{What do you think is on this card?}}
-Jazzy replied with \enquote{\emph{There is a dog}}. The experimenter
-showed the cat-card to the child and explained that when the puppet is
-\enquote{not right} he gets a circle. The pilot study had shown that
-some children struggle with understanding the word \enquote{wrong}, so
-\enquote{not right} was used instead. He then asked the child to give
-the puppet a circle. Rewards were collected by the experimenter and
-placed under the table to not distract the child. The second trial
-followed the same pattern except that the puppet guessed \enquote{right}
-and the experimenter invited the child to give the puppet a big star. In
-the final trial, the puppet guessed that there is a cat on the card when
-the card had a cat and a dog on it. The experimenter said that the
-puppet was \enquote{a little right} and asked the child to give him a
-little star.
+play with the puppet first, so that the child could learn the game. He
+removed the six introduction cards and placed a deck of three cards
+face-down on the table. From top to bottom (first to last), the cards
+had the following images: cat, elephant, cat and dog. He put the
+sleeping mask on the puppet's eyes and explained that the puppet is
+going to guess what animal is on the cards. He then picked the first
+card and asked the puppet: \enquote{\emph{What do you think is on this
+card?}} The puppet replied with \enquote{\emph{There is a dog}}. The
+experimenter showed the cat-card to the child and explained that when
+the puppet is \enquote{not right} he gets a circle. The pilot study had
+shown that some children struggle with understanding the word
+\enquote{wrong}, so \enquote{not right} was used instead. He then asked
+the child to give the puppet a circle. Rewards were collected by the
+experimenter and placed under the table to not distract the child. The
+second trial followed the same pattern except that the puppet guessed
+\enquote{right} and the experimenter invited the child to give the
+puppet a big star. In the final trial, the puppet guessed that there is
+a cat on the card when the card had a cat and a dog on it. The
+experimenter said that the puppet was \enquote{a little right} and asked
+the child to give him a little star.
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{\label{tab:instruction} Instruction Trials.}\tabularnewline
@@ -976,10 +1311,7 @@ CAT-DOG & There is a dog! & Little Star\tabularnewline
 In the test phase, the experimenter removed the three instruction cards
 and placed a deck of 16 randomized cards on the table. The experimenter
 explained that it was the child's turn to play with the puppet. The test
-phase followed the pattern described in the instruction phase. The
-randomization code as well as the details of the methods are in the
-online repository for this study at
-\href{https://github.com/jasbi/jasbi_dissertation_LearningDisjunction/tree/master/connective_comprehension/study2/0_methods}{https://github.com/jasbi/jasbi\_dissertation\_LearningDisjunction}.
+phase followed the pattern described in the instruction phase.
 
 \paragraph{Offline Annotations}\label{feedbackCoding}
 
@@ -993,34 +1325,31 @@ feedback only expressed judgments and complemented the rewards.
 Descriptions were cases that the child simply mentioned what was on the
 card: \emph{cat!}, \emph{dog and elephant!}, \emph{There is a cat and a
 dog!} etc. Finally, corrections referred to feedback that provided
-additional linguistic elements that acted like corrections to what the
+\enquote{focused elements} that acted like corrections to what the
 puppet had said. Examples include: \emph{Just a cat!}, \emph{Both!},
 \emph{The two are!}, \emph{Only cat}, \emph{cat AND dog} (with emphasis
 placed on \emph{and}). In trials where the child provided both judgments
-as well as descriptions or corrections, I placed the feedback into the
+as well as descriptions or corrections, we placed the feedback into the
 more informative categories, namely description or correction.
 
 \subsubsection{Results}\label{results-1}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/childrenTernaryPlot-1} 
-
-}
-
-\caption{Children's ternary judgments in the connective guessing game.}\label{fig:childrenTernaryPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/childrenTernaryPlot-1.pdf}
+\caption{\label{fig:childrenTernaryPlot}Children's 3AFC judgments in the
+connective guessing game.}
 \end{figure}
 
 Figure \ref{fig:childrenTernaryPlot} shows the results for children's
 3AFC judgments. Starting from the left column, if the mentioned animal
 was not on the card (e.g.~elephant), children judged the guess as
 \enquote{wrong}. If the animal mentioned (e.g.~cat) was the only animal
-on the card, children judged the guess to be \enquote{right}. Here I
-will ignore the results for trial types in which the animal mentioned
-was one of the animals on the card. The reason is that such trials were
-used in the instruction phase to introduce the \enquote{little bit
-right} guesses, and the results are potentially biased by the
-instructions.
+on the card, children judged the guess to be \enquote{right}. Here we
+ignore the results for trial types in which the animal mentioned was one
+of the animals on the card. The reason is that such trials were used in
+the instruction phase to introduce the \enquote{little bit right}
+guesses, and the results are potentially biased by the instructions.
 
 In conjunctive guesses (e.g. \emph{cat and dog}), when only one of the
 animals mentioned was on the card, children judged the guess as
@@ -1041,40 +1370,39 @@ differences between \emph{and} and \emph{or}. The truth judgments did
 not provide evidence that children differentiated \emph{and} and
 \emph{or} when two animals were on the card. Since in the majority of
 examples with \emph{or} and two animals, children responded with
-\enquote{right}, it is possible to conclude from the judgment data that
-children did not generate exclusivity inferences in this task.
+\enquote{right}, it is possible to conclude from the 3AFC judgment data
+that children did not generate exclusivity inferences in this task.
 
 Figure \ref{fig:childAdultComp} compares the results for children and
 adults' 3AFC judgments in the conjunction and disjunction trials. The
 major difference between adults and children's responses was disjunctive
 trials with two animals on the card. Most children considered such
 trials as \enquote{right} while adults considered them as \enquote{kinda
-right} or \enquote{right}. In the next section, I use Bayesian
-regression modeling to compare adults' and children's three-alternative
-responses more systematically.
+right}. In the next section, we use Bayesian regression modeling to
+compare adults' and children's three-alternative responses more
+systematically.
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/childAdultComp-1} 
-
-}
-
-\caption{Comparison of Adults' and Children's ternary judgments.}\label{fig:childAdultComp}
+\begin{figure}
+\centering
+\includegraphics{figs/childAdultComp-1.pdf}
+\caption{\label{fig:childAdultComp}Comparison of Adults' and Children's 3AFC
+judgments.}
 \end{figure}
 
 \paragraph{Analysis and Statistical
 Modeling}\label{analysis-and-statistical-modeling}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/stanModelPlot-1} 
-
-}
-
-\caption{Coefficients capturing the relevant comparisons across conditions in ternary judgments in Study 1 and 2. In naming the coefficients like b(OR,2), OR/AND represents the connective used and the number 1/2 represents the number of animals on the card. Error bars represent 99\% regions of highest posterior density.}\label{fig:stanModelPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/stanModelPlot-1.pdf}
+\caption{\label{fig:stanModelPlot}Coefficients capturing the relevant
+comparisons across conditions in 3AFC judgments in Study 1 and 2. In
+naming the coefficients like b(OR,2), OR/AND represents the connective
+used and the number 1/2 represents the number of animals on the card.
+Error bars represent 99\% regions of highest posterior density.}
 \end{figure}
 
-I used the R package RStan for Bayesian statistical modeling to fit
+We used the R package RStan for Bayesian statistical modeling to fit
 separate ordinal mixed-effects logistic models for the children's and
 adults' judgments. The response variable had three ordered levels:
 \emph{wrong}, \emph{kinda right}, and \emph{right}. The trial types
@@ -1082,27 +1410,28 @@ adults' judgments. The response variable had three ordered levels:
 constituted the (dummy-coded) fixed effects of the model with
 \emph{Two-Animals-AND} set as the intercept. The model also included
 by-subject random intercepts. The priors over trial types and the random
-intercepts were set to \(\mathcal{N}(0,10)\). I also included parameters
-\(C_1\) and \(C_2\), the two cutpoints delimiting the logistic for 1)
-\emph{wrong} and \emph{kinda right} and 2) \emph{kinda right} and
-\emph{right} responses, drawn with the prior
-\(\mathcal{N}(0,1)\).\footnote{I used a tight prior in this case to
+intercepts were set to \(\mathcal{N}(0,10)\). We also included
+parameters \(C_1\) and \(C_2\), the two cutpoints delimiting the
+logistic for 1) \emph{wrong} and \emph{kinda right} and 2) \emph{kinda
+right} and \emph{right} responses, drawn with the prior
+\(\mathcal{N}(0,1)\).\footnote{We used a tight prior in this case to
   decrease posterior correlations between cutpoints and intercept.} All
 four chains converged after 3000 samples (with a burn-in period of 1500
 samples).
 
-I made inferences based on the highest-posterior density (HPD) intervals
-for the coefficients estimated from each model. Because predictors are
-dummy-coded, it's possible to examine contrasts of interest by computing
-the difference between coefficients for pairs of conditions I wish to
-contrast. In naming the coefficients like b(OR,2), OR/AND represents the
-connective used and the number represents the number of animals on the
-card. Figure \ref{fig:stanModelPlot} shows the contrasts of interest:
-\emph{b(OR, 2)-b(OR,1)} represents the difference between the estimated
-coefficients for the disjunction trials with two animal on the card and
-those with only one; \emph{b(OR, 2)} represents the difference between
-the estimated coefficients for the conjunction trials with two animals
-and the disjunction trials with two animals; and so on.
+We made inferences based on the highest-posterior density (HPD)
+intervals for the coefficients estimated from each model. Because
+predictors are dummy-coded, it's possible to examine contrasts of
+interest by computing the difference between coefficients for pairs of
+conditions we wish to contrast. In naming the coefficients like b(OR,2),
+OR/AND represents the connective used and the number represents the
+number of animals on the card. Figure \ref{fig:stanModelPlot} shows the
+contrasts of interest: \emph{b(OR, 2)-b(OR,1)} represents the difference
+between the estimated coefficients for the disjunction trials with two
+animal on the card and those with only one; \emph{b(OR, 2)} represents
+the difference between the estimated coefficients for the conjunction
+trials with two animals and the disjunction trials with two animals; and
+so on.
 
 Overall, adults' and children's estimated coefficients are similar in
 sign to one another, though adults' are more extreme. In the conjunction
@@ -1122,22 +1451,22 @@ hand showed the opposite pattern: they rated disjunction trials with two
 animals lower. This pattern is compatible with current accounts of
 pragmatic development that suggest an absence of implicatures in
 children's interpretations. The idea is that while adults strengthen the
-disjunctive guess \enquote{cat or dog} to \enquote{cat or dog but not
+disjunctive guess \emph{cat or dog} to \enquote{cat or dog but not
 both}, children simply interpret it as \enquote{cat or dog or both}.
 Adults are therefore going to rate trials with both disjuncts true
 lower.
 
 The slight preference children show for cards with two animals when the
 guess is disjunctive is also compatible with the account proposed by
-Singh et al. (2016) and Tieu et al. (2016). However, the effect is much
-smaller here than was reported in their studies. The comparison with
-conjunction trials makes it clear that overall, children are not
+Singh et al. (2016) and Tieu et al. (2016). However, the effect seems
+much smaller here than was reported in their studies. The comparison
+with conjunction trials makes it clear that overall, children are not
 interpreting \emph{or} as having a conjunctive meaning. The effect in
 this study can be more accurately described as a preference in judgment
 for both disjuncts being true rather than a conjunctive interpretation
 of disjunction. The results from children's spontaneous linguistic
 feedback make it less likely that children interpretive \emph{or} as a
-conjunction. I will discuss this issue further in section
+conjunction. We will discuss this issue further in section
 \ref{conjunctive}.
 
 \paragraph{Children's open-ended
@@ -1167,28 +1496,28 @@ Examples\strut
 \midrule
 \endhead
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-None\strut
+\textbf{None}\strut
 \end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
 no feedback provided to the puppet, only reward\strut
 \end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Judgment\strut
+\textbf{Judgment}\strut
 \end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
 the child said yes/no, you are right, etc.\strut
 \end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright\strut
 \enquote{No!} , \enquote{You are right Jazzy!}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Description\strut
+\textbf{Description}\strut
 \end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
 mentioned the animal(s) on the card\strut
 \end{minipage} & \begin{minipage}[t]{0.32\columnwidth}\raggedright\strut
 \enquote{elephant}, \enquote{cat and dog}\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Correction\strut
+\textbf{Correction}\strut
 \end{minipage} & \begin{minipage}[t]{0.46\columnwidth}\raggedright\strut
 used focus particles like \emph{only}/\emph{just}, emphasized \emph{and}
 or used \emph{both}\strut
@@ -1199,93 +1528,91 @@ or used \emph{both}\strut
 \bottomrule
 \end{longtable}
 
-As explained in section \ref{feedbackCoding}, I also categorized and
-annotated children's spontaneous and free form verbal reactions to the
+As explained in section \ref{feedbackCoding}, we also categorized and
+annotated children's spontaneous and free-form verbal reactions to the
 puppet's guesses. Table \ref{tab:feedbackCat} summarizes the definitions
 and examples for each category and Figure \ref{fig:feedbackData} shows
-the results.
+the results. We should point out that each trial type had a similar
+number of \enquote{None} cases. Some children remained more or less
+silent throughout the experiment and only provided rewards to the
+puppet. In the next study we ask children to provide feedback explicitly
+and therefore we have no \enquote{None} responses. In the discussion and
+analysis here we will not comment further on the \enquote{None} category
+but focus on the other three categories.
 
-\begin{figure}[h]
-
-{\centering \includegraphics{figs/feedbackData-1} 
-
-}
-
-\caption{Children's open-ended Feedback. Error bars represent 95\% confidence intervals.}\label{fig:feedbackData}
+\begin{figure}
+\centering
+\includegraphics{figs/feedbackData-1.pdf}
+\caption{\label{fig:feedbackData}Children's open-ended Feedback. Error bars
+represent 95\% confidence intervals.}
 \end{figure}
 
-I should first point out that each trial type has a similar number of
-\enquote{None} cases, for feedback. Some children remained more or less
-silent throughout the experiment and only provided rewards to the
-puppet. In the next study I focus on children's open-ended feedback. In
-the discussion and analysis here I will not comment further on the
-\enquote{None} category but focus on the other three categories.
-
-In the leftmost column, when the animal guessed (e.g.~elephant) was not
-on the card, children either provided judgments like \enquote{No!} or
-described what was on the card like \enquote{cat} or \enquote{cat and
-dog}. However, when the animal guessed was the only animal on the card
+In the leftmost column, when the guessed animal was not on the card
+(e.g.~elephant), children either provided judgments like \enquote{No!}
+or described what was on the card like \emph{cat} or \emph{cat and dog}.
+However, when the guessed animal was the only animal on the card
 (e.g.~cat), most children provided a positive judgment like
 \enquote{Yes}. When the animal guessed was only one of the animals on
-the card, children described what was on the card, say, \enquote{cat and
-dog}. Corrections were rare for all these four control trial types.
+the card, children described what was on the card, for example,
+\emph{cat and dog}. Corrections were rare for all these four trial
+types.
 
 In the critical trial types with conjunction and disjunction, children
 showed a high rate of corrections and description when the guess used
 \emph{and} but there was only one animal on the card. In their
 corrections, children used the focus particles \emph{just} and
-\emph{only} like \enquote{just a cat} or \enquote{only a cat}. However,
+\emph{only} as in \enquote{just a cat} or \enquote{only a cat}. However,
 in trial types where conjunction was used and both animals were
 depicted, children predominantly provided positive judgments like
 \enquote{Yes!} and \enquote{You are right}. Considering disjunctive
 guesses like \enquote{cat or dog}, when only one of the animals was on
 the card, most children simply described what was on the card, for
 example \enquote{cat}. However, when both animals were on the card,
-children corrected the puppet by saying \emph{both} or emphasizing
-\emph{and} as in \enquote{cat AND dog}.
+children corrected the puppet by saying \enquote{Both!} or emphasizing
+\emph{and} as in \enquote{cat AND dog!}
 
-I performed chi-squared goodness-of-fit tests to compare the feedback
+We performed chi-squared goodness-of-fit tests to compare the feedback
 distributions in the critical conditions with \emph{and} and \emph{or}.
-Here I focus on those trials (the four bar charts on the right of Figure
-\ref{fig:feedbackData}). Children's linguistic feedback showed three
-patterns. First, the one-animal conjunctive and two-animal disjunctive
-(top left and bottom right) trials contained a higher proportion of
-Corrections than the other trial types. These were trials where the
-guesses were either false or infelicitous. In the conjunction trials, a
-comparison of the feedback distribution in one-animal and two-animal
-conditions was statistically significant (\(\chi^2\)(3, 83) = 201.65, p
-\textless{} .0001), suggesting that children gave different feedback to
-true and false guesses. A similar numerical trend was present in the
-disjunction trials, but it was not significant (\(\chi^2\)(9, 4) = 12, p
-= 0.21).
+Here we focus on those trials (the four bar charts on the right of
+Figure \ref{fig:feedbackData}). Children's linguistic feedback showed
+three patterns. First, the one-animal conjunctive and two-animal
+disjunctive (top left and bottom right) trials contained a higher
+proportion of corrections than the other trial types. These were trials
+where the guesses were either false or infelicitous. In the conjunction
+trials, a comparison of the feedback distribution in one-animal and
+two-animal conditions was statistically significant (\(\chi^2\)(3, 83) =
+201.65, p \textless{} .0001), suggesting that children gave different
+feedback to true and false guesses. A similar numerical trend was
+present in the disjunction trials, but it was not significant
+(\(\chi^2\)(9, 4) = 12, p = 0.21).
 
 Second, the one-animal disjunctive trials (top right) showed the highest
-proportion of \emph{Descriptions}. These are trials in which the guess
-is correct but not specific enough: it leaves two possibilities open.
-These trials were significantly different from the one-animal trials for
-conjunction (\(\chi^2\)(3, 83) = 62.16, p \textless{} .0001). Finally,
-the two-animal conjunctive trials (bottom left) showed the highest
-proportion of \emph{Judgments} such as \emph{You are right!}. This was
-not surprising given that these trials represented the optimal guessing
-scenario. These trials had a significantly different feedback
+proportion of \enquote{descriptions}. These are trials in which the
+guess is correct but not specific enough: it leaves two possibilities
+open. These trials were significantly different from the one-animal
+trials for conjunction (\(\chi^2\)(3, 83) = 62.16, p \textless{} .0001).
+Finally, the two-animal conjunctive trials (bottom left) showed the
+highest proportion of \enquote{judgments} such as \emph{You are right!}.
+This was not surprising given that these trials represented the optimal
+guessing scenario. These trials had a significantly different feedback
 distribution from the matching disjunction trials (\(\chi^2\)(3, 84) =
 184.98, p \textless{} .0001).
 
 \subsubsection{Discussion}\label{discussion-1}
 
-In study 2, I used a 3AFC judgment task to test children's comprehension
-of logical connectives \emph{and} and \emph{or}. I compared these
-results to those found in the 3AFC judgment task of study 1 with adults.
-The general comparison showed that adults and children had similar
-patterns of judgments, except when both disjuncts were true. In such
-cases, adults judged the disjunctive guess as not completely right while
-most children found it completely right. There was even a slight
-preference among children to rewarded the puppet more in such cases,
-compared to cases of disjunction when only one disjunct was true.
+In study 2, we used a 3AFC judgment task to test children's
+comprehension of logical connectives \emph{and} and \emph{or}. We
+compared these results to those found in the 3AFC judgment task of study
+1 with adults. The general comparison showed that adults and children
+had similar patterns of judgments, except when both disjuncts were true.
+In such cases, adults judged the disjunctive guess as not completely
+right while most children found it completely right. There was even a
+slight preference among children to rewarded the puppet more in such
+cases, compared to cases of disjunction when only one disjunct was true.
 
-To consider another measure of children's comprehension, I also looked
-at children's spontaneous open-ended feedback in response to the
-guesses. My analysis suggested that children recognized false and
+To consider another measure of children's comprehension, we also looked
+at children's spontaneous open-ended verbal feedback to the puppet's
+guesses. Our analyses suggested that children recognized false and
 infelicitous utterances with the connectives and provided appropriate
 corrective feedback. As expected from an adult-like understanding of
 connectives, children corrected the puppet most often when there was
@@ -1299,27 +1626,26 @@ find any infelicity with disjunctive guesses when both disjuncts were
 true.
 
 The analysis of children's open-ended feedback raises two important
-issues. First, as I mentioned before, it runs counter to what the 3AFC
-judgment task suggests with respect to exclusivity implicatures
-(i.e.~trials with disjunction when both disjuncts are true). The
-forced-choice judgment task suggests that children find such cases
-unproblematic while analysis of their spontaneous feedback shows that
-they provided more corrections to the puppet. Second, a common
-explanation for why children fail to derive0 implicatures is that they
-cannot access the stronger alternative to the disjunction \emph{or},
-namely \emph{and} (Barner, Brooks, \& Bale, 2011). However, in the
-context of the guessing game, some children explicitly mentioned the
-word \emph{and} as what the puppet should have said instead of
+issues. First, as we mentioned before, it runs counter to what the 3AFC
+judgment task suggests with respect to exclusivity implicatures. The
+forced-choice task suggests that children find such underinformative
+utterances as unproblematic while analysis of their spontaneous feedback
+shows that they provided more corrections to such utterances. Second, a
+common explanation for why children fail to derive implicatures is that
+they cannot access the stronger alternative to the disjunction
+\emph{or}, namely \emph{and} (Barner, Brooks, \& Bale, 2011). However,
+in the context of the guessing game, some children explicitly mentioned
+the word \emph{and}, as the word the puppet should have said instead of
 \emph{or}. Interestingly, these children continued to reward the puppet
 and considered the guess \enquote{right}. This raises the possibility
 that children's forced-choice truth value judgments, whether with two or
 three alternatives, do not fully reflect their pragmatic knowledge. In
-study 3, I used both a 2AFC truth judgment task and an analysis of
+study 3, we used both a 2AFC truth judgment task and an analysis of
 children's open-ended feedback. If the findings of study 2 were on the
-right track, I expected to replicate the same pattern in study 3: the
-analysis of children's spontaneous linguistic feedback provides more
-evidence that children are sensitive to pragmatic violations than the
-results of the 2AFC judgments.
+right track, we expected to replicate the same pattern in study 3,
+namely that the analysis of children's open-ended feedback should
+provide more evidence that children are sensitive to pragmatic
+violations than the results of the 2AFC judgments.
 
 \subsection{Study 3: Children's 2AFC judgments and open-ended
 feedback}\label{study-3-childrens-2afc-judgments-and-open-ended-feedback}
@@ -1422,30 +1748,30 @@ Yes (Right)/No (Wrong) - Open-ended Feedback\strut
 \paragraph{Materials and Design}\label{materials-and-design-2}
 
 Study 3 was similar to Study 2 but differed in how children provided
-their judgments. Based on the findings in Study 2, I focused on verbal
-judgments and feedback, instead of rewards. I used two different ways of
-measuring children's judgments. First, I encouraged children to provide
-verbal feedback to the puppet. They were asked to say \enquote{yes} when
-the puppet was right, and \enquote{no} when he was not. They were also
-encouraged to help the puppet say it better when he was not right. After
-children were done with this initial open-ended feedback, for each trial
-I asked a forced choice yes/no judgment question: \enquote{Was Jazzy
-(the puppet) right?}. This question elicited a \enquote{yes} or
-\enquote{no} response for each trial independent of their earlier
-open-ended response. These two measures allowed me to compare open-ended
-and forced-choice judgments.
+their judgments. Based on the findings in Study 2, we focused on verbal
+judgments and feedback, instead of rewards. We used two different ways
+of measuring children's judgments. First, we encouraged children to
+provide verbal feedback to the puppet. They were asked to say
+\enquote{yes} when the puppet was right, and \enquote{no} when he was
+not. They were also encouraged to help the puppet say it better when he
+was not right. After children were done with this initial open-ended
+feedback, for each trial we asked a forced choice yes/no judgment
+question: \enquote{Was Jazzy (the puppet) right?}. This question
+elicited a \enquote{yes} or \enquote{no} response for each trial
+independent of their earlier open-ended response. These two measures
+allowed me to compare open-ended and forced-choice judgments.
 
 \paragraph{Participants and
 Procedure}\label{participants-and-procedure-2}
 
-I recruited 50 English speaking children from the Bing Nursery School at
-Stanford University. Children were between 3;6 and 5;9 years old (Mean =
-4;7). The setup and procedure were similar to Study 2, except there were
-no rewards on the table. As before, participants sat through three
-phases: introduction, instruction, and test. The introduction phase made
-sure children knew the names of the animals on the cards. In the
-instruction phase, they received four training trials, as shown in Table
-\ref{tab:instructionStudy3}.
+We recruited 50 English speaking children from the Bing Nursery School
+at Stanford University. Children were between 3;6 and 5;9 years old
+(Mean = 4;7). The setup and procedure were similar to Study 2, except
+there were no rewards on the table. As before, participants sat through
+three phases: introduction, instruction, and test. The introduction
+phase made sure children knew the names of the animals on the cards. In
+the instruction phase, they received four training trials, as shown in
+Table \ref{tab:instructionStudy3}.
 
 As in Study 2, the experimenter put a sleeping mask over the puppet's
 eyes and explained that Jazzy (the puppet) was going to guess what
@@ -1483,28 +1809,25 @@ DOG & there is a dog! & Yes!\tabularnewline
 
 \subsubsection{Results}\label{results-2}
 
-I first look at the results of the 2AFC judgement task for each trial
-type and compare them to those of the adults' in Study 1. Then I analyze
-children's open-ended responses and compare them to the forced choice
-responses obtained in the same trial types. For the 2AFC judgments I
-excluded 26 trials (out of total 800) where children either did not
-provide a Yes/No response or provided both (i.e. \enquote{Yes and No}).
-The exclusions were almost equally distributed among different types of
-guesses and cards. In the analysis of children's open-ended feedback, I
-excluded 8 trials (out of total 800) where children either did not
-provide any feedback or their feedback could not be categorized into the
-existing categories.
+We first look at the results of the 2AFC judgement task for each trial
+type and compare them to those of the adults' in Study 1. Then we
+analyze children's open-ended responses and compare them to the forced
+choice responses obtained in the same trial types. For the 2AFC
+judgments we excluded 26 trials (out of total 800) where children either
+did not provide a Yes/No response or provided both (i.e. \enquote{Yes
+and No}). The exclusions were almost equally distributed among different
+types of guesses and cards. In the analysis of children's open-ended
+feedback, we excluded 8 trials (out of total 800) where children either
+did not provide any feedback or their feedback could not be categorized
+into the existing categories.
 
 \paragraph{Two-Alternative Forced Choice
 Judgments}\label{two-alternative-forced-choice-judgments}
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/Study3tvjtPlot-1} 
-
-}
-
-\caption{Children's binary truth value judgments.}\label{fig:Study3tvjtPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/Study3tvjtPlot-1.pdf}
+\caption{\label{fig:Study3tvjtPlot}Children's binary truth value judgments.}
 \end{figure}
 
 Figure \ref{fig:Study3tvjtPlot} shows children's 2AFC judgments. In the
@@ -1571,13 +1894,12 @@ there was two animals on the card and the guess used the connective
 \emph{or}. Children and adults did not differ in their rate of rejecting
 disjunctive guesses when both disjuncts were true.
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/BinaryPlotComp-1} 
-
-}
-
-\caption{The comparison of the 2AFC judgment task for conjunction and disjunction trials in adults (study 1) and children (study 3).}\label{fig:BinaryPlotComp}
+\begin{figure}
+\centering
+\includegraphics{figs/BinaryPlotComp-1.pdf}
+\caption{\label{fig:BinaryPlotComp}The comparison of the 2AFC judgment task
+for conjunction and disjunction trials in adults (study 1) and children
+(study 3).}
 \end{figure}
 
 Finally, there is a small but significant preference in children's
@@ -1590,18 +1912,16 @@ had a slight preference for both animals to be on the card (\(b\)= 1.85,
 trend in children's three-alternative judgments in study 2. While this
 was quite small compared to the other effects observed in these studies,
 it nevertheless indicated a difference between children's and adults'
-judgments. I return to this in more detail in section \ref{conjunctive}
+judgments. We return to this in more detail in section \ref{conjunctive}
 of the General Discussion.
 
 \paragraph{Open-ended Feedback}\label{open-ended-feedback}
 
-\begin{figure}[h]
-
-{\centering \includegraphics{figs/feedbackStudy3-1} 
-
-}
-
-\caption{Children's Open-ended Feedback in Study 3. Error bars represent 95\% confidence intervals.}\label{fig:feedbackStudy3}
+\begin{figure}
+\centering
+\includegraphics{figs/feedbackStudy3-1.pdf}
+\caption{\label{fig:feedbackStudy3}Children's Open-ended Feedback in Study
+3. Error bars represent 95\% confidence intervals.}
 \end{figure}
 
 Figure \ref{fig:feedbackStudy3} shows the distribution of children's
@@ -1613,154 +1933,107 @@ the responses in the other three categories (Judgment, Description, and
 Correction) revealed a successful replication of Study 2.
 
 Children's feedback showed four main patterns. First when the puppet
-guessed an animal not on the card (e.g.~elephant), there is a split
-pattern between negative judgments like \enquote{no!} and simple
-descriptions of what was on the card, e.g. \enquote{cat!}. Children
-provided no corrections on such trials. Second, almost all children
-responded with positive judgments like \enquote{yes} when the puppet's
-guess accurately matched what was on the card. This was the case in
-trials where there was only one animal on the card (e.g.~cat) and the
-puppet mentioned it, as well as trials where there were two animals on
-the card and the puppet mentioned both with a conjunction (e.g.~cat and
-dog). Third, children provided the largest number of corrective feedback
-in trials where the guess was either false or infelicitous. These
-included three trial types: (a) the ones where there were two animals on
-the card but the puppet only guessed one (e.g.~cat); (b) the ones where
-the puppet guessed two animals with conjunction (e.g.~cat and dog) but
-only one of them was on the card; and (c) the ones where there were two
-animals on the card, and the puppet guessed both but used a disjunction
-(e.g.~cat or dog). The fourth general pattern was unique to disjunctive
-trials with only one animal on the card. In such cases, almost all
-children simply named the animal on the card (e.g. \enquote{Cat!}).
+guessed an animal not on the card (e.g. \emph{There is an elephant!}),
+there is a split pattern between negative judgments like \emph{No!} and
+simply mentioning the animal on the card, e.g. \emph{Cat!}. Children
+provided no corrections on such trials, at leat the way we have defined
+them. Second, almost all children responded with positive judgments like
+\emph{Yes!} when the puppet's guess accurately matched what was on the
+card. This was the case in trials where there was only one animal on the
+card (e.g.~cat) and the puppet mentioned it (e.g. \emph{There is a
+cat!}), as well as trials where there were two animals on the card and
+the puppet mentioned both with a conjunction (e.g. \emph{There is a cat
+and a dog!}). Third, children provided the largest number of corrective
+feedback in trials where the guess was either false or infelicitous.
+These included three trial types: (a) the ones where there were two
+animals on the card (e.g.~cat and dog) but the puppet only guessed one
+(e.g. \emph{There is a cat!}); (b) the ones where the puppet guessed two
+animals with conjunction (e.g. \emph{There is a cat and a dog!}) but
+only one of them was on the card (e.g.~cat); and (c) the ones where
+there were two animals on the card (e.g.~cat and dog), and the puppet
+guessed both but used a disjunction (e.g. \emph{There is a cat or a
+dog!}). Finally, there was a pattern of feedback unique to disjunctive
+trials (e.g. \emph{There is a cat or a dog!}) with only one animal on
+the card (e.g.~cat). In such cases, almost all children simply named the
+animal on the card (e.g. \emph{Cat!}).
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/study3JudgmentPlot-1} 
-
-}
-
-\caption{Children's open-ended feedback to the puppet's guesses. The x-axis shows whether children spontaneously provided a yes (green), no (red), or other response (grey).}\label{fig:study3JudgmentPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/study3JudgmentPlot-1.pdf}
+\caption{\label{fig:study3JudgmentPlot}Children's open-ended feedback to the
+puppet's guesses. The x-axis shows whether children spontaneously
+provided a yes (green), no (red), or other response (grey).}
 \end{figure}
 
 Figure \ref{fig:study3JudgmentPlot} breaks down children's open-ended
-feedback based on whether children said \enquote{yes}, \enquote{no}, or
-said something else. Responses that were not \enquote{yes/no} judgments
-are grouped in a middle category shown with a dash. The goal here is to
-compare children's open-ended judgments with their forced choice
-judgments shown in Figure \ref{fig:Study3tvjtPlot}. Children's
-open-ended judgments and their forced choice judgments in study 3 show
-similar patterns for all types of guesses except for disjunctive ones.
-In trials that the puppet guessed with \emph{or}, the vast majority of
-children refused to provide a \enquote{yes/no} judgment when they were
-not forced to. Instead, they described the animal on the card or
-provided corrections to the puppet's infelicitous disjunctive guess.
+feedback based on whether children said \emph{Yes!}, \emph{No!}, or said
+something else. Responses that were not yes/no judgments are grouped in
+a middle category shown with a dash. The goal here is to compare
+children's open-ended judgments with their forced choice judgments shown
+in Figure \ref{fig:Study3tvjtPlot}. Children's open-ended judgments and
+their forced choice judgments in study 3 show similar patterns for all
+types of guesses except for disjunctive ones. In trials that the puppet
+guessed with \emph{or}, the vast majority of children refused to provide
+a yes/no judgment when they were not forced to. Instead, they described
+the animal on the card or provided corrections to the puppet's
+infelicitous disjunctive guess.
 
 One way to interpret these results is that disjunctive guesses (with at
 least one disjunct true) are considered neither right nor wrong by
-almost all children. When children were forced to provide wrong-right
+almost all children. When children were forced to provide wrong/right
 responses in the experimental context, some conformed to the adult
 patterns of judgment and some did not. However, it is possible that such
 deviations from adult judgments do not reflect differences in the
 comprehension of disjunction, but rather differences in how children map
-their adult-like comprehension onto the notions of \enquote{right} and
-\enquote{wrong} in a forced choice judgment task. In other words, it is
-possible that children and adults only differ in how they behave when
+their comprehension of disjunction onto the notions of \enquote{right}
+and \enquote{wrong} in a forced choice judgment task. In other words, it
+is possible that children and adults only differ in how they behave when
 they are forced to respond with a fixed set of options.
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/feedbackFillPlot-1} 
-
-}
-
-\caption{Children's open-ended feedback. The x-axis shows whether children said yes or no and the color fill shows what children said other than yes/no.}\label{fig:feedbackFillPlot}
+\begin{figure}
+\centering
+\includegraphics{figs/correctivePlot-1.pdf}
+\caption{\label{fig:correctivePlot}Children's feedback categories in
+disjunction trials.}
 \end{figure}
 
-Figure \ref{fig:feedbackFillPlot} is similar to Figure
-\ref{fig:study3JudgmentPlot} but it uses color-fill to show what
-children said in addition to \enquote{yes/no}. The gray color represents
-the trials where children only said \enquote{yes/no} and nothing else.
-The yellow-fill represents descriptions where children mentioned the
-animal on the card (e.g. \enquote{cat!}). The blue fill represents
-children's corrective feedback that used the exclusive focus particles
-\emph{just} or \emph{only} (e.g. \enquote{just a cat!}). Such a
-corrective feedback suggests that the guess included an animal that did
-not belong and should have been excluded. Finally the red fill
-represents the inclusive corrective feedback that emphasized the word
-\emph{and} or said \emph{both} (e.g. \enquote{Both!}, \enquote{cat AND
-dog!}). Such corrective feedback indicated that both animals should have
-been mentioned.
-
-As shown in the leftmost column, when the puppet mentioned an animal
-that was not on the card (e.g.~elephant), children responded with a
-simple \enquote{no} or \enquote{no} followed by what was on the card
-(e.g.~no! elephant!). When there was only one animal on the card and the
-puppet mentioned the animal (e.g.~cat), children responded with a simple
-\enquote{yes}. However, when the card had two animals (e.g.~cat and dog)
-and the puppet only mentioned one of them (e.g.~cat), children were
-likely to provide inclusive feedback. They said \emph{both} or
-emphasized \emph{and}, as in \enquote{cat AND dog}. However, in such
-trials children were equally split between saying \enquote{yes},
-\enquote{no}, or neither.
-
-In the trials with conjunctive and disjunctive guesses, when there was
-only one animal on the card (e.g.~cat) and the puppet used a conjunction
-(e.g.~cat and dog), children were likely to say a simple \enquote{no} or
-say \enquote{no}, followed by \enquote{only/just} (e.g.~no, just a cat).
-Some children did not say \enquote{no} but did respond with
-\enquote{only/just}. When the card had two animals on it and the puppet
-mentioned both using \emph{and}, children responded with a simple
-\enquote{yes}. In trials with disjunctive guesses like \enquote{cat or
-dog}, children avoided yes/no responses. Instead, when the card had only
-one animal, children mentioned that animal. When the card had both
-animals, children said \emph{both} or emphasized the word \emph{and}, as
-in \enquote{cat AND dog}.
-
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/correctivePlot-1} 
-
-}
-
-\caption{Children's feedback categories in disjunction trials.}\label{fig:correctivePlot}
-\end{figure}
-
-Figure \ref{fig:correctivePlot} shows the same feedback data in Figure
-\ref{fig:feedbackFillPlot} but uses the x-axis to also show the
-proportion of feedback categories other than yes/no judgments. My goal
-here is to display the trial types with corrective feedback (blue and
-red). These trial types include: (1) conjunction when only one conjunct
-is true, (2) disjunction when both disjuncts are true, and (3) simple
-guesses (e.g. \enquote{there is a cat}) when two animals were on the
-card. These trial types involved guesses that are either false or
+Figure \ref{fig:correctivePlot} shows the proportion of feedback
+categories other than yes/no judgments on the x-axis. My goal here is to
+display the trial types with corrective feedback (blue and red). These
+trial types include: (1) conjunction when only one conjunct is true
+(e.g.~guess: \emph{There is a cat and a dog!}, card: cat), (2)
+disjunction when both disjuncts are true (e.g.~guess: \emph{There is a
+cat or a dog}, card: cat and dog), and (3) simple guesses when two
+animals were on the card (e.g. \emph{There is a cat!}, card: cat and
+dog). These trial types involved guesses that were either false or
 infelicitous. Furthermore, the type of corrective feedback children
 provided matched the type of mistakes made in the guesses. With
-conjunctive guesses like \enquote{cat and dog} when there was only one
-animal on the card (e.g.~cat), children provided exclusive corrections
-(e.g.~just/only a cat), suggesting that the other animal (e.g.~dog)
-should have been excluded. When two animals were on the card and the
-puppet used a disjunctive guess like \enquote{cat or dog}, or simple
-guess like \enquote{cat}, children provided inclusive feedback,
-suggesting that another animal should have been included. This is
-particularly notable in the case of disjunction since both animals were
-mentioned, but children still emphasized that the connective \emph{and}
-should have been used, or that both animals mentioned were on the card.
+conjunctive guesses (e.g.~There is a cat and a dog!``) when there was
+only one animal on the card (e.g.~cat), children provided exclusive
+corrections (e.g. \emph{Just/only a cat!}), suggesting that the other
+animal (e.g.~dog) should have been excluded. When two animals were on
+the card (e.g.~cat and dog) and the puppet used a disjunctive guess
+(e.g. \emph{There is a cat or a dog!}), or simple guess (e.g. \emph{Ther
+is a cat!}), children provided inclusive feedback, suggesting that
+another animal should have been included. This is particularly notable
+in the case of disjunction since both animals were mentioned, but
+children still emphasized that the connective \emph{and} should have
+been used, or that both animals mentioned were on the card.
 
 \subsubsection{Discussion}\label{discussion-2}
 
-Study 3 measured children's comprehension of logical connectives by
-asking them to judge a puppet's guess in two ways: with open-ended
-feedback and with a two-alternative forced choice task. First, I asked
-children to say \enquote{yes} to the puppet if he was right and
-\enquote{no} if he was wrong. However, children could provide any form
-of feedback they wanted. Second, I followed children's open-ended
-feedback with a two-alternative forced choice question: \enquote{Was the
-puppet right?} This way, I could measure children's comprehension in two
-different ways in the same trial. Ideally, both measures should show
-similar results. However, the findings were similar for conjunctive
-guesses, but not disjunctive ones. Children avoided binary right/wrong
-feedback with disjunction and preferred to provide more nuanced feedback
-when they could.
+Study 3 measured children's comprehension of logical connectives in two
+ways: First, with analyzing their open-ended feedback and second, with a
+two-alternative forced choice task. First, we asked children to say
+\emph{yes} to the puppet if he was right and \emph{no} if he was wrong.
+However, children could provide any form of feedback they wanted.
+Second, we followed children's open-ended feedback with a
+two-alternative forced choice question: \emph{Was the puppet right?}
+This way, we could measure children's comprehension in two different
+ways in the same trial. Ideally, both measures should show similar
+results. However, the findings were similar for conjunctive guesses, but
+not disjunctive ones. Children avoided binary right/wrong feedback with
+disjunction and preferred to provide more nuanced feedback.
 
 The 2AFC responses followed the predicted pattern: conjunctive guesses
 were judged wrong if only one conjunct was true, and right if both were
@@ -1773,32 +2046,35 @@ Study 2. Children provided more corrective feedback in false and
 infelicitous trials than in true and felicitous ones. The corrective
 feedback was tailored to the puppet's mistake. If the puppet used a
 conjunction when there was only one animal on the card, children pointed
-out that the other animal should have been excluded using the exclusive
-adverbials \emph{just} and \emph{only}. If the puppet used a disjunction
-when both animals were on the card, children stressed \emph{and} or
-\emph{both}, implying that both animals should be included.
+out that the other animal should have been excluded from the guess. They
+used the exclusive adverbials \emph{just} and \emph{only} in their
+feedback. If the puppet used a disjunction when both animals were on the
+card, children stressed \emph{and} or \emph{both}, implying that both
+animals should have been included.
 
-While the 2AFC results suggested that children take no issue with
+While the 2AFC results suggested that children took no issue with
 disjunctive guesses when both disjuncts are true, the analysis of their
 corrective feedback showed that they provide appropriate corrections in
 such cases and emphasize that the connective \emph{and} would have been
-a better guess. Taking both measures together, I conclude that even
+a better guess. Taking both measures together, we conclude that even
 though children are aware of the problem with such guesses, they do not
-consider them \emph{wrong}. These results are similar to those I
+consider them \emph{wrong}. These results are similar to those we
 reported for adults in Study 1.
 
 \subsection{General Discussion}\label{general-discussion}
 
-I reported three studies on adults and four-year-olds' comprehension of
+We reported three studies on adults and four-year-olds' comprehension of
 the logical connectives \emph{and} and \emph{or}. The first study used
 two- and three-alternative forced choice judgment tasks with adults. In
 the 2AFC task, adult interpretations closely matched the semantic
 accounts of \emph{and} and \emph{or} as conjunction and inclusive
-disjunction. The judgments did not register robust signs of pragmatic
-infelicities. However, the 3AFC judgment task, showed signs of pragmatic
-infelicities, especially in disjunctive guesses with true disjuncts.
-When both disjuncts were true, participants were more likely to choose
-\enquote{kinda right} rather than \enquote{right}.
+disjunction. The 2AFC judgments did not register robust signs of
+pragmatic infelicities. However, the 3AFC judgments showed signs of
+pragmatic infelicities, especially in disjunctive guesses with true
+disjuncts. When two animals where on the card (e.g.~cat and dog) and the
+guess used \emph{or} (e.g. \emph{There is a cat or a dog!}),
+participants were more likely to choose \enquote{kinda right} rather
+than \enquote{right}.
 
 The second study used a 3AFC judgment task with four-year-old children.
 It also included an exploratory analysis of children's open-ended verbal
@@ -1812,7 +2088,7 @@ such guesses. While, children judged such disjunctive statement as
 they took issue with such statements as well, and provided appropriate
 corrective feedback.
 
-In the third study, I focused on eliciting open-ended verbal feedback
+In the third study, we focused on eliciting open-ended verbal feedback
 from children and followed it with a 2AFC task. In the 2AFC task,
 children's responses reflected the semantics of connectives as
 conjunction and inclusive disjunction. There was no significant
@@ -1824,22 +2100,22 @@ Analysis of the children's open-ended feedback replicated the findings
 in study 2. Children provided more corrective feedback in false and
 pragmatically infelicitous trials with logical connectives than in
 felicitous trials. The comparison of the 2AFC task and children's
-open-ended responses shows that children are sensitive to the infelicity
-of disjunctions with true disjuncts, even though they consider them to
-be \enquote{right} guesses.
+open-ended responses showed that children are sensitive to the
+infelicity of disjunctions with true disjuncts, even though they
+consider them to be \enquote{right} guesses.
 
-Overall, I did not find any major differences between adults' and
+Overall, we did not find any major differences between adults' and
 four-year-old children's interpretations of logical connectives
 \emph{and} and \emph{or} in the context of the guessing game. However,
-there were two minor differences. First, I found that in both 2AFC and
+there were two minor differences. First, we found that in both 2AFC and
 3AFC judgment tasks, children showed a small preference for disjunctions
 with both disjuncts true rather than only one. Adults on the other hand
 showed the opposite pattern: they preferred disjuncts with only one
 disjunct true. Second, in both 2AFC and 3AFC judgment tasks, children
 rated disjunctions with both disjuncts true higher than adults did. That
-is, they considered utterances like \enquote{there is a cat or a dog}
-when both animals were on the card \enquote{right} more often than
-adults. Here I will discuss these two differences and their possible
+is, they considered utterances like \emph{There is a cat or a dog} when
+both animals were on the card \enquote{right} more often than adults
+did. Here we will discuss these two differences and their possible
 causes in more detail.
 
 \subsubsection{Preference for True Disjuncts}\label{conjunctive}
@@ -1847,7 +2123,7 @@ causes in more detail.
 First for some children, there was a small preference for both disjuncts
 being true, compared to only one. This effect is similar in kind but not
 magnitude, to an effect that Singh et al. (2016) and Tieu et al. (2016)
-reported. In my study this effect is quite small while Singh et al.
+reported. In our study this effect is quite small while Singh et al.
 (2016) and Tieu et al. (2016) seem to have found bigger effects. Based
 on this, Singh et al. (2016) proposed that many children at this
 age-range have a pragmatically driven conjunctive interpretation of
@@ -1862,8 +2138,8 @@ More importantly, the open-ended feedback to disjunctive guesses showed
 the opposite pattern to that predicted by the conjunctive hypothesis.
 Children took issue with disjunctions that had both disjuncts true and
 provided more corrective feedback in such cases. Therefore, the findings
-from Singh et al. (2016) and Tieu et al. (2016) appear to be a product
-of experimental design rather than a real reflection of children's
+from Singh et al. (2016) and Tieu et al. (2016) may be a product of
+experimental design rather than a real reflection of children's
 comprehension of the connectives.
 
 However, even if this small preference for true disjuncts is not due to
@@ -1887,16 +2163,17 @@ technically true: simple guesses (e.g.~there is a cat) with two animals
 (e.g.~cat and dog). Children were equally split between \enquote{wrong}
 and \enquote{right} in their judgments here, while adults considered
 such guesses \enquote{right}. In light of these alternative
-explanations, I am hesitant to attribute this small preference to a
+explanations, we are hesitant to attribute this small preference to a
 pragmatically driven conjunctive interpretation of disjunction.
 
-\subsubsection{Lack of Infelicity with True
-Disjuncts}\label{lack-of-infelicity-with-true-disjuncts}
+\subsubsection{Lack of infelicity with true disjuncts in the forced
+choice
+tasks}\label{lack-of-infelicity-with-true-disjuncts-in-the-forced-choice-tasks}
 
 The second difference between adults and children emerged in the 3AFC
-judgment task: in disjunctive trials (e.g. \enquote{cat or dog}) with
-two animals (e.g.~cat and dog), adults were more likely to choose
-\enquote{kinda right} than children were. Children mostly chose
+judgment task: in disjunctive trials (e.g. \emph{There is a cat or a
+dog}) with two animals (e.g.~cat and dog), adults were more likely to
+choose \enquote{kinda right} than children were. Children mostly chose
 \enquote{right}. This response pattern has been taken to mean that
 children found no infelicity with such disjunctions or that they did not
 \enquote{derive an exclusivity implicature}. The absence of an
@@ -1906,28 +2183,28 @@ literally, and that children do not compute implicatures or judge
 infelicity to the same \textbf{rate} that adults do (Pouscoulous \&
 Noveck, 2009, Katsos (2014)). But why is that?
 
-There have been three major proposals to account for children's low rate
-of implicatures: 1. processing (Pouscoulous, Noveck, Politzer, \&
-Bastide, 2007; Reinhart, 2004) 2. non-adult-like lexical entry (Barner
-et al., 2011; Horowitz, Schneider, \& Frank, 2017) and 3. pragmatic
-tolerance (Katsos \& Bishop, 2011). Here I show that none of these
-accounts can provide a satisfactory explanation of the results in this
-study.
+There have been at least three major proposals to account for children's
+low rate of implicatures: 1. processing difficulty (Pouscoulous, Noveck,
+Politzer, \& Bastide, 2007; Reinhart, 2004) 2. non-adult-like lexical
+entry (Barner et al., 2011; Horowitz, Schneider, \& Frank, 2017) and 3.
+pragmatic tolerance (Katsos \& Bishop, 2011). Here we show that none of
+these accounts can provide a satisfactory explanation of the results in
+this study.
 
-\textbf{1. Processing.} First, the processing accounts locate the
+\textbf{1. Processing difficulty.} First, processing accounts locate the
 problem in children's processing capacities such as working memory. They
 suggest that pragmatic computations are cognitively taxing and children
 lack the appropriate processing resources to carry them out
 appropriately. A prediction of processing accounts (at least in their
 current format) is that children will show reduced implicature
 computations for all types of implicatures -- scalar or ad-hoc. This
-prediction was not borne out in my experimental results. In Study 3,
-children were much more likely than adults to call a simple guess (e.g.
-\enquote{cat}) \enquote{wrong} in the 2AFC task if there were two
-animals on the card (e.g. \enquote{cat and dog}). Processing accounts do
-not predict that children would derive more implicatures than adults but
-this is what I found for the traditional interpretation of the judgment
-task.
+prediction was not borne out in our experimental results here. In Study
+3, children were much more likely than adults to call a simple guess
+(e.g. \emph{There is a cat!}) \enquote{wrong} if there were two animals
+on the card (e.g.~cat and dog). Processing accounts do not predict that
+children may derive implicatures at a higher rate than adults but this
+is what we found, at least for the traditional interpretation of the
+judgment task.
 
 \textbf{2. Non-adult-like Lexicon.} Several proposals blame the
 structure of the child's lexicon for the alleged failure in deriving
@@ -1943,119 +2220,124 @@ have been pinpointed as the source of the problem in previous studies
 However none of them seem to apply to the results reported here.
 
 If children in this study lack the semantics of the connective
-\emph{or}, I would expect them to either perform at chance or default to
-a conjunctive interpretation. Neither prediction was borne out in
+\emph{or}, we would expect them to either perform at chance or default
+to a conjunctive interpretation. Neither prediction was borne out in
 studies 2 and 3. Furthermore, children's free-form linguistic feedback
-suggests good understanding of disjunction. So this explanation seems
-unlikely. The problem cannot be that children do not know the meaning of
+in both studies suggested that children understood disjunction well
+enough to provide relevant feedback. So this explanation seems unlikely.
+The problem cannot be that children do not know the meaning of
 \emph{and} either. Children's performance in both study 2 and 3 for
 conjunction trials show that they understand its meaning very well.
 Finally, while it is possible that children lacked the appropriate
 lexical scale and could not access the stronger alternative, this
 explanation cannot be the whole story. Several children in both studies
-stressed the word \emph{and} suggesting that the puppet should have used
-the stronger term instead. However, they judged the puppet's guess as
-\enquote{right}. If children could not access the stronger term, they
-would not have mentioned it in their feedback either.
+stressed the word \emph{and} in their verbal feedback, suggesting that
+the puppet should have used the stronger term instead. However, they
+still judged the puppet's guess as \enquote{right}. If children could
+not access the stronger term, they could not mentioned it in their
+feedback either.
 
 \textbf{3. Pragmatic Tolerance.} Katsos \& Bishop (2011) suggested that
 children tend to tolerate pragmatic infelicities more than adults. They
-showed that when children are provided with a 2AFC judgment task, they
-tolerate the infelicity of \emph{some} when \emph{all} applies but when
-they are presented with a 3AFC task they choose the middle option and
-report this infelicity. As in a processing account, the pragmatic
-tolerance account predicts that scalar and ad-hoc implicatures will be
-similarly affected. However, my results did not match those of Katsos \&
-Bishop (2011). When children were presented with a 3AFC task, they chose
-the highest reward (and not the middle option) for uses of \emph{or}
-when \emph{and} applied. Second, and more importantly, I found different
-patterns for ad-hoc and scalar implicatures as mentioned before. This is
-not predicted by the tolerance account unless children are assumed to be
-more tolerant towards violations of scalar implicatures than they are
-towards ad-hoc ones. While tolerance may not be the source of the
-problem here, I believe that a number of discussions including those by
-Katsos \& Bishop (2011) and later Katsos (2014) do point to an important
-factor: the role of measurement in estimates of children's pragmatic
-capacity.
-
-Several observations in the current studies provide support for the
-hypothesis that methodological issues, and more specifically issues of
-measurement contribute to the differences found between adults and
+showed that when children were provided with a 2AFC judgment task, they
+considered a description with the scalar term \emph{some} as
+\enquote{right} when \emph{all} was more informative (e.g. \emph{The
+turtle played with some of the balls.}, Scene: the turtle played with
+all the balls.) However, when they are presented with three options
+(small, big, and huge strawberries) in a 3AFC task, they choose the
+middle option in the same type of trials. They argue that children
+tolerate pragmatic infelicities and do not regard them as
+\enquote{wrong}. As in a processing account, the tolerance account
+predicts that scalar and ad-hoc implicatures will be similarly affected.
+However, our results did not match those of Katsos \& Bishop (2011).
+When children were presented with a 3AFC task, they chose the highest
+reward (and not the middle option) for uses of \emph{or} when \emph{and}
+was more informative. Second, and more importantly, we found different
+patterns for exhaustive and scalar inferences as mentioned before. This
+is not predicted by the tolerance account unless we assume that children
+are more tolerant towards violations of scalar inferences than they are
+towards exhaustive ones. While this is not currently assumed in the
+literature, it is a possible adjustment. However, we would like address
+this issue by focusing on another related factor: the role of
+measurement in estimates of children's pragmatic capacity (Katsos,
+2014). Several observations in the current studies provide support for
+the hypothesis that methodological issues, and more specifically issues
+of measurement contribute to the differences found between adults and
 children in pragmatic capacity. First, Study 1 showed that even for
 adults, the estimates of adult infelicity rates may differ based on the
-number of alternatives in the forced choice task. A 2AFC task tends to
-underestimate adults' rate of response to pragmatic infelicity. Second,
-children's open-ended linguistic feedback in the experimental context
-better reflected their sensitivity to pragmatic nuances than the
-forced-choice judgment tasks. Third, children showed a higher rate of
-infelicity judgments for cases of ad-hoc implicatures (simple guesses
-with two animals on the card) than adults did. While a difference in
-sensitivity to ad-hoc vs.~scalar implicatures has been reported and
-argued for before (Horowitz et al., 2017; Stiller, Goodman, \& Frank,
-2015), a higher sensitivity than adults is not predicted by any of the
-current accounts.
+number of alternatives in the forced choice task. A 2AFC task
+underestimated adults' sensitivity to pragmatic infelicity. In fact, in
+a follow up study, we systematically varied the number of response
+options and replicated the results presented here (see Jasbi, Waldon,
+and Degen in press). Second, children's open-ended linguistic feedback
+in the experimental context better reflected their sensitivity to
+pragmatic nuances than the forced-choice judgment tasks. Third, children
+showed a higher rate of infelicity judgments for cases of ad-hoc
+implicatures (simple guesses with two animals on the card) than adults
+did. While a difference in sensitivity to ad-hoc vs.~scalar implicatures
+has been reported and argued for before (Horowitz et al., 2017; Stiller,
+Goodman, \& Frank, 2015), a higher sensitivity than adults is not
+predicted by any of the current accounts.
 
 In order to better understand the differences between adults and
 children's pragmatic capacities, it is necessary to have a good
-understanding of how measurements affect estimates of adults and
+understanding of how our measurements affect estimates of adults and
 children's performance in the experimental tasks. Children may be no
 more capable of making exhaustive inferences than adults and no less
 capable of making scalar inferences either. They may simply have a
 different construal of the wrong-right scale and of what the
 forced-choice task is about. The concepts \enquote{right} and
 \enquote{wrong} are as much subject to developmental change and
-differences between adults and children as are scalar items in general.
-It is reasonable to assume that children's understanding of what
-constitutes as \enquote{right} or \enquote{wrong} does not fully conform
-to that of adults. However, it remains to be established what these
-differences are and how they affect the estimates of children's
-pragmatic abilities. It is important to point out that such issues of
-measurement could be the culprit behind both children's seemingly slight
-preference for true disjuncts described earlier and the lack of
-infelicity judgments when both disjuncts are true.
+differences between adults and children as are scalar items that
+constitute the focus of our studies. It is possible that children's
+understanding of what constitutes as \enquote{right} or \enquote{wrong}
+does not fully conform to that of adults. However, it remains to be
+established what these differences are and how they affect the estimates
+of children's pragmatic abilities. It is important to point out that
+such issues of measurement could be the culprit behind both children's
+seemingly slight preference for true disjuncts described earlier and the
+lack of infelicity judgments when both disjuncts are true.
 
 \textbf{A General Approach for Measuring Implicature/Infelicity Rate}
 
-Methodological issues are nothing new in studies of children's semantic
-and pragmatic development. Developing better measures of children's
-linguistic capacities has always been a major concern for researchers in
-the field. My goal here is to propose some future steps that can address
-the methodological concerns in measuring children's pragmatic
-development.
+Methodological issues are nothing new in developmental studies and
+language acquisition. Creating better measures of children's linguistic
+capacities has always been a major concern for researchers in the field.
+Our goal here is to propose some future steps that can address possible
+methodological issues in assesssing children's pragamtic competence.
 
 As Pouscoulous \& Noveck (2009) and Katsos (2014) have suggested, the
 central issue is \enquote{the rate} at which children and adults
 manifest pragmatic reasoning in the experimental setting. No one doubts
 children's capacity to perform such computations. At issue is the extent
-to which children and adults compute specific implicatures. The claims
-are that children perform such computations less often than adults; or
-that children do not perform such computations where adults normally do.
-In the previous section, I discussed some factors that might account for
+to which children and adults compute specific implicatures. The claim is
+that children perform such computations less often than adults; or that
+children do not perform such computations where adults normally do. In
+the previous section, we discussed some factors that might account for
 these differences including processing demands, the structure of the
 lexicon, tolerance, as well as issues of measuring adults and children's
 comprehension. As Katsos (2014) pointed out, it seems reasonable to
 assume that all these factors play some part here. What matters is the
 degree to which each contributes to the outcome.
 
-\begin{figure}[t]
-
-{\centering \includegraphics{figs/implicatureGraph-1} 
-
-}
-
-\caption{Factors that could affect pragmatic computations and the estimates of these computations in the experimental settings}\label{fig:implicatureGraph}
+\begin{figure}
+\centering
+\includegraphics{figs/implicatureGraph-1.pdf}
+\caption{\label{fig:implicatureGraph}Factors that could affect pragmatic
+computations and the estimates of these computations in the experimental
+settings}
 \end{figure}
 
 Figure \ref{fig:implicatureGraph} shows the factors that affect
 pragmatic computations as well as the observations of the rate of
 pragmatic computations in an experiment. First it is important to
 distinguish between factors that affect pragmatic computations and those
-that affect the observed rate in an experimental setting. As I showed in
-Study 1, given the number of alternatives in the forced choice task
-(2AFC vs.~3AFC), I may get different estimates of adults' infelicity
-judgments, yet it is unreasonable to assume that there is a difference
+that affect the observed rate in an experimental setting. As we showed
+in Study 1, given the number of alternatives in the forced choice task
+(2AFC vs.~3AFC), we may get different estimates of adults' rate of
+infelicity judgments, but we cannot to assume that there is a difference
 in adults' pragmatic capacities in these two tasks. A similar situation
-exists when I compare children's forced choice measures of infelicity
+exists when we compare children's forced choice measures of infelicity
 and their open-ended feedback. In disjunctive trials where both
 disjuncts are true, the forced choice tasks show no sign of children
 detecting infelicity while the open ended responses show that children
@@ -2064,19 +2346,19 @@ have been more appropriate.
 
 \subsection{Conclusion}\label{conclusion}
 
-To conclude, I have shown that children and adults do not differ
-substantially in their \textbf{semantic} knowledge of the logical
-connectives \emph{and} and \emph{or}. The results were highly consistent
-with the current accounts that posit the semantics of \emph{and} as
-logical conjunction and \emph{or} as logical (inclusive) disjunction.
-With respect to pragmatic knowledge, the three-alternative forced choice
-judgment task showed that adults are sensitive to the infelicity of
-disjunctive statements when both disjuncts are true. I also showed that
-while the three-alternative judgment task failed to register such a
-sensitivity for children, my systematic analysis of children's verbal
-open-ended verbal feedback showed that children are sensitive to
-pragmatic infelicities and can provide appropriate corrections to
-infelicitous utterances containing logical connectives.
+To conclude, the studies presented here did not provide evidence for a
+substantial difference between adults and three-to-five-year-old
+children in their \textbf{semantic} knowledge of the logical connectives
+\emph{and} and \emph{or}. The results were highly consistent with the
+current accounts that posit the semantics of \emph{and} as conjunction
+and \emph{or} as inclusive disjunction. With respect to pragmatic
+knowledge, the three-alternative forced choice judgment task showed that
+adults are sensitive to the infelicity of disjunctive statements when
+both disjuncts are true. We also showed that the three-alternative
+judgment task failed to register such a sensitivity for children, but
+our systematic analysis of children's open-ended verbal feedback did. It
+showed that children can provide appropriate corrections to infelicitous
+utterances containing logical connectives \emph{and} and \emph{or}.
 
 \newpage
 
@@ -2100,22 +2382,74 @@ Braine, M. D., \& Rumain, B. (1981). Development of comprehension of
 ``or'': Evidence for a sequence of competencies. \emph{Journal of
 Experimental Child Psychology}, \emph{31}(1), 46--70.
 
+\hypertarget{ref-chierchia1998some}{}
+Chierchia, G., Crain, S., Guasti, M. T., \& Thornton, R. (1998).
+``Some'' and ``or'': A study on the emergence of logical form. In
+\emph{Proceedings of the Boston University conference on language
+development} (Vol. 22, pp. 97--108). Somerville, MA: Cascadilla Press.
+
+\hypertarget{ref-chierchia2001acquisition}{}
+Chierchia, G., Crain, S., Guasti, M. T., Gualmini, A., \& Meroni, L.
+(2001). The acquisition of disjunction: Evidence for a grammatical view
+of scalar implicatures. In \emph{Proceedings of the 25th Boston
+University conference on language development} (pp. 157--168).
+Somerville, MA: Cascadilla Press.
+
+\hypertarget{ref-chierchia2004semantic}{}
+Chierchia, G., Guasti, M. T., Gualmini, A., Meroni, L., Crain, S., \&
+Foppolo, F. (2004). Semantic and pragmatic competence in children's and
+adults' comprehension of or. In I. Noveck \& D. Sperber (Eds.),
+\emph{Experimental pragmatics} (pp. 283--300). Basingstoke: Palgrave
+Macmillan.
+
+\hypertarget{ref-clark1973non}{}
+Clark, E. V. (1973). Non-linguistic strategies and the acquisition of
+word meanings. \emph{Cognition}, \emph{2}(2), 161--182.
+
 \hypertarget{ref-crain2012emergence}{}
 Crain, S. (2012). \emph{The emergence of meaning}. Cambridge: Cambridge
 University Press.
+
+\hypertarget{ref-crain2008logic}{}
+Crain, S., \& Khlentzos, D. (2008). Is logic innate?
+\emph{Biolinguistics}, \emph{2}(1), 024--056.
+
+\hypertarget{ref-crain2010logic}{}
+Crain, S., \& Khlentzos, D. (2010). The logic instinct. \emph{Mind \&
+Language}, \emph{25}(1), 30--65.
 
 \hypertarget{ref-crain1998investigations}{}
 Crain, S., \& Thornton, R. (1998). \emph{Investigations in universal
 grammar: A guide to experiments on the acquisition of syntax and
 semantics}. Cambridge, MA: MIT Press.
 
+\hypertarget{ref-crain2000acquisition}{}
+Crain, S., Gualmini, A., \& Meroni, L. (2000). The acquisition of
+logical words. \emph{LOGOS and Language}, \emph{1}, 49--59.
+
 \hypertarget{ref-gazdar79}{}
 Gazdar, G. (1979). \emph{Pragmatics: Implicature, presupposition, and
 logical form}. New York: Academic Press.
 
+\hypertarget{ref-goro2004acquisition}{}
+Goro, T., \& Akiba, S. (2004). The acquisition of disjunction and
+positive polarity in Japanese. In \emph{Proceedings of the 23rd West
+Coast conference on formal linguistics} (pp. 251--264). Somerville, MA:
+Cascadilla Press.
+
 \hypertarget{ref-grice1989studies}{}
 Grice, H. P. (1989). \emph{Studies in the way of words}. Cambridge, MA:
 Harvard University Press.
+
+\hypertarget{ref-gualminicrain2002}{}
+Gualmini, A., \& Crain, S. (2002). Why no child or adult must learn de
+Morgan's laws. In \emph{Proceedings of the Boston University conference
+on language development}. Somerville, MA: Cascadilla Press.
+
+\hypertarget{ref-gualmini2000}{}
+Gualmini, A., Crain, S., \& Meroni, L. (2000). Acqisition of disjunction
+in conditional sentences. In \emph{Proceedings of the boston university
+conference on language development}.
 
 \hypertarget{ref-gutzmann2014}{}
 Gutzmann, D. (2014). Semantics vs. pragmatics. In L. Matthewson, C.
@@ -2131,10 +2465,20 @@ Horowitz, A. C., Schneider, R. M., \& Frank, M. C. (2017). The trouble
 with quantifiers: Exploring children's deficits in scalar implicature.
 \emph{Child Development}.
 
+\hypertarget{ref-piaget1958growth}{}
+Inhelder, B., \& Piaget, J. (1958). \emph{The growth of logical thinking
+from childhood to adolescence: An essay on the construction of formal
+operational structures} (Vol. 84). London: Routledge.
+
 \hypertarget{ref-jasbiWaldonDegan2017}{}
 Jasbi, M., Waldon, B., \& Degen, J. (submitted). \emph{Linking
 hypothesis and number of response options modulate inferred scalar
 implicature rate}.
+
+\hypertarget{ref-johansson1975preschool}{}
+Johansson, B. S., \& Sjolin, B. (1975). Preschool children's
+understanding of the coordinators ``and'' and ``or''. \emph{Journal of
+Experimental Child Psychology}, \emph{19}(2), 233--240.
 
 \hypertarget{ref-katsos2014scalar}{}
 Katsos, N. (2014). Scalar implicature. In D. Matthews (Ed.),
@@ -2146,10 +2490,42 @@ Katsos, N., \& Bishop, D. V. (2011). Pragmatic tolerance: Implications
 for the acquisition of informativeness and implicature.
 \emph{Cognition}, \emph{120}(1), 67--81.
 
+\hypertarget{ref-neimark1970}{}
+Neimark, E. D. (1970). Development of comprehension of logical
+connectives: Understanding of ``or''. \emph{Psychonomic Science},
+\emph{21}(4), 217--219.
+
+\hypertarget{ref-neimarkSlotnick1970}{}
+Neimark, E. D., \& Slotnick, N. S. (1970). Development of the
+understanding of logical connectives. \emph{Journal of Educational
+Psychology}, \emph{61}(6p1), 451.
+
+\hypertarget{ref-nitta1966basic}{}
+Nitta, N., \& Nagano, S. (1966). Basic logical operations and their
+verbal expressions: Child's conception of logical sum and product.
+\emph{Research Bulletin of the National Institute for Educational
+Research, Tokyo}, \emph{7}, 1--27.
+
+\hypertarget{ref-notley2012notevery}{}
+Notley, A., Thornton, R., \& Crain, S. (2012). English-speaking
+children's interpretation of disjunction in the scope of ``not every''.
+\emph{Biolinguistics}, \emph{6}(1), 32--69.
+
+\hypertarget{ref-notley2012children}{}
+Notley, A., Zhou, P., Jensen, B., \& Crain, S. (2012). Children's
+interpretation of disjunction in the scope of ``before'': A comparison
+of English and Mandarin. \emph{Journal of Child Language},
+\emph{39}(03), 482--522.
+
 \hypertarget{ref-noveck2001children}{}
 Noveck, I. A. (2001). When children are more logical than adults:
 Experimental investigations of scalar implicature. \emph{Cognition},
 \emph{78}(2), 165--188.
+
+\hypertarget{ref-paris1973comprehension}{}
+Paris, S. G. (1973). Comprehension of language connectives and
+propositional logical relationships. \emph{Journal of Experimental Child
+Psychology}, \emph{16}(2), 278--291.
 
 \hypertarget{ref-pouscoulous2009going}{}
 Pouscoulous, N., \& Noveck, I. A. (2009). Going beyond semantics: The
@@ -2172,10 +2548,32 @@ Children interpret disjunction as conjunction: Consequences for theories
 of implicature and child development. \emph{Natural Language Semantics},
 \emph{24}(4), 305--352.
 
+\hypertarget{ref-skordosEtal2018}{}
+Skordos, D., Feiman, R., Bale, A., \& Barner, D. (2018, July). \emph{Do
+children interpret ``or'' conjunctively?} Retrieved from
+\url{https://osf.io/2srxk/}
+
 \hypertarget{ref-stiller2015ad}{}
 Stiller, A. J., Goodman, N. D., \& Frank, M. C. (2015). Ad-hoc
 implicature in preschool children. \emph{Language Learning and
 Development}, \emph{11}(2), 176--190.
+
+\hypertarget{ref-su2014acquisition}{}
+Su, Y. (2014). The acquisition of logical connectives in child Mandarin.
+\emph{Language Acquisition}, \emph{21}(2), 119--155.
+
+\hypertarget{ref-su2013disjunction}{}
+Su, Y., \& Crain, S. (2013). Disjunction and universal quantification in
+child mandarin. \emph{Language and Linguistics}, \emph{14}(3), 599--631.
+
+\hypertarget{ref-suppes1969young}{}
+Suppes, P., \& Feldman, S. (1969). \emph{Young children's comprehension
+of logical connectives.} \emph{ERIC}. Department of Health, Education,
+Welfare. Office of Education.
+
+\hypertarget{ref-tarski1941logic}{}
+Tarski, A. (1941). \emph{Introduction to logic and to the methodology of
+the deductive sciences}. Oxford University Press.
 
 \hypertarget{ref-tieu2016}{}
 Tieu, L., Yatsushiro, K., Cremers, A., Romoli, J., Sauerland, U., \&
