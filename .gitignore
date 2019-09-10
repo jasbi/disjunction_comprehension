@@ -46,3 +46,8 @@ Jasbi-Frank-2019_files/
 # R project file
 *.Rproj
 
+# latex files
+*.aux
+*.log
+*.out
+

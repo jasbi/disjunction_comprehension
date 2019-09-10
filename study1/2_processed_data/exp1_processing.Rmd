@@ -1,0 +1,151 @@
+---
+title: "Mturk Connective Card Game Data Wrangling Code"
+author: "Masoud Jasbi"
+date: "August 18, 2016"
+output: html_document
+---
+
+```{r, include=FALSE}
+#load the required packages
+library(tidyverse)
+```
+
+```{r}
+# read the raw data and fill the cells that have no values with NAs:
+game_data <- read.csv("../1_raw_data/connective_cardgame_adults_raw.csv", na.strings=c("","NA"), stringsAsFactors=FALSE)
+```
+
+There are `r ncol(game_data)` columns in `game_data` which stores the raw data collected on Qualtrics. The code developed in this document performs 2 main tasks:
+
+1. Remove the columns and rows that do not matter for the analysis.
+2. Abstract over trials that differ only in what animal was on the card. Basically, create the trial types for the analysis.
+
+Let's take a look at the columns we have:
+
+```{r}
+#the names of the columns in the game_data dataframe
+colnames(game_data)
+```
+
+**Task 1**
+
+There were `r nrow(game_data)` participants in the experiment but 3 did not finish the experiment and need to be excluded from the analysis.
+
+The following columns are default qualtrics data sheet columns that do not hold any data and need to be removed: Response ID (`V1`), ResponseSet(`V2`), Participant's Name (`V3`), External Data Reference (`V4`), Email Address (`V5`), IP Address (`V6`), Status (`V7`), Start Date (`V8`), End Date (`V9`), whether participants finished  the experiment (`V10`) [they all did], Mechanical Turk code (`mTurkCode`), introduction slides for condition 1 (`I1` to `I3`), Introduction slides for condition 2 (`Intro1` to `Intro4`), the last slide (`End`), location info (`LocationLatitude`, `LocationLongitude`, and `LocationAccuracy`), and an empty column at the end (`X`).
+
+The code below removes the mentioned columns and the participants that did not finish, and stores the trimmed data frame. It also removes the first row since it stores labels and not an observation:
+
+```{r}
+trimmed_game_data <- 
+  game_data[-1,] %>% # removing the first row
+  filter(V10==1) %>% # removing the participants that did not finish
+  select(-V2:-V10, -mTurkCode, -I1:-I3, -Intro1:-Intro4, -End:-X) %>% # removing the columns with no relevant data
+  gather("trial", "response",'D.D':'EC.C.3') %>%
+  drop_na() %>%
+  rename(dv_type = "Condition", sid = "V1") %>%
+  separate("trial", c("card", "guess"), sep="\\.", remove = TRUE) %>%
+  mutate_if(is.character,funs(factor(.))) %>%
+  mutate(card = fct_recode(card, "DOG" = "D", "CAT" = "C", "ELE" = "E", "CAT-DOG" = "CD", "DOG-ELE"="DE", "CAT-ELE"="EC")) %>%
+    mutate(guess = fct_recode(guess, "dog" = "D", "cat" = "C", "elephant" = "E", "cat and dog" = "CD", "dog and elephant"="DE", "cat and elephant"="EC", "cat and elephant"="CE", "dog and elephant"="ED", "cat or dog"="CoD", "dog or elephant"="DoE", "cat or elephant"="CoE", "dog or elephant"="DoE", "cat or elephant"="EoC"))
+```
+
+**Task 2**
+
+* Labeling Conventions: 
+    + Animals: C --> cat, D --> dog, E --> elephant.
+    + CARDS: C (only a cat on the card), E (only an elephant on the card), CD (a cat and a dog on the card), etc.
+    + GUESSES: C (player guessed "there is cat"), CD (player guessed "there is a cat and a dog"), CoD (player guessed "there is a cat or a dog"), etc.
+    + Result Format: CARD.GUESS - (e.g. CD.DoE a card with a cat and a dog - player guessed "dog or elephant").
+
+* Trial Types:
+    + **X.X**: There was one animal on the card, the guess was correctly that animal. 
+    + **X.Y**: There was one animal on the card, the guess was incorrectly another animal. 
+    + **XY.XandY**: There were two animals and the player guessed both correctly with "and".
+    + **X.XandY**: There was one animal on the card and the other player guessed two animals with "and" incorrectly.
+    + **X.XorY**: There was one animal on the card. The guess had two labels with "or". One label was right.
+    + **X.YorZ**: There was one animal on the card. The guess had two labels with "or". No label was right.
+    + **XY.YandZ**: There were two animals on the card. The guess had two labels with "and". One label was right.
+    + **XY.XandY**: There were two animals on the card. The guess had two labels with "and". Both labels were right.
+    + **XY.XorY**: There were two animals on the card. The guess had two labels with "or". Both labels were right.
+    + **XY.YorZ**: There were two animals on the card. The guess had two labels with "or". One label was right.
+    + **XY.Z**: There were two animals on the card. The guess had one label. The label was wrong.
+
+The code below removes the empty cells and creates columns corresponding to the trial types above:
+
+```{r}
+trimmed_game_data$trial_type <- NA
+
+condition_function <- function (card, guess) {
+  if (card=="CAT" & guess=="cat" | card=="DOG" & guess=="dog" | card=="ELE" & guess=="elephant") {return("X.X")}
+  
+  if (card=="CAT" & guess=="dog" | card=="CAT" & guess=="elephant" | card=="ELE" & guess=="cat" | card=="ELE" & guess=="dog" | card=="DOG" & guess=="cat" | card=="DOG" & guess=="elephant") {return("X.Z")}
+
+  if (card=="CAT" & guess=="cat or dog" | card=="CAT" & guess=="cat or elephant" | card=="ELE" & guess=="cat or elephant" | card=="ELE" & guess=="dog or elephant" | card=="DOG" & guess=="dog or elephant" | card=="DOG" & guess=="cat or dog") {return("X.XorY")}
+  
+  if (card=="CAT" & guess=="cat and dog" | card=="CAT" & guess=="cat and elephant" | card=="ELE" & guess=="cat and elephant" | card=="ELE" & guess=="dog and elephant" | card=="DOG" & guess=="dog and elephant" | card=="DOG" & guess=="cat and dog") {return("X.XandY")}
+
+  if (card=="CAT-DOG" & guess=="cat or dog" | card=="CAT-ELE" & guess=="cat or elephant" | card=="DOG-ELE" & guess=="dog or elephant") {return("XY.XorY")}
+  
+  if (card=="CAT-DOG" & guess=="cat and dog" | card=="CAT-ELE" & guess=="cat and elephant" | card=="DOG-ELE" & guess=="dog and elephant") {return("XY.XandY")}
+
+  if (card=="CAT-DOG" & guess=="cat" | card=="CAT-DOG" & guess=="dog" | card=="CAT-ELE" & guess=="cat" | card=="CAT-ELE" & guess=="elephant" | card=="DOG-ELE" & guess=="dog" | card=="DOG-ELE" & guess=="elephant") {return("XY.X")}
+
+  if (card=="CAT-DOG" & guess=="elephant" | card=="CAT-ELE" & guess=="dog" | card=="DOG-ELE" & guess=="cat") {return("XY.Z")} else {return(NA)}
+  
+#  return(condition)
+}
+```
+
+```{r}
+for (i in 1:nrow(trimmed_game_data)){
+  trimmed_game_data$trial_type[i] = condition_function(trimmed_game_data$card[i],trimmed_game_data$guess[i])
+}
+```
+
+``` {r}
+# final_game_data<-
+#   trimmed_game_data %>%
+#   select(-DE.C, -EC.D) %>% # removing the two trials that were collected extra
+#   unite("X.X", D.D, C.C, E.E, D.D.3, C.C.3, E.E.3, na.rm = TRUE, remove = TRUE) %>% #one animal, one label, right
+#   unite("X.Y", D.C, D.E, C.D, C.E, E.D, E.C, D.C.3, D.E.3, C.D.3, C.E.3, E.D.3, E.C.3, sep="", remove = TRUE, na.rm = TRUE) %>% #one animal, one label, right
+#   unite("X.XandY", D.CD, D.CE, D.DE, C.CD, C.DE, C.CE, E.CD, E.DE, E.CE, D.CD.3, D.CE.3, D.DE.3, C.CD.3, C.DE.3, C.CE.3, E.CD.3, E.DE.3, E.CE.3, sep="", remove = TRUE, na.rm = TRUE) %>% #one animal, two labels with "and", either one right or neither right
+#   unite("X.XorY", D.CoD, D.DoE, C.CoD, C.CoE, E.DoE, E.CoE, D.CoD.3, D.DoE.3, C.CoD.3, C.CoE.3, E.DoE.3, E.CoE.3, sep="", remove = TRUE, na.rm = TRUE) %>% #one animal, two labels with "or", one right
+#   unite("X.YorZ", D.CoE, C.DoE, E.CoD, D.CoE.3, C.DoE.3, E.CoD.3, sep="", remove = TRUE, na.rm = TRUE) %>% #one animal, two labels with "or", both wrong
+#   unite("XY.YandZ", CD.CE, CD.DE, DE.CE, DE.CD, EC.DE, EC.CD, CD.CE.3, CD.DE.3, DE.CE.3, DE.CD.3, EC.DE.3, EC.CD.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animal, two labels with "and", one right
+#   unite("XY.XandY", CD.CD, EC.EC, DE.DE, CD.CD.3, EC.ED.3, DE.DE.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animals, two labels with "and", both right
+#   unite("XY.XorY", CD.CoD, EC.EoC, DE.DoE, CD.CoD.3, EC.CoE.3, DE.DoE.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animals, two labels with "and", both right
+#   unite("XY.YorZ", CD.CoE, CD.DoE, DE.CoE, DE.CoD, EC.DoE, EC.CoD, CD.CoE.3, CD.DoE.3, DE.CoE.3, DE.CoD.3, EC.DoE.3, EC.CoD.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animal, two labels with "or", one right
+#   unite("XY.X", CD.C, CD.D, DE.D, DE.E, EC.E, EC.C, CD.C.3, CD.D.3, DE.D.3, DE.E.3, EC.E.3, EC.C.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animals, one label , right
+#   unite("XY.Z", CD.E, CD.E.3, DE.C.3, EC.D.3, sep="", remove = TRUE, na.rm = TRUE) %>% #two animals, one label , wrong
+#   gather("trial_type", "response2", 'X.X':'XY.X')
+```
+
+Reshaping the data into a tiday format:
+
+```{r}
+adult_data_long <-
+  trimmed_game_data %>%
+  drop_na() %>%
+  separate(trial_type, c("card_type","guess_type"), sep="\\.", remove=FALSE)
+
+adult_data_long[,"feedback"] <- NA
+adult_data_long[,"age_year"] <- NA
+
+adult_data_long[,"age_category"] <- "Adults"
+
+adult_data_long$response <- as.factor(adult_data_long$response)
+
+adult_data_long %>%
+  filter(dv_type==2) -> adult_data_long_dv2
+
+adult_data_long %>%
+  filter(dv_type==3) -> adult_data_long_dv3
+
+adult_data_long_dv2$response <- fct_recode(adult_data_long_dv2$response, "Right" = "1", "Wrong" = "2")
+
+adult_data_long_dv3$response <- fct_recode(adult_data_long_dv3$response, "Right" = "1", "Kinda Right" = "2", "Wrong" = "3")
+
+adult_data_long_2 <- rbind(adult_data_long_dv2, adult_data_long_dv3)
+
+write.csv(adult_data_long_2, file="exp1_processed_data.csv", row.names=FALSE)
+```

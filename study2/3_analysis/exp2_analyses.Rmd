@@ -1,0 +1,221 @@
+---
+title: "Analysis Script for Study 2"
+author: "Masoud Jasbi"
+date: "7/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+library(tidyverse)
+library(brms)
+library(bayesplot)
+library(HDInterval)
+library(ggthemes)
+```
+
+```{r import_data}
+exp1_data <- read.csv("../../study1/2_processed_data/exp1_data_processed.csv")
+exp2_data <- read.csv("../../study2/2_processed_data/exp2_data_processed.csv")
+```
+
+```{r combine_study1and2}
+exp1_ternary <-
+  exp1_data %>%
+  filter(dv_type==3)
+
+ternary_data <- 
+  bind_rows(exp1_ternary, exp2_data) %>%
+  filter(guess_type != "Z", guess_type != "X")
+
+ternary_data$response <- factor(ternary_data$response, levels = c("Wrong", "Kinda Right", "Right"), ordered=TRUE)
+ternary_data$trial_type <-
+  ternary_data$trial_type %>% 
+  droplevels() %>%
+  factor(levels = c("X.XorY", "X.XandY", "XY.XandY", "XY.XorY"))
+```
+
+```{r brmsSeparateModels}
+adults_ternary_data <-
+  ternary_data %>%
+  filter(age_category=="Adults")
+
+children_ternary_data <-
+  ternary_data %>%
+  filter(age_category=="Children")
+
+adults_ternary_fit <- 
+  brm(
+    formula = response ~ trial_type + (1 + trial_type|sid) + (1 + trial_type|card),
+    data = adults_ternary_data,
+    family = cumulative(),
+    prior = set_prior("normal(0,10)", class = "b"),
+    file = "adults_ternary_fit",
+    iter = 4000,
+    control = list(max_treedepth=15, adapt_delta=0.999) 
+  )
+
+children_ternary_fit <- 
+  brm(
+    formula = response ~ trial_type + (1 + trial_type|sid) + (1 + trial_type|card),
+    data = children_ternary_data,
+    family = cumulative(),
+    prior = set_prior("normal(0,10)", class = "b"),
+    file = "children_binary_fit",
+    iter = 4000,
+    control = list(max_treedepth=15, adapt_delta=0.999) 
+  )
+
+adults_ternary_pars <-
+  posterior_samples(adults_ternary_fit, "^b") %>%
+  select(b_trial_typeX.XandY, 
+         b_trial_typeXY.XandY,
+         b_trial_typeXY.XorY) %>%
+  mutate(b_twoAnimals = b_trial_typeXY.XandY - b_trial_typeXY.XorY) %>%
+  rename(`one animal, and - or` = "b_trial_typeX.XandY",
+         `or, two - one animal` = "b_trial_typeXY.XorY",
+         `two animals, and - or` = "b_twoAnimals") %>%
+  select(-b_trial_typeXY.XandY) %>%
+  gather(parameter, value)
+
+children_ternary_pars <-
+  posterior_samples(children_ternary_fit, "^b") %>%
+  select(b_trial_typeX.XandY, 
+         b_trial_typeXY.XandY,
+         b_trial_typeXY.XorY) %>%
+  mutate(b_twoAnimals = b_trial_typeXY.XandY - b_trial_typeXY.XorY) %>%
+  rename(`one animal, and - or` = "b_trial_typeX.XandY",
+         `or, two - one animal` = "b_trial_typeXY.XorY",
+         `two animals, and - or` = "b_twoAnimals") %>%
+  select(-b_trial_typeXY.XandY) %>%
+  gather(parameter, value)
+
+adults_ternary_pars$`age category` <- "adults"
+children_ternary_pars$`age category` <- "children"
+
+ternary_pars <- 
+  bind_rows(adults_ternary_pars, children_ternary_pars)
+
+ternary_comparisons <-
+  ternary_pars %>%
+  group_by(parameter, `age category`) %>%
+  summarize(`parameter value` = mean(value),
+            hpdi_90_lower = hdi(value, credMass=0.9)[1],
+            hpdi_90_upper = hdi(value, credMass=0.9)[2],
+            hpdi_50_lower = hdi(value, credMass=0.5)[1],
+            hpdi_50_upper = hdi(value, credMass=0.5)[2])
+
+saveRDS(ternary_comparisons, file="ternary_comparisons")
+
+ternary_comparisons %>%
+  ggplot(aes(y=`parameter value`, x = parameter, color=`age category`)) + 
+  geom_pointrange(aes(ymin = hpdi_90_lower, ymax = hpdi_90_upper)) +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  theme_base() +
+  theme(text = element_text(size=12)) + labs(x="")
+```
+
+$log(\frac{P(Y\leq Wrong)}{P(Y>Wrong)}) = -27.58 + $
+$log(\frac{P(Y\leq Kinda Right)}{P(Y>Kinda Right)}) = -0.92 $
+
+```{r brmsTVJTfit}
+ternary_fit <- 
+  brm(
+    formula = response ~ trial_type * age_category + (1 + trial_type|sid) + (1 + trial_type|card),
+    data = ternary_data,
+    family = cumulative(),
+    prior = set_prior("normal(0,10)", class = "b"),
+    file = "ternary_fit",
+    iter = 4000,
+    control = list(max_treedepth=15, adapt_delta=0.999)
+  )
+
+ternary_interaction_samples <-
+  posterior_samples(ternary_fit, "^b") %>%
+  select(b_age_categoryChildren, `b_trial_typeXY.XorY:age_categoryChildren`, `b_trial_typeX.XandY:age_categoryChildren`,
+         `b_trial_typeXY.XandY:age_categoryChildren`) %>%
+  rename(`one animal, or` = "b_age_categoryChildren",
+         `two animals, or` = "b_trial_typeXY.XorY:age_categoryChildren",
+         `one animal, and` = "b_trial_typeX.XandY:age_categoryChildren",
+         `two animals, and` = "b_trial_typeXY.XandY:age_categoryChildren") %>%
+  gather(parameter, value)
+
+ternary_interactions <-
+  ternary_interaction_samples %>%
+  group_by(parameter) %>%
+  summarize(`parameter value` = mean(value),
+            hpdi_90_lower = hdi(value, credMass=0.9)[1],
+            hpdi_90_upper = hdi(value, credMass=0.9)[2],
+            hpdi_50_lower = hdi(value, credMass=0.5)[1],
+            hpdi_50_upper = hdi(value, credMass=0.5)[2])
+
+saveRDS(ternary_interactions, file="ternary_interactions")
+
+# plot the mean and highest posterior density interval for the difference between adults and children
+ternary_interactions %>%
+  ggplot(aes(y=`parameter value`, x = parameter)) + 
+  geom_pointrange(aes(ymin = hpdi_90_lower, ymax = hpdi_90_upper)) +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  theme_base() +
+  theme(text = element_text(size=12)) + labs(x="")
+```
+
+```{r brmsFeedbackFit}
+exp2_feedback_data <-
+  children_ternary_data %>%
+  filter(feedback!="None")
+
+exp2_feedback_data$trial_type <-
+  exp2_feedback_data$trial_type %>% 
+  factor(levels = c("XY.XorY", "X.XorY", "X.XandY", "XY.XandY"))
+
+exp2_feedback_data$feedback <- 
+  exp2_feedback_data$feedback %>% 
+    droplevels()
+
+exp2_feedback_fit <- 
+  brm(
+    formula = feedback ~ trial_type + (1 + trial_type|sid) + (1 + trial_type|card),
+    data = exp2_feedback_data,
+    family = categorical(),
+    prior = set_prior("normal(0,10)", class = "b"),
+    file = "study2_feedback_fit",
+    iter = 4000,
+    control = list(max_treedepth=15, adapt_delta=0.999)
+  )
+
+exp2_feedback_samples <-
+  posterior_samples(exp2_feedback_fit, "^b") %>%
+  select(b_muDescription_trial_typeX.XorY:b_muJudgement_trial_typeXY.XandY) %>%
+  rename(`description_one animal, or` = "b_muDescription_trial_typeX.XorY",
+         `description_one animal, and` = "b_muDescription_trial_typeX.XandY",
+         `description_two animals, and` = "b_muDescription_trial_typeXY.XandY",
+         `judgment_one animal, or` = "b_muJudgement_trial_typeX.XorY",
+         `judgment_one animal, and` = "b_muJudgement_trial_typeX.XandY",
+         `judgment_two animals, and` = "b_muJudgement_trial_typeXY.XandY") %>%
+  gather(parameter, value) %>%
+  separate(parameter, c("feedback", "trial_type"), sep = "_") 
+
+exp2_feedback_pars <-
+  exp2_feedback_samples %>%
+  group_by(feedback, trial_type) %>%
+  summarize(`parameter value` = mean(value),
+            hpdi_90_lower = hdi(value, credMass=0.9)[1],
+            hpdi_90_upper = hdi(value, credMass=0.9)[2],
+            hpdi_50_lower = hdi(value, credMass=0.5)[1],
+            hpdi_50_upper = hdi(value, credMass=0.5)[2])
+
+saveRDS(exp2_feedback_pars, "exp2_feedback")
+
+exp2_feedback_pars %>%
+  ggplot(aes(y=`parameter value`, x = trial_type, color=feedback)) + 
+  geom_pointrange(aes(ymin = hpdi_90_lower, ymax = hpdi_90_upper),
+                  position = position_dodge(width = 0.5)) +
+  geom_hline(yintercept = 0, linetype="dashed") +
+  theme_base() +
+  theme(text = element_text(size=12)) + labs(x="")
+```
+

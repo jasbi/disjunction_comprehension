@@ -1,0 +1,41 @@
+---
+title: "Exp3_Data_Processing"
+author: "Masoud Jasbi"
+date: "5/29/2017"
+output: html_document
+---
+
+The participant CSV files need to be compiled into one CSV file.
+
+```{r combine_CSVs, warning=FALSE, message=FALSE}
+exp3_data <- data.frame()
+
+file_names <- list.files("../1_raw_data/", pattern=".csv")
+
+for (file_name in file_names){
+  file <- read.csv(paste("../1_raw_data/", file_name, sep=""))
+  exp3_data <- rbind(exp3_data, file)
+}
+
+exp3_data <- 
+  exp3_data %>% 
+  separate(trial_type, c("card_type","guess_type"), sep="\\.", remove = FALSE)
+  
+exp3_data[,"critical"] <- 0
+exp3_data[exp3_data$guess_type=="XorY" | exp3_data$guess_type=="XandY","critical"] <- 1
+
+exp3_data[,"dv_type"] <- 2
+exp3_data[,"age_category"] <- "Children"
+
+exp3_data$tvjt <- 
+  exp3_data$tvjt %>%
+  factor(levels = c("N", "Y")) %>%
+  fct_recode(Yes = "Y", No = "N")
+
+exp3_data <-
+  exp3_data %>%
+  select(-response) %>%
+  rename(response="tvjt", sid="id")
+
+write.csv(exp3_data, "exp3_data_processed.csv", row.names=FALSE)
+```

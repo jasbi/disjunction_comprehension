@@ -1,0 +1,678 @@
+"card","guess","response","feedback","sid","trial_type","card_type","guess_type","age_category","dv_type","age_year"
+"CAT","elephant","Wrong","Judgement","11-10-16_1.csv","X.Z","X","Z","Children",3,4.55068493150685
+"DOG-ELE","dog","Kinda Right","None","11-10-16_1.csv","XY.X","XY","X","Children",3,4.55068493150685
+"DOG","dog","Right","Judgement","11-10-16_1.csv","X.X","X","X","Children",3,4.55068493150685
+"DOG","dog or elephant","Right","Description","11-10-16_1.csv","X.XorY","X","XorY","Children",3,4.55068493150685
+"CAT-DOG","cat and dog","Right","None","11-10-16_1.csv","XY.XandY","XY","XandY","Children",3,4.55068493150685
+"CAT-DOG","elephant","Wrong","Judgement","11-10-16_1.csv","XY.Z","XY","Z","Children",3,4.55068493150685
+"DOG-ELE","dog or elephant","Right","Description","11-10-16_1.csv","XY.XorY","XY","XorY","Children",3,4.55068493150685
+"CAT","cat and elephant","Kinda Right","None","11-10-16_1.csv","X.XandY","X","XandY","Children",3,4.55068493150685
+"ELE","cat","Wrong","Judgement","11-10-16_1.csv","X.Z","X","Z","Children",3,4.55068493150685
+"CAT","cat","Right","None","11-10-16_1.csv","X.X","X","X","Children",3,4.55068493150685
+"DOG-ELE","cat","Wrong","Judgement","11-10-16_1.csv","XY.Z","XY","Z","Children",3,4.55068493150685
+"CAT-ELE","cat and elephant","Right","Judgement","11-10-16_1.csv","XY.XandY","XY","XandY","Children",3,4.55068493150685
+"CAT-DOG","dog","Kinda Right","Judgement","11-10-16_1.csv","XY.X","XY","X","Children",3,4.55068493150685
+"DOG","cat or dog","Right","Description","11-10-16_1.csv","X.XorY","X","XorY","Children",3,4.55068493150685
+"ELE","dog and elephant","Kinda Right","None","11-10-16_1.csv","X.XandY","X","XandY","Children",3,4.55068493150685
+"CAT-ELE","cat or elephant","Kinda Right","Correction","11-10-16_1.csv","XY.XorY","XY","XorY","Children",3,4.55068493150685
+"DOG-ELE","elephant","Kinda Right","Correction","11-10-16_2.csv","XY.X","XY","X","Children",3,4.37260273972603
+"ELE","elephant","Right","Judgement","11-10-16_2.csv","X.X","X","X","Children",3,4.37260273972603
+"DOG","elephant","Wrong","Description","11-10-16_2.csv","X.Z","X","Z","Children",3,4.37260273972603
+"CAT-ELE","dog","Wrong","Description","11-10-16_2.csv","XY.Z","XY","Z","Children",3,4.37260273972603
+"DOG-ELE","dog and elephant","Right","Judgement","11-10-16_2.csv","XY.XandY","XY","XandY","Children",3,4.37260273972603
+"ELE","cat and elephant","Wrong","Correction","11-10-16_2.csv","X.XandY","X","XandY","Children",3,4.37260273972603
+"CAT-DOG","cat or dog","Right","None","11-10-16_2.csv","XY.XorY","XY","XorY","Children",3,4.37260273972603
+"ELE","dog or elephant","Wrong","Correction","11-10-16_2.csv","X.XorY","X","XorY","Children",3,4.37260273972603
+"DOG","dog","Right","Judgement","11-10-16_2.csv","X.X","X","X","Children",3,4.37260273972603
+"DOG","dog and elephant","Wrong","None","11-10-16_2.csv","X.XandY","X","XandY","Children",3,4.37260273972603
+"CAT-ELE","elephant","Kinda Right","Judgement","11-10-16_2.csv","XY.X","XY","X","Children",3,4.37260273972603
+"CAT-DOG","elephant","Wrong","Judgement","11-10-16_2.csv","XY.Z","XY","Z","Children",3,4.37260273972603
+"DOG-ELE","dog or elephant","Right","Correction","11-10-16_2.csv","XY.XorY","XY","XorY","Children",3,4.37260273972603
+"DOG","cat","Wrong","Description","11-10-16_2.csv","X.Z","X","Z","Children",3,4.37260273972603
+"CAT-DOG","cat and dog","Right","Correction","11-10-16_2.csv","XY.XandY","XY","XandY","Children",3,4.37260273972603
+"CAT","cat or elephant","Kinda Right","Description","11-10-16_2.csv","X.XorY","X","XorY","Children",3,4.37260273972603
+"CAT-DOG","cat","Kinda Right","Description","11-10-16_3.csv","XY.X","XY","X","Children",3,5.04383561643836
+"DOG","dog","Right","Judgement","11-10-16_3.csv","X.X","X","X","Children",3,5.04383561643836
+"CAT","dog","Wrong","Description","11-10-16_3.csv","X.Z","X","Z","Children",3,5.04383561643836
+"CAT-ELE","cat and elephant","Right","Description","11-10-16_3.csv","XY.XandY","XY","XandY","Children",3,5.04383561643836
+"CAT-DOG","elephant","Wrong","Description","11-10-16_3.csv","XY.Z","XY","Z","Children",3,5.04383561643836
+"CAT-DOG","cat or dog","Right","Correction","11-10-16_3.csv","XY.XorY","XY","XorY","Children",3,5.04383561643836
+"CAT","cat and dog","Kinda Right","Description","11-10-16_3.csv","X.XandY","X","XandY","Children",3,5.04383561643836
+"DOG","dog or elephant","Right","Description","11-10-16_3.csv","X.XorY","X","XorY","Children",3,5.04383561643836
+"ELE","dog","Kinda Right","Description","11-10-16_3.csv","X.Z","X","Z","Children",3,5.04383561643836
+"DOG-ELE","cat","Wrong","None","11-10-16_3.csv","XY.Z","XY","Z","Children",3,5.04383561643836
+"CAT-DOG","cat and dog","Right","Description","11-10-16_3.csv","XY.XandY","XY","XandY","Children",3,5.04383561643836
+"ELE","dog and elephant","Kinda Right","Description","11-10-16_3.csv","X.XandY","X","XandY","Children",3,5.04383561643836
+"ELE","elephant","Right","Judgement","11-10-16_3.csv","X.X","X","X","Children",3,5.04383561643836
+"DOG","cat or dog","Kinda Right","Description","11-10-16_3.csv","X.XorY","X","XorY","Children",3,5.04383561643836
+"DOG-ELE","dog or elephant","Right","Correction","11-10-16_3.csv","XY.XorY","XY","XorY","Children",3,5.04383561643836
+"DOG-ELE","dog","Kinda Right","Judgement","11-10-16_3.csv","XY.X","XY","X","Children",3,5.04383561643836
+"CAT-DOG","dog","Wrong","None","11-10-16_4.csv","XY.X","XY","X","Children",3,3.93972602739726
+"CAT","cat","Kinda Right","None","11-10-16_4.csv","X.X","X","X","Children",3,3.93972602739726
+"ELE","cat","Wrong","None","11-10-16_4.csv","X.Z","X","Z","Children",3,3.93972602739726
+"CAT-ELE","dog","Wrong","Description","11-10-16_4.csv","XY.Z","XY","Z","Children",3,3.93972602739726
+"ELE","cat and elephant","Wrong","Judgement","11-10-16_4.csv","X.XandY","X","XandY","Children",3,3.93972602739726
+"DOG-ELE","dog and elephant","Kinda Right","None","11-10-16_4.csv","XY.XandY","XY","XandY","Children",3,3.93972602739726
+"CAT-ELE","cat or elephant","Wrong","None","11-10-16_4.csv","XY.XorY","XY","XorY","Children",3,3.93972602739726
+"ELE","cat or elephant","Wrong","None","11-10-16_4.csv","X.XorY","X","XorY","Children",3,3.93972602739726
+"CAT-ELE","cat or elephant","Wrong","None","11-10-16_4.csv","XY.XorY","XY","XorY","Children",3,3.93972602739726
+"DOG","dog","Kinda Right","Judgement","11-10-16_4.csv","X.X","X","X","Children",3,3.93972602739726
+"CAT","cat or dog","Wrong","None","11-10-16_4.csv","X.XorY","X","XorY","Children",3,3.93972602739726
+"CAT-ELE","cat and elephant","Kinda Right","None","11-10-16_4.csv","XY.XandY","XY","XandY","Children",3,3.93972602739726
+"DOG-ELE","cat","Wrong","Judgement","11-10-16_4.csv","XY.Z","XY","Z","Children",3,3.93972602739726
+"DOG","dog and elephant","Wrong","Judgement","11-10-16_4.csv","X.XandY","X","XandY","Children",3,3.93972602739726
+"DOG","cat",NA,NA,"11-10-16_4.csv","X.Z","X","Z","Children",3,3.93972602739726
+"CAT-ELE","elephant","Wrong","Judgement","11-10-16_4.csv","XY.X","XY","X","Children",3,3.93972602739726
+"DOG-ELE","elephant","Kinda Right","None","11-10-16_5.csv","XY.X","XY","X","Children",3,3.4
+"CAT","elephant","Wrong","None","11-10-16_5.csv","X.Z","X","Z","Children",3,3.4
+"ELE","elephant","Right","None","11-10-16_5.csv","X.X","X","X","Children",3,3.4
+"CAT-DOG","cat or dog","Right","Description","11-10-16_5.csv","XY.XorY","XY","XorY","Children",3,3.4
+"CAT-ELE","dog","Wrong","None","11-10-16_5.csv","XY.Z","XY","Z","Children",3,3.4
+"CAT","cat and elephant","Right","Description","11-10-16_5.csv","X.XandY","X","XandY","Children",3,3.4
+"CAT","cat or elephant","Right","Description","11-10-16_5.csv","X.XorY","X","XorY","Children",3,3.4
+"CAT-DOG","cat and dog","Right","Description","11-10-16_5.csv","XY.XandY","XY","XandY","Children",3,3.4
+"DOG-ELE","dog or elephant","Right","Correction","11-10-16_5.csv","XY.XorY","XY","XorY","Children",3,3.4
+"CAT-DOG","elephant","Wrong","None","11-10-16_5.csv","XY.Z","XY","Z","Children",3,3.4
+"DOG-ELE","dog and elephant","Right","Judgement","11-10-16_5.csv","XY.XandY","XY","XandY","Children",3,3.4
+"DOG","cat and dog","Right","None","11-10-16_5.csv","X.XandY","X","XandY","Children",3,3.4
+"ELE","dog or elephant","Right","Description","11-10-16_5.csv","X.XorY","X","XorY","Children",3,3.4
+"CAT-ELE","cat","Right","Description","11-10-16_5.csv","XY.X","XY","X","Children",3,3.4
+"DOG","elephant","Wrong","None","11-10-16_5.csv","X.Z","X","Z","Children",3,3.4
+"CAT","cat","Right","Judgement","11-10-16_5.csv","X.X","X","X","Children",3,3.4
+"CAT","cat","Right","Description","11-10-16_6.csv","X.X","X","X","Children",3,4.27397260273973
+"ELE","cat","Wrong","Description","11-10-16_6.csv","X.Z","X","Z","Children",3,4.27397260273973
+"CAT-ELE","cat","Kinda Right","Correction","11-10-16_6.csv","XY.X","XY","X","Children",3,4.27397260273973
+"CAT","cat or elephant","Right","Description","11-10-16_6.csv","X.XorY","X","XorY","Children",3,4.27397260273973
+"CAT-DOG","cat and dog","Right","Description","11-10-16_6.csv","XY.XandY","XY","XandY","Children",3,4.27397260273973
+"CAT-DOG","cat or dog","Right","Description","11-10-16_6.csv","XY.XorY","XY","XorY","Children",3,4.27397260273973
+"CAT-DOG","elephant","Wrong","Description","11-10-16_6.csv","XY.Z","XY","Z","Children",3,4.27397260273973
+"CAT","cat and dog","Kinda Right","Description","11-10-16_6.csv","X.XandY","X","XandY","Children",3,4.27397260273973
+"DOG-ELE","dog","Kinda Right","Description","11-10-16_6.csv","XY.X","XY","X","Children",3,4.27397260273973
+"CAT","cat or dog","Kinda Right","Description","11-10-16_6.csv","X.XorY","X","XorY","Children",3,4.27397260273973
+"DOG","elephant","Wrong","Description","11-10-16_6.csv","X.Z","X","Z","Children",3,4.27397260273973
+"DOG","cat and dog","Kinda Right","Correction","11-10-16_6.csv","X.XandY","X","XandY","Children",3,4.27397260273973
+"DOG-ELE","cat","Wrong","Description","11-10-16_6.csv","XY.Z","XY","Z","Children",3,4.27397260273973
+"ELE","elephant","Right","Description","11-10-16_6.csv","X.X","X","X","Children",3,4.27397260273973
+"DOG-ELE","dog and elephant","Right","Description","11-10-16_6.csv","XY.XandY","XY","XandY","Children",3,4.27397260273973
+"DOG-ELE","dog or elephant","Kinda Right","Correction","11-10-16_6.csv","XY.XorY","XY","XorY","Children",3,4.27397260273973
+"CAT-DOG","cat","Kinda Right","None","11-16-16_1.csv","XY.X","XY","X","Children",3,4.27671232876712
+"DOG","dog","Right","Judgement","11-16-16_1.csv","X.X","X","X","Children",3,4.27671232876712
+"CAT","elephant","Wrong","Judgement","11-16-16_1.csv","X.Z","X","Z","Children",3,4.27671232876712
+"CAT-ELE","cat and elephant","Right","Judgement","11-16-16_1.csv","XY.XandY","XY","XandY","Children",3,4.27671232876712
+"DOG","cat or dog","Right","Description","11-16-16_1.csv","X.XorY","X","XorY","Children",3,4.27671232876712
+"CAT-ELE","dog","Wrong","Description","11-16-16_1.csv","XY.Z","XY","Z","Children",3,4.27671232876712
+"ELE","dog and elephant","Wrong","Judgement","11-16-16_1.csv","X.XandY","X","XandY","Children",3,4.27671232876712
+"CAT-ELE","cat or elephant","Right","Correction","11-16-16_1.csv","XY.XorY","XY","XorY","Children",3,4.27671232876712
+"DOG-ELE","dog or elephant","Right","Correction","11-16-16_1.csv","XY.XorY","XY","XorY","Children",3,4.27671232876712
+"DOG","dog or elephant","Right","Description","11-16-16_1.csv","X.XorY","X","XorY","Children",3,4.27671232876712
+"ELE","dog","Wrong","Judgement","11-16-16_1.csv","X.Z","X","Z","Children",3,4.27671232876712
+"ELE","elephant","Right","Judgement","11-16-16_1.csv","X.X","X","X","Children",3,4.27671232876712
+"CAT-DOG","elephant","Wrong","Judgement","11-16-16_1.csv","XY.Z","XY","Z","Children",3,4.27671232876712
+"DOG-ELE","dog and elephant","Right","Judgement","11-16-16_1.csv","XY.XandY","XY","XandY","Children",3,4.27671232876712
+"CAT-ELE","elephant","Wrong","Judgement","11-16-16_1.csv","XY.X","XY","X","Children",3,4.27671232876712
+"ELE","cat and elephant","Wrong","Judgement","11-16-16_1.csv","X.XandY","X","XandY","Children",3,4.27671232876712
+"DOG-ELE","elephant","Right","Description","11-16-16_2.csv","XY.X","XY","X","Children",3,3.35616438356164
+"CAT","cat","Right","Description","11-16-16_2.csv","X.X","X","X","Children",3,3.35616438356164
+"DOG","cat","Wrong","Description","11-16-16_2.csv","X.Z","X","Z","Children",3,3.35616438356164
+"CAT-ELE","cat or elephant","Right","Description","11-16-16_2.csv","XY.XorY","XY","XorY","Children",3,3.35616438356164
+"ELE","cat or elephant","Right","Description","11-16-16_2.csv","X.XorY","X","XorY","Children",3,3.35616438356164
+"CAT-ELE","cat and elephant","Right","Description","11-16-16_2.csv","XY.XandY","XY","XandY","Children",3,3.35616438356164
+"DOG-ELE","cat","Wrong","Description","11-16-16_2.csv","XY.Z","XY","Z","Children",3,3.35616438356164
+"CAT","cat and elephant","Right","Description","11-16-16_2.csv","X.XandY","X","XandY","Children",3,3.35616438356164
+"CAT-DOG","dog","Right","Description","11-16-16_2.csv","XY.X","XY","X","Children",3,3.35616438356164
+"CAT-ELE","dog","Wrong","Description","11-16-16_2.csv","XY.Z","XY","Z","Children",3,3.35616438356164
+"DOG","dog and elephant","Wrong","Description","11-16-16_2.csv","X.XandY","X","XandY","Children",3,3.35616438356164
+"CAT-DOG","cat or dog","Right","Description","11-16-16_2.csv","XY.XorY","XY","XorY","Children",3,3.35616438356164
+"ELE","dog or elephant","Wrong","Correction","11-16-16_2.csv","X.XorY","X","XorY","Children",3,3.35616438356164
+"CAT","dog","Wrong","Description","11-16-16_2.csv","X.Z","X","Z","Children",3,3.35616438356164
+"CAT-DOG","cat and dog","Right","Description","11-16-16_2.csv","XY.XandY","XY","XandY","Children",3,3.35616438356164
+"DOG","dog","Right","Description","11-16-16_2.csv","X.X","X","X","Children",3,3.35616438356164
+"DOG","dog","Right","Judgement","11-16-16_3.csv","X.X","X","X","Children",3,4.7972602739726
+"DOG-ELE","elephant","Kinda Right","Description","11-16-16_3.csv","XY.X","XY","X","Children",3,4.7972602739726
+"ELE","dog","Wrong","Description","11-16-16_3.csv","X.Z","X","Z","Children",3,4.7972602739726
+"ELE","cat or elephant","Right","Description","11-16-16_3.csv","X.XorY","X","XorY","Children",3,4.7972602739726
+"DOG-ELE","dog or elephant","Kinda Right","Description","11-16-16_3.csv","XY.XorY","XY","XorY","Children",3,4.7972602739726
+"CAT-DOG","cat and dog","Right","Description","11-16-16_3.csv","XY.XandY","XY","XandY","Children",3,4.7972602739726
+"DOG","dog and elephant","Kinda Right","Judgement","11-16-16_3.csv","X.XandY","X","XandY","Children",3,4.7972602739726
+"CAT-ELE","dog","Wrong","None","11-16-16_3.csv","XY.Z","XY","Z","Children",3,4.7972602739726
+"CAT-DOG","cat","Kinda Right","Description","11-16-16_3.csv","XY.X","XY","X","Children",3,4.7972602739726
+"CAT-DOG","cat or dog","Kinda Right","Judgement","11-16-16_3.csv","XY.XorY","XY","XorY","Children",3,4.7972602739726
+"ELE","elephant","Right","Judgement","11-16-16_3.csv","X.X","X","X","Children",3,4.7972602739726
+"CAT-DOG","elephant","Wrong","None","11-16-16_3.csv","XY.Z","XY","Z","Children",3,4.7972602739726
+"DOG","cat or dog","Right","None","11-16-16_3.csv","X.XorY","X","XorY","Children",3,4.7972602739726
+"DOG","cat and dog","Wrong","None","11-16-16_3.csv","X.XandY","X","XandY","Children",3,4.7972602739726
+"DOG-ELE","dog and elephant","Right","Description","11-16-16_3.csv","XY.XandY","XY","XandY","Children",3,4.7972602739726
+"DOG","cat","Wrong","Description","11-16-16_3.csv","X.Z","X","Z","Children",3,4.7972602739726
+"CAT-DOG","dog","Right","Description","11-16-16_4.csv","XY.X","XY","X","Children",3,4.51780821917808
+"CAT","elephant","Kinda Right","Description","11-16-16_4.csv","X.Z","X","Z","Children",3,4.51780821917808
+"CAT","cat","Right","Judgement","11-16-16_4.csv","X.X","X","X","Children",3,4.51780821917808
+"CAT-ELE","cat and elephant","Right","Judgement","11-16-16_4.csv","XY.XandY","XY","XandY","Children",3,4.51780821917808
+"CAT-ELE","cat or elephant","Right","Description","11-16-16_4.csv","XY.XorY","XY","XorY","Children",3,4.51780821917808
+"DOG","dog or elephant","Right","Description","11-16-16_4.csv","X.XorY","X","XorY","Children",3,4.51780821917808
+"ELE","dog and elephant","Right","Description","11-16-16_4.csv","X.XandY","X","XandY","Children",3,4.51780821917808
+"DOG-ELE","cat","Kinda Right","Description","11-16-16_4.csv","XY.Z","XY","Z","Children",3,4.51780821917808
+"DOG-ELE","dog","Right","Description","11-16-16_4.csv","XY.X","XY","X","Children",3,4.51780821917808
+"DOG","elephant","Kinda Right","Description","11-16-16_4.csv","X.Z","X","Z","Children",3,4.51780821917808
+"DOG-ELE","dog or elephant","Right","Correction","11-16-16_4.csv","XY.XorY","XY","XorY","Children",3,4.51780821917808
+"CAT","cat and elephant","Kinda Right","Correction","11-16-16_4.csv","X.XandY","X","XandY","Children",3,4.51780821917808
+"CAT","cat or dog","Right","Description","11-16-16_4.csv","X.XorY","X","XorY","Children",3,4.51780821917808
+"CAT-ELE","cat and elephant","Right","Judgement","11-16-16_4.csv","XY.XandY","XY","XandY","Children",3,4.51780821917808
+"CAT-DOG","elephant","Kinda Right","Judgement","11-16-16_4.csv","XY.Z","XY","Z","Children",3,4.51780821917808
+"ELE","elephant","Right","Judgement","11-16-16_4.csv","X.X","X","X","Children",3,4.51780821917808
+"CAT-ELE","cat","Kinda Right","None","11-16-16_5.csv","XY.X","XY","X","Children",3,3.8958904109589
+"CAT","dog","Wrong","Judgement","11-16-16_5.csv","X.Z","X","Z","Children",3,3.8958904109589
+"DOG","dog","Right","Judgement","11-16-16_5.csv","X.X","X","X","Children",3,3.8958904109589
+"CAT","cat or elephant","Right","Judgement","11-16-16_5.csv","X.XorY","X","XorY","Children",3,3.8958904109589
+"DOG-ELE","dog and elephant","Right","None","11-16-16_5.csv","XY.XandY","XY","XandY","Children",3,3.8958904109589
+"CAT-DOG","cat or dog","Right","None","11-16-16_5.csv","XY.XorY","XY","XorY","Children",3,3.8958904109589
+"ELE","cat and elephant","Kinda Right","Correction","11-16-16_5.csv","X.XandY","X","XandY","Children",3,3.8958904109589
+"DOG-ELE","cat","Wrong","Judgement","11-16-16_5.csv","XY.Z","XY","Z","Children",3,3.8958904109589
+"CAT","cat and dog","Kinda Right","Correction","11-16-16_5.csv","X.XandY","X","XandY","Children",3,3.8958904109589
+"CAT-ELE","cat or elephant","Right","Description","11-16-16_5.csv","XY.XorY","XY","XorY","Children",3,3.8958904109589
+"CAT","cat","Right","Judgement","11-16-16_5.csv","X.X","X","X","Children",3,3.8958904109589
+"CAT-ELE","elephant","Kinda Right","Description","11-16-16_5.csv","XY.X","XY","X","Children",3,3.8958904109589
+"CAT-ELE","dog","Kinda Right","Description","11-16-16_5.csv","XY.Z","XY","Z","Children",3,3.8958904109589
+"ELE","dog or elephant","Kinda Right","Correction","11-16-16_5.csv","X.XorY","X","XorY","Children",3,3.8958904109589
+"CAT-DOG","cat and dog","Right","Judgement","11-16-16_5.csv","XY.XandY","XY","XandY","Children",3,3.8958904109589
+"ELE","cat","Wrong","None","11-16-16_5.csv","X.Z","X","Z","Children",3,3.8958904109589
+"DOG","elephant","Wrong","Description","11-16-16_6.csv","X.Z","X","Z","Children",3,5.01917808219178
+"DOG","dog","Right","Description","11-16-16_6.csv","X.X","X","X","Children",3,5.01917808219178
+"DOG-ELE","dog","Kinda Right","Description","11-16-16_6.csv","XY.X","XY","X","Children",3,5.01917808219178
+"DOG","dog and elephant","Wrong","None","11-16-16_6.csv","X.XandY","X","XandY","Children",3,5.01917808219178
+"CAT-ELE","cat and elephant","Right","Judgement","11-16-16_6.csv","XY.XandY","XY","XandY","Children",3,5.01917808219178
+"ELE","cat or elephant","Right","Description","11-16-16_6.csv","X.XorY","X","XorY","Children",3,5.01917808219178
+"CAT-DOG","elephant","Wrong","Description","11-16-16_6.csv","XY.Z","XY","Z","Children",3,5.01917808219178
+"CAT-ELE","cat or elephant","Right","Description","11-16-16_6.csv","XY.XorY","XY","XorY","Children",3,5.01917808219178
+"CAT-DOG","cat","Kinda Right","Description","11-16-16_6.csv","XY.X","XY","X","Children",3,5.01917808219178
+"CAT-DOG","cat or dog","Right","Description","11-16-16_6.csv","XY.XorY","XY","XorY","Children",3,5.01917808219178
+"ELE","elephant","Right","None","11-16-16_6.csv","X.X","X","X","Children",3,5.01917808219178
+"DOG-ELE","cat","Wrong","Description","11-16-16_6.csv","XY.Z","XY","Z","Children",3,5.01917808219178
+"ELE","cat","Wrong","Description","11-16-16_6.csv","X.Z","X","Z","Children",3,5.01917808219178
+"CAT","cat and elephant","Kinda Right","Description","11-16-16_6.csv","X.XandY","X","XandY","Children",3,5.01917808219178
+"CAT-DOG","cat and dog","Right","None","11-16-16_6.csv","XY.XandY","XY","XandY","Children",3,5.01917808219178
+"CAT","cat or elephant","Right","Description","11-16-16_6.csv","X.XorY","X","XorY","Children",3,5.01917808219178
+"CAT","cat","Right","None","11-18-16_1.csv","X.X","X","X","Children",3,4.70958904109589
+"DOG-ELE","elephant","Kinda Right","None","11-18-16_1.csv","XY.X","XY","X","Children",3,4.70958904109589
+"ELE","dog","Wrong","None","11-18-16_1.csv","X.Z","X","Z","Children",3,4.70958904109589
+"CAT","cat or dog","Right","None","11-18-16_1.csv","X.XorY","X","XorY","Children",3,4.70958904109589
+"CAT-ELE","dog","Kinda Right","None","11-18-16_1.csv","XY.Z","XY","Z","Children",3,4.70958904109589
+"DOG-ELE","dog or elephant","Kinda Right","None","11-18-16_1.csv","XY.XorY","XY","XorY","Children",3,4.70958904109589
+"DOG","cat and dog","Right","Description","11-18-16_1.csv","X.XandY","X","XandY","Children",3,4.70958904109589
+"DOG-ELE","dog and elephant","Right","Judgement","11-18-16_1.csv","XY.XandY","XY","XandY","Children",3,4.70958904109589
+"ELE","dog and elephant","Right","Description","11-18-16_1.csv","X.XandY","X","XandY","Children",3,4.70958904109589
+"ELE","elephant","Right","None","11-18-16_1.csv","X.X","X","X","Children",3,4.70958904109589
+"CAT-DOG","cat or dog","Right","Correction","11-18-16_1.csv","XY.XorY","XY","XorY","Children",3,4.70958904109589
+"DOG-ELE","cat","Wrong","Judgement","11-18-16_1.csv","XY.Z","XY","Z","Children",3,4.70958904109589
+"DOG-ELE","dog and elephant","Right","Judgement","11-18-16_1.csv","XY.XandY","XY","XandY","Children",3,4.70958904109589
+"ELE","dog or elephant","Right","Description","11-18-16_1.csv","X.XorY","X","XorY","Children",3,4.70958904109589
+"CAT","elephant","Wrong","Judgement","11-18-16_1.csv","X.Z","X","Z","Children",3,4.70958904109589
+"CAT-ELE","elephant","Kinda Right","Description","11-18-16_1.csv","XY.X","XY","X","Children",3,4.70958904109589
+"CAT-ELE","cat","Right","Description","11-18-16_2.csv","XY.X","XY","X","Children",3,3.89315068493151
+"CAT","dog","Wrong","Description","11-18-16_2.csv","X.Z","X","Z","Children",3,3.89315068493151
+"DOG","dog","Right","Description","11-18-16_2.csv","X.X","X","X","Children",3,3.89315068493151
+"ELE","cat and elephant","Kinda Right","Description","11-18-16_2.csv","X.XandY","X","XandY","Children",3,3.89315068493151
+"CAT-ELE","dog","Wrong","Description","11-18-16_2.csv","XY.Z","XY","Z","Children",3,3.89315068493151
+"DOG","dog or elephant","Right","Description","11-18-16_2.csv","X.XorY","X","XorY","Children",3,3.89315068493151
+"DOG-ELE","dog or elephant","Right","Description","11-18-16_2.csv","XY.XorY","XY","XorY","Children",3,3.89315068493151
+"CAT-ELE","cat and elephant","Right","Description","11-18-16_2.csv","XY.XandY","XY","XandY","Children",3,3.89315068493151
+"CAT-DOG","elephant","Wrong","Description","11-18-16_2.csv","XY.Z","XY","Z","Children",3,3.89315068493151
+"CAT-DOG","cat and dog","Right","Description","11-18-16_2.csv","XY.XandY","XY","XandY","Children",3,3.89315068493151
+"CAT-ELE","cat or elephant","Right","Description","11-18-16_2.csv","XY.XorY","XY","XorY","Children",3,3.89315068493151
+"DOG","cat","Wrong","Description","11-18-16_2.csv","X.Z","X","Z","Children",3,3.89315068493151
+"CAT","cat and dog","Right","Description","11-18-16_2.csv","X.XandY","X","XandY","Children",3,3.89315068493151
+"CAT-DOG","dog","Wrong","Judgement","11-18-16_2.csv","XY.X","XY","X","Children",3,3.89315068493151
+"DOG","cat or dog","Right","Description","11-18-16_2.csv","X.XorY","X","XorY","Children",3,3.89315068493151
+"CAT","cat","Right","Description","11-18-16_2.csv","X.X","X","X","Children",3,3.89315068493151
+"DOG","dog","Right","Judgement","11-18-16_3.csv","X.X","X","X","Children",3,4.08767123287671
+"CAT-DOG","dog","Right","Judgement","11-18-16_3.csv","XY.X","XY","X","Children",3,4.08767123287671
+"DOG","cat","Wrong","Judgement","11-18-16_3.csv","X.Z","X","Z","Children",3,4.08767123287671
+"ELE","dog and elephant","Wrong","Judgement","11-18-16_3.csv","X.XandY","X","XandY","Children",3,4.08767123287671
+"CAT-DOG","cat and dog","Right","Judgement","11-18-16_3.csv","XY.XandY","XY","XandY","Children",3,4.08767123287671
+"DOG","cat or dog","Right","Description","11-18-16_3.csv","X.XorY","X","XorY","Children",3,4.08767123287671
+"CAT-ELE","cat or elephant","Wrong","Judgement","11-18-16_3.csv","XY.XorY","XY","XorY","Children",3,4.08767123287671
+"DOG-ELE","cat","Wrong","Judgement","11-18-16_3.csv","XY.Z","XY","Z","Children",3,4.08767123287671
+"CAT-ELE","cat and elephant","Right","Judgement","11-18-16_3.csv","XY.XandY","XY","XandY","Children",3,4.08767123287671
+"CAT-DOG","elephant","Wrong","Description","11-18-16_3.csv","XY.Z","XY","Z","Children",3,4.08767123287671
+"ELE","cat or elephant","Right","Description","11-18-16_3.csv","X.XorY","X","XorY","Children",3,4.08767123287671
+"CAT","dog","Wrong","Description","11-18-16_3.csv","X.Z","X","Z","Children",3,4.08767123287671
+"DOG-ELE","dog or elephant","Right","Description","11-18-16_3.csv","XY.XorY","XY","XorY","Children",3,4.08767123287671
+"CAT-DOG","cat","Wrong","None","11-18-16_3.csv","XY.X","XY","X","Children",3,4.08767123287671
+"ELE","elephant","Right","Judgement","11-18-16_3.csv","X.X","X","X","Children",3,4.08767123287671
+"CAT","cat and elephant","Wrong","None","11-18-16_3.csv","X.XandY","X","XandY","Children",3,4.08767123287671
+"CAT-ELE","elephant","Kinda Right","Description","11-18-16_4.csv","XY.X","XY","X","Children",3,4.7041095890411
+"CAT","cat","Right","Judgement","11-18-16_4.csv","X.X","X","X","Children",3,4.7041095890411
+"ELE","cat","Wrong","Description","11-18-16_4.csv","X.Z","X","Z","Children",3,4.7041095890411
+"ELE","dog or elephant","Kinda Right","Correction","11-18-16_4.csv","X.XorY","X","XorY","Children",3,4.7041095890411
+"DOG-ELE","dog and elephant","Right","Description","11-18-16_4.csv","XY.XandY","XY","XandY","Children",3,4.7041095890411
+"CAT-DOG","cat or dog","Right","Correction","11-18-16_4.csv","XY.XorY","XY","XorY","Children",3,4.7041095890411
+"CAT-ELE","dog","Wrong","Description","11-18-16_4.csv","XY.Z","XY","Z","Children",3,4.7041095890411
+"ELE","cat and elephant","Kinda Right","Correction","11-18-16_4.csv","X.XandY","X","XandY","Children",3,4.7041095890411
+"CAT-DOG","cat or dog","Right","Description","11-18-16_4.csv","XY.XorY","XY","XorY","Children",3,4.7041095890411
+"CAT-ELE","cat and elephant","Right","Judgement","11-18-16_4.csv","XY.XandY","XY","XandY","Children",3,4.7041095890411
+"CAT","elephant","Wrong","Description","11-18-16_4.csv","X.Z","X","Z","Children",3,4.7041095890411
+"CAT","cat or elephant","Kinda Right","Correction","11-18-16_4.csv","X.XorY","X","XorY","Children",3,4.7041095890411
+"DOG-ELE","elephant","Kinda Right","Description","11-18-16_4.csv","XY.X","XY","X","Children",3,4.7041095890411
+"CAT","cat","Right","Judgement","11-18-16_4.csv","X.X","X","X","Children",3,4.7041095890411
+"DOG","cat and dog","Kinda Right","Correction","11-18-16_4.csv","X.XandY","X","XandY","Children",3,4.7041095890411
+"CAT-ELE","dog","Wrong","Description","11-18-16_4.csv","XY.Z","XY","Z","Children",3,4.7041095890411
+"DOG-ELE","dog","Kinda Right","Description","11-18-16_5.csv","XY.X","XY","X","Children",3,3.10958904109589
+"DOG","dog","Right","Description","11-18-16_5.csv","X.X","X","X","Children",3,3.10958904109589
+"DOG","elephant","Kinda Right","Description","11-18-16_5.csv","X.Z","X","Z","Children",3,3.10958904109589
+"CAT","cat and dog","Kinda Right","Correction","11-18-16_5.csv","X.XandY","X","XandY","Children",3,3.10958904109589
+"DOG-ELE","cat","Kinda Right","Description","11-18-16_5.csv","XY.Z","XY","Z","Children",3,3.10958904109589
+"CAT","cat or dog","Kinda Right","Description","11-18-16_5.csv","X.XorY","X","XorY","Children",3,3.10958904109589
+"DOG-ELE","dog or elephant","Right","Description","11-18-16_5.csv","XY.XorY","XY","XorY","Children",3,3.10958904109589
+"DOG-ELE","dog and elephant","Right","Description","11-18-16_5.csv","XY.XandY","XY","XandY","Children",3,3.10958904109589
+"ELE","dog","Kinda Right","Description","11-18-16_5.csv","X.Z","X","Z","Children",3,3.10958904109589
+"ELE","dog","Kinda Right","Description","11-18-16_5.csv","X.Z","X","Z","Children",3,3.10958904109589
+"ELE","elephant",NA,NA,"11-18-16_5.csv","X.X","X","X","Children",3,3.10958904109589
+"CAT-ELE","cat or elephant","Kinda Right","Description","11-18-16_5.csv","XY.XorY","XY","XorY","Children",3,3.10958904109589
+"CAT-DOG","cat and dog","Kinda Right","Description","11-18-16_5.csv","XY.XandY","XY","XandY","Children",3,3.10958904109589
+"CAT-DOG","elephant","Kinda Right","Judgement","11-18-16_5.csv","XY.Z","XY","Z","Children",3,3.10958904109589
+"DOG","dog or elephant","Kinda Right","Correction","11-18-16_5.csv","X.XorY","X","XorY","Children",3,3.10958904109589
+"CAT-ELE","cat","Kinda Right","Description","11-18-16_5.csv","XY.X","XY","X","Children",3,3.10958904109589
+"DOG","dog and elephant","Kinda Right","Correction","11-18-16_5.csv","X.XandY","X","XandY","Children",3,3.10958904109589
+"ELE","dog","Wrong","Description","11-2-16_1.csv","X.Z","X","Z","Children",3,4.34794520547945
+"CAT-ELE","cat","Kinda Right","Description","11-2-16_1.csv","XY.X","XY","X","Children",3,4.34794520547945
+"CAT","cat","Right","Description","11-2-16_1.csv","X.X","X","X","Children",3,4.34794520547945
+"CAT-DOG","elephant","Wrong","Description","11-2-16_1.csv","XY.Z","XY","Z","Children",3,4.34794520547945
+"DOG-ELE","dog or elephant","Wrong","Description","11-2-16_1.csv","XY.XorY","XY","XorY","Children",3,4.34794520547945
+"DOG-ELE","dog or elephant","Right","Description","11-2-16_1.csv","XY.XorY","XY","XorY","Children",3,4.34794520547945
+"DOG-ELE","dog and elephant","Right","Judgement","11-2-16_1.csv","XY.XandY","XY","XandY","Children",3,4.34794520547945
+"CAT","elephant","Wrong","Description","11-2-16_1.csv","X.Z","X","Z","Children",3,4.34794520547945
+"DOG","dog","Right","Judgement","11-2-16_1.csv","X.X","X","X","Children",3,4.34794520547945
+"DOG","cat and dog","Kinda Right","Correction","11-2-16_1.csv","X.XandY","X","XandY","Children",3,4.34794520547945
+"CAT-DOG","dog","Wrong","Description","11-2-16_1.csv","XY.X","XY","X","Children",3,4.34794520547945
+"CAT-DOG","cat and dog","Right","Description","11-2-16_1.csv","XY.XandY","XY","XandY","Children",3,4.34794520547945
+"CAT-DOG","elephant","Kinda Right","Description","11-2-16_1.csv","XY.Z","XY","Z","Children",3,4.34794520547945
+"CAT","cat or elephant","Right","Description","11-2-16_1.csv","X.XorY","X","XorY","Children",3,4.34794520547945
+"CAT","cat and dog","Wrong","Correction","11-2-16_1.csv","X.XandY","X","XandY","Children",3,4.34794520547945
+"DOG","cat or dog","Wrong","Description","11-2-16_1.csv","X.XorY","X","XorY","Children",3,4.34794520547945
+"CAT-ELE","cat","Kinda Right","Description","11-21-16_1.csv","XY.X","XY","X","Children",3,4.25479452054795
+"DOG","dog","Right","Description","11-21-16_1.csv","X.X","X","X","Children",3,4.25479452054795
+"ELE","dog","Wrong","Description","11-21-16_1.csv","X.Z","X","Z","Children",3,4.25479452054795
+"CAT-ELE","cat or elephant","Right","Description","11-21-16_1.csv","XY.XorY","XY","XorY","Children",3,4.25479452054795
+"DOG","cat and dog","Kinda Right","Description","11-21-16_1.csv","X.XandY","X","XandY","Children",3,4.25479452054795
+"DOG-ELE","cat","Wrong","None","11-21-16_1.csv","XY.Z","XY","Z","Children",3,4.25479452054795
+"CAT-ELE","cat and elephant","Right","Judgement","11-21-16_1.csv","XY.XandY","XY","XandY","Children",3,4.25479452054795
+"DOG","dog or elephant","Kinda Right","Description","11-21-16_1.csv","X.XorY","X","XorY","Children",3,4.25479452054795
+"CAT","cat","Right","None","11-21-16_1.csv","X.X","X","X","Children",3,4.25479452054795
+"DOG-ELE","dog and elephant","Right","None","11-21-16_1.csv","XY.XandY","XY","XandY","Children",3,4.25479452054795
+"CAT-DOG","cat or dog","Right","None","11-21-16_1.csv","XY.XorY","XY","XorY","Children",3,4.25479452054795
+"CAT-ELE","dog","Wrong","Judgement","11-21-16_1.csv","XY.Z","XY","Z","Children",3,4.25479452054795
+"DOG-ELE","elephant","Kinda Right","None","11-21-16_1.csv","XY.X","XY","X","Children",3,4.25479452054795
+"DOG","cat or dog","Right","None","11-21-16_1.csv","X.XorY","X","XorY","Children",3,4.25479452054795
+"ELE","dog and elephant","Right","None","11-21-16_1.csv","X.XandY","X","XandY","Children",3,4.25479452054795
+"DOG","elephant","Wrong","None","11-21-16_1.csv","X.Z","X","Z","Children",3,4.25479452054795
+"CAT-ELE","elephant","Kinda Right","None","11-22-16_1.csv","XY.X","XY","X","Children",3,3.7972602739726
+"CAT","elephant","Wrong","None","11-22-16_1.csv","X.Z","X","Z","Children",3,3.7972602739726
+"ELE","elephant","Right","None","11-22-16_1.csv","X.X","X","X","Children",3,3.7972602739726
+"DOG-ELE","dog or elephant","Right","None","11-22-16_1.csv","XY.XorY","XY","XorY","Children",3,3.7972602739726
+"CAT-DOG","cat and dog","Right","None","11-22-16_1.csv","XY.XandY","XY","XandY","Children",3,3.7972602739726
+"CAT","cat or elephant","Right","None","11-22-16_1.csv","X.XorY","X","XorY","Children",3,3.7972602739726
+"CAT","cat and elephant","Wrong","None","11-22-16_1.csv","X.XandY","X","XandY","Children",3,3.7972602739726
+"CAT-DOG","elephant","Wrong","None","11-22-16_1.csv","XY.Z","XY","Z","Children",3,3.7972602739726
+"CAT-DOG","cat or dog","Right","None","11-22-16_1.csv","XY.XorY","XY","XorY","Children",3,3.7972602739726
+"ELE","elephant","Right","None","11-22-16_1.csv","X.X","X","X","Children",3,3.7972602739726
+"CAT-DOG","cat and dog","Right","None","11-22-16_1.csv","XY.XandY","XY","XandY","Children",3,3.7972602739726
+"DOG","cat","Wrong","None","11-22-16_1.csv","X.Z","X","Z","Children",3,3.7972602739726
+"DOG-ELE","cat","Wrong","None","11-22-16_1.csv","XY.Z","XY","Z","Children",3,3.7972602739726
+"DOG-ELE","dog","Kinda Right","None","11-22-16_1.csv","XY.X","XY","X","Children",3,3.7972602739726
+"ELE","cat and elephant","Wrong","None","11-22-16_1.csv","X.XandY","X","XandY","Children",3,3.7972602739726
+"ELE","dog or elephant","Right","None","11-22-16_1.csv","X.XorY","X","XorY","Children",3,3.7972602739726
+"DOG","dog","Right","Judgement","11-22-16_2.csv","X.X","X","X","Children",3,3.7041095890411
+"ELE","cat","Wrong","Judgement","11-22-16_2.csv","X.Z","X","Z","Children",3,3.7041095890411
+"CAT-DOG","cat","Kinda Right","Judgement","11-22-16_2.csv","XY.X","XY","X","Children",3,3.7041095890411
+"CAT-DOG","elephant","Wrong","Judgement","11-22-16_2.csv","XY.Z","XY","Z","Children",3,3.7041095890411
+"CAT-ELE","cat or elephant","Right","Description","11-22-16_2.csv","XY.XorY","XY","XorY","Children",3,3.7041095890411
+"DOG","dog and elephant","Kinda Right","Correction","11-22-16_2.csv","X.XandY","X","XandY","Children",3,3.7041095890411
+"CAT","cat or dog","Right","Description","11-22-16_2.csv","X.XorY","X","XorY","Children",3,3.7041095890411
+"DOG-ELE","dog and elephant","Right","Judgement","11-22-16_2.csv","XY.XandY","XY","XandY","Children",3,3.7041095890411
+"CAT-DOG","dog","Kinda Right","Judgement","11-22-16_2.csv","XY.X","XY","X","Children",3,3.7041095890411
+"CAT","cat","Right","Judgement","11-22-16_2.csv","X.X","X","X","Children",3,3.7041095890411
+"ELE","cat or elephant","Right","Description","11-22-16_2.csv","X.XorY","X","XorY","Children",3,3.7041095890411
+"CAT","dog","Wrong","Judgement","11-22-16_2.csv","X.Z","X","Z","Children",3,3.7041095890411
+"CAT","cat and dog","Kinda Right","Correction","11-22-16_2.csv","X.XandY","X","XandY","Children",3,3.7041095890411
+"CAT-ELE","cat and elephant","Right","Judgement","11-22-16_2.csv","XY.XandY","XY","XandY","Children",3,3.7041095890411
+"CAT-ELE","dog","Wrong","Judgement","11-22-16_2.csv","XY.Z","XY","Z","Children",3,3.7041095890411
+"DOG-ELE","dog or elephant","Right","Description","11-22-16_2.csv","XY.XorY","XY","XorY","Children",3,3.7041095890411
+"DOG-ELE","dog","Wrong","None","11-7-16_1.csv","XY.X","XY","X","Children",3,3.64109589041096
+"DOG","cat","Wrong","Judgement","11-7-16_1.csv","X.Z","X","Z","Children",3,3.64109589041096
+"ELE","elephant","Right","None","11-7-16_1.csv","X.X","X","X","Children",3,3.64109589041096
+"CAT-ELE","cat and elephant","Kinda Right","Judgement","11-7-16_1.csv","XY.XandY","XY","XandY","Children",3,3.64109589041096
+"CAT-DOG","cat or dog","Right","None","11-7-16_1.csv","XY.XorY","XY","XorY","Children",3,3.64109589041096
+"DOG-ELE","cat","Wrong","Judgement","11-7-16_1.csv","XY.Z","XY","Z","Children",3,3.64109589041096
+"CAT","cat or dog","Right","None","11-7-16_1.csv","X.XorY","X","XorY","Children",3,3.64109589041096
+"CAT","cat and dog","Right","None","11-7-16_1.csv","X.XandY","X","XandY","Children",3,3.64109589041096
+"DOG","dog or elephant","Kinda Right","Description","11-7-16_1.csv","X.XorY","X","XorY","Children",3,3.64109589041096
+"CAT-ELE","dog","Wrong","Judgement","11-7-16_1.csv","XY.Z","XY","Z","Children",3,3.64109589041096
+"DOG","dog","Right","Judgement","11-7-16_1.csv","X.X","X","X","Children",3,3.64109589041096
+"CAT-DOG","cat and dog","Kinda Right","Judgement","11-7-16_1.csv","XY.XandY","XY","XandY","Children",3,3.64109589041096
+"DOG-ELE","dog or elephant","Right","Correction","11-7-16_1.csv","XY.XorY","XY","XorY","Children",3,3.64109589041096
+"CAT-ELE","cat","Wrong","None","11-7-16_1.csv","XY.X","XY","X","Children",3,3.64109589041096
+"CAT","dog","Wrong","Judgement","11-7-16_1.csv","X.Z","X","Z","Children",3,3.64109589041096
+"DOG","cat and dog","Wrong","None","11-7-16_1.csv","X.XandY","X","XandY","Children",3,3.64109589041096
+"CAT","elephant","Wrong","Judgement","11-7-16_2.csv","X.Z","X","Z","Children",3,4.53424657534247
+"CAT","cat",NA,NA,"11-7-16_2.csv","X.X","X","X","Children",3,4.53424657534247
+"DOG-ELE","elephant",NA,NA,"11-7-16_2.csv","XY.X","XY","X","Children",3,4.53424657534247
+"DOG-ELE","dog or elephant","Right","Correction","11-7-16_2.csv","XY.XorY","XY","XorY","Children",3,4.53424657534247
+"DOG-ELE","dog and elephant","Right","Judgement","11-7-16_2.csv","XY.XandY","XY","XandY","Children",3,4.53424657534247
+"ELE","dog or elephant",NA,NA,"11-7-16_2.csv","X.XorY","X","XorY","Children",3,4.53424657534247
+"ELE","cat or elephant","Kinda Right","Correction","11-7-16_2.csv","X.XorY","X","XorY","Children",3,4.53424657534247
+"ELE","cat and elephant","Kinda Right","Correction","11-7-16_2.csv","X.XandY","X","XandY","Children",3,4.53424657534247
+"CAT-DOG","dog","Kinda Right","Judgement","11-7-16_2.csv","XY.X","XY","X","Children",3,4.53424657534247
+"CAT-ELE","elephant","Wrong","Description","11-7-16_2.csv","XY.X","XY","X","Children",3,4.53424657534247
+"CAT-ELE","cat or elephant",NA,NA,"11-7-16_2.csv","XY.XorY","XY","XorY","Children",3,4.53424657534247
+"CAT-DOG","elephant",NA,NA,"11-7-16_2.csv","XY.Z","XY","Z","Children",3,4.53424657534247
+"ELE","dog","Wrong","Judgement","11-7-16_2.csv","X.Z","X","Z","Children",3,4.53424657534247
+"CAT","cat","Right","Judgement","11-7-16_2.csv","X.X","X","X","Children",3,4.53424657534247
+"CAT-DOG","cat or dog","Right","Correction","11-7-16_2.csv","XY.XorY","XY","XorY","Children",3,4.53424657534247
+"CAT-DOG","dog","Wrong",NA,"11-7-16_2.csv","XY.X","XY","X","Children",3,4.53424657534247
+"CAT","cat and elephant","Wrong","Description","11-7-16_2.csv","X.XandY","X","XandY","Children",3,4.53424657534247
+"CAT-ELE","cat and elephant","Right","Judgement","11-7-16_2.csv","XY.XandY","XY","XandY","Children",3,4.53424657534247
+"CAT-DOG","elephant","Wrong","Judgement","11-7-16_2.csv","XY.Z","XY","Z","Children",3,4.53424657534247
+"ELE","cat or elephant","Right","Description","11-7-16_2.csv","X.XorY","X","XorY","Children",3,4.53424657534247
+"CAT-ELE","elephant","Kinda Right","Correction","11-7-16_3.csv","XY.X","XY","X","Children",3,3.42739726027397
+"ELE","cat","Wrong","Description","11-7-16_3.csv","X.Z","X","Z","Children",3,3.42739726027397
+"ELE","elephant","Right","Judgement","11-7-16_3.csv","X.X","X","X","Children",3,3.42739726027397
+"DOG-ELE","dog or elephant","Kinda Right","Judgement","11-7-16_3.csv","XY.XorY","XY","XorY","Children",3,3.42739726027397
+"DOG","dog and elephant","Wrong","Correction","11-7-16_3.csv","X.XandY","X","XandY","Children",3,3.42739726027397
+"CAT-DOG","cat and dog","Right","Judgement","11-7-16_3.csv","XY.XandY","XY","XandY","Children",3,3.42739726027397
+"DOG","cat or dog","Wrong","None","11-7-16_3.csv","X.XorY","X","XorY","Children",3,3.42739726027397
+"DOG-ELE","cat","Wrong","Description","11-7-16_3.csv","XY.Z","XY","Z","Children",3,3.42739726027397
+"CAT-DOG","cat","Wrong","Description","11-7-16_3.csv","XY.X","XY","X","Children",3,3.42739726027397
+"CAT-ELE","dog","Wrong","Description","11-7-16_3.csv","XY.Z","XY","Z","Children",3,3.42739726027397
+"CAT-ELE","cat or elephant","Right","Correction","11-7-16_3.csv","XY.XorY","XY","XorY","Children",3,3.42739726027397
+"DOG-ELE","dog and elephant","Right","Correction","11-7-16_3.csv","XY.XandY","XY","XandY","Children",3,3.42739726027397
+"CAT","cat or elephant","Wrong","Description","11-7-16_3.csv","X.XorY","X","XorY","Children",3,3.42739726027397
+"DOG","elephant","Wrong","Description","11-7-16_3.csv","X.Z","X","Z","Children",3,3.42739726027397
+"ELE","dog and elephant","Wrong","Description","11-7-16_3.csv","X.XandY","X","XandY","Children",3,3.42739726027397
+"DOG","dog","Wrong","Description","11-7-16_3.csv","X.X","X","X","Children",3,3.42739726027397
+"CAT-DOG","cat","Kinda Right","None","11-7-16_4.csv","XY.X","XY","X","Children",3,4.6986301369863
+"DOG","dog","Right","None","11-7-16_4.csv","X.X","X","X","Children",3,4.6986301369863
+"DOG","cat","Wrong","Description","11-7-16_4.csv","X.Z","X","Z","Children",3,4.6986301369863
+"CAT","cat or elephant","Right","Description","11-7-16_4.csv","X.XorY","X","XorY","Children",3,4.6986301369863
+"DOG-ELE","dog or elephant","Right","None","11-7-16_4.csv","XY.XorY","XY","XorY","Children",3,4.6986301369863
+"CAT-DOG","elephant","Wrong","Judgement","11-7-16_4.csv","XY.Z","XY","Z","Children",3,4.6986301369863
+"DOG","cat and dog","Kinda Right","Correction","11-7-16_4.csv","X.XandY","X","XandY","Children",3,4.6986301369863
+"DOG-ELE","dog and elephant","Right","Description","11-7-16_4.csv","XY.XandY","XY","XandY","Children",3,4.6986301369863
+"CAT-DOG","cat or dog","Right","None","11-7-16_4.csv","XY.XorY","XY","XorY","Children",3,4.6986301369863
+"DOG-ELE","cat","Wrong","Judgement","11-7-16_4.csv","XY.Z","XY","Z","Children",3,4.6986301369863
+"CAT","cat and elephant","Right","Judgement","11-7-16_4.csv","X.XandY","X","XandY","Children",3,4.6986301369863
+"DOG-ELE","elephant","Kinda Right","Correction","11-7-16_4.csv","XY.X","XY","X","Children",3,4.6986301369863
+"ELE","elephant","Right","Description","11-7-16_4.csv","X.X","X","X","Children",3,4.6986301369863
+"ELE","cat","Wrong","Description","11-7-16_4.csv","X.Z","X","Z","Children",3,4.6986301369863
+"CAT","cat or dog","Kinda Right","Description","11-7-16_4.csv","X.XorY","X","XorY","Children",3,4.6986301369863
+"CAT-ELE","cat and elephant","Right","None","11-7-16_4.csv","XY.XandY","XY","XandY","Children",3,4.6986301369863
+"CAT-ELE","cat","Kinda Right","Judgement","11-7-16_5.csv","XY.X","XY","X","Children",3,4.56712328767123
+"CAT","cat","Right","Judgement","11-7-16_5.csv","X.X","X","X","Children",3,4.56712328767123
+"DOG","elephant","Wrong","Judgement","11-7-16_5.csv","X.Z","X","Z","Children",3,4.56712328767123
+"CAT-ELE","cat or elephant","Right","Description","11-7-16_5.csv","XY.XorY","XY","XorY","Children",3,4.56712328767123
+"CAT-ELE","dog","Wrong","Judgement","11-7-16_5.csv","XY.Z","XY","Z","Children",3,4.56712328767123
+"CAT-DOG","cat and dog","Right","Judgement","11-7-16_5.csv","XY.XandY","XY","XandY","Children",3,4.56712328767123
+"ELE","dog or elephant","Right","Description","11-7-16_5.csv","X.XorY","X","XorY","Children",3,4.56712328767123
+"ELE","cat and elephant","Wrong","Judgement","11-7-16_5.csv","X.XandY","X","XandY","Children",3,4.56712328767123
+"CAT","dog","Wrong","Judgement","11-7-16_5.csv","X.Z","X","Z","Children",3,4.56712328767123
+"DOG","cat or dog","Right","Judgement","11-7-16_5.csv","X.XorY","X","XorY","Children",3,4.56712328767123
+"DOG-ELE","cat","Wrong","Judgement","11-7-16_5.csv","XY.Z","XY","Z","Children",3,4.56712328767123
+"CAT-ELE","dog","Wrong","Judgement","11-7-16_5.csv","XY.Z","XY","Z","Children",3,4.56712328767123
+"CAT-ELE","cat or elephant","Wrong","Judgement","11-7-16_5.csv","XY.XorY","XY","XorY","Children",3,4.56712328767123
+"DOG","dog","Right","Judgement","11-7-16_5.csv","X.X","X","X","Children",3,4.56712328767123
+"CAT-DOG","cat and dog","Right","Judgement","11-7-16_5.csv","XY.XandY","XY","XandY","Children",3,4.56712328767123
+"CAT","cat and dog","Kinda Right","Correction","11-7-16_5.csv","X.XandY","X","XandY","Children",3,4.56712328767123
+"CAT-ELE","elephant","Kinda Right","None","11-7-16_6.csv","XY.X","XY","X","Children",3,4.05753424657534
+"ELE","dog","Wrong","None","11-7-16_6.csv","X.Z","X","Z","Children",3,4.05753424657534
+"ELE","elephant","Right","Judgement","11-7-16_6.csv","X.X","X","X","Children",3,4.05753424657534
+"ELE","cat or elephant","Right","Description","11-7-16_6.csv","X.XorY","X","XorY","Children",3,4.05753424657534
+"CAT-ELE","cat and elephant","Right","None","11-7-16_6.csv","XY.XandY","XY","XandY","Children",3,4.05753424657534
+"ELE","dog and elephant","Kinda Right","None","11-7-16_6.csv","X.XandY","X","XandY","Children",3,4.05753424657534
+"CAT-DOG","cat or dog","Right","None","11-7-16_6.csv","XY.XorY","XY","XorY","Children",3,4.05753424657534
+"CAT-DOG","elephant","Wrong","None","11-7-16_6.csv","XY.Z","XY","Z","Children",3,4.05753424657534
+"CAT","cat","Right","None","11-7-16_6.csv","X.X","X","X","Children",3,4.05753424657534
+"DOG-ELE","dog or elephant","Right","None","11-7-16_6.csv","XY.XorY","XY","XorY","Children",3,4.05753424657534
+"DOG-ELE","dog and elephant","Right","None","11-7-16_6.csv","XY.XandY","XY","XandY","Children",3,4.05753424657534
+"CAT","elephant","Wrong","None","11-7-16_6.csv","X.Z","X","Z","Children",3,4.05753424657534
+"DOG","dog or elephant","Right","Description","11-7-16_6.csv","X.XorY","X","XorY","Children",3,4.05753424657534
+"CAT-ELE","dog","Right","None","11-7-16_6.csv","XY.Z","XY","Z","Children",3,4.05753424657534
+"DOG","dog and elephant","Kinda Right","None","11-7-16_6.csv","X.XandY","X","XandY","Children",3,4.05753424657534
+"CAT-DOG","dog","Kinda Right","Description","11-7-16_6.csv","XY.X","XY","X","Children",3,4.05753424657534
+"ELE","elephant","Right","None","11-7-16_7.csv","X.X","X","X","Children",3,4.58356164383562
+"CAT-ELE","elephant","Kinda Right","None","11-7-16_7.csv","XY.X","XY","X","Children",3,4.58356164383562
+"ELE","cat","Wrong","None","11-7-16_7.csv","X.Z","X","Z","Children",3,4.58356164383562
+"DOG-ELE","dog and elephant","Right","None","11-7-16_7.csv","XY.XandY","XY","XandY","Children",3,4.58356164383562
+"CAT-ELE","cat or elephant","Right","None","11-7-16_7.csv","XY.XorY","XY","XorY","Children",3,4.58356164383562
+"DOG","cat or dog",NA,NA,"11-7-16_7.csv","X.XorY","X","XorY","Children",3,4.58356164383562
+"CAT-ELE","dog","Wrong","None","11-7-16_7.csv","XY.Z","XY","Z","Children",3,4.58356164383562
+"ELE","dog and elephant","Wrong","None","11-7-16_7.csv","X.XandY","X","XandY","Children",3,4.58356164383562
+"CAT","cat and dog","Wrong","None","11-7-16_7.csv","X.XandY","X","XandY","Children",3,4.58356164383562
+"CAT-DOG","cat and dog","Right","None","11-7-16_7.csv","XY.XandY","XY","XandY","Children",3,4.58356164383562
+"DOG-ELE","dog or elephant","Kinda Right","None","11-7-16_7.csv","XY.XorY","XY","XorY","Children",3,4.58356164383562
+"CAT","cat or elephant","Wrong","Description","11-7-16_7.csv","X.XorY","X","XorY","Children",3,4.58356164383562
+"CAT-DOG","elephant","Wrong","Description","11-7-16_7.csv","XY.Z","XY","Z","Children",3,4.58356164383562
+"DOG","dog","Right","None","11-7-16_7.csv","X.X","X","X","Children",3,4.58356164383562
+"CAT-DOG","cat","Wrong","Correction","11-7-16_7.csv","XY.X","XY","X","Children",3,4.58356164383562
+"DOG","elephant","Wrong","None","11-7-16_7.csv","X.Z","X","Z","Children",3,4.58356164383562
+"CAT","cat","Right","Judgement","11-8-16_1.csv","X.X","X","X","Children",3,3.66575342465753
+"DOG","cat","Wrong","None","11-8-16_1.csv","X.Z","X","Z","Children",3,3.66575342465753
+"DOG-ELE","dog","Kinda Right","None","11-8-16_1.csv","XY.X","XY","X","Children",3,3.66575342465753
+"ELE","cat or elephant","Right","None","11-8-16_1.csv","X.XorY","X","XorY","Children",3,3.66575342465753
+"CAT-DOG","cat or dog","Kinda Right","None","11-8-16_1.csv","XY.XorY","XY","XorY","Children",3,3.66575342465753
+"DOG-ELE","cat","Wrong","Judgement","11-8-16_1.csv","XY.Z","XY","Z","Children",3,3.66575342465753
+"CAT-ELE","cat and elephant","Right","None","11-8-16_1.csv","XY.XandY","XY","XandY","Children",3,3.66575342465753
+"DOG","cat and dog","Wrong","Description","11-8-16_1.csv","X.XandY","X","XandY","Children",3,3.66575342465753
+"CAT-DOG","cat and dog","Right","Judgement","11-8-16_1.csv","XY.XandY","XY","XandY","Children",3,3.66575342465753
+"DOG-ELE","dog or elephant","Right","Correction","11-8-16_1.csv","XY.XorY","XY","XorY","Children",3,3.66575342465753
+"CAT","elephant","Wrong","Description","11-8-16_1.csv","X.Z","X","Z","Children",3,3.66575342465753
+"CAT","cat","Right","Description","11-8-16_1.csv","X.X","X","X","Children",3,3.66575342465753
+"CAT","cat or dog","Right","Description","11-8-16_1.csv","X.XorY","X","XorY","Children",3,3.66575342465753
+"DOG","dog and elephant","Wrong","Description","11-8-16_1.csv","X.XandY","X","XandY","Children",3,3.66575342465753
+"DOG-ELE","cat","Wrong","Description","11-8-16_1.csv","XY.Z","XY","Z","Children",3,3.66575342465753
+"CAT-DOG","dog","Wrong","Description","11-8-16_1.csv","XY.X","XY","X","Children",3,3.66575342465753
+"CAT-DOG","dog","Kinda Right","None","11-8-16_10.csv","XY.X","XY","X","Children",3,4.07671232876712
+"CAT","cat","Right","Judgement","11-8-16_10.csv","X.X","X","X","Children",3,4.07671232876712
+"DOG","elephant","Wrong","Judgement","11-8-16_10.csv","X.Z","X","Z","Children",3,4.07671232876712
+"CAT","cat or elephant","Right","Judgement","11-8-16_10.csv","X.XorY","X","XorY","Children",3,4.07671232876712
+"CAT-ELE","dog","Wrong","None","11-8-16_10.csv","XY.Z","XY","Z","Children",3,4.07671232876712
+"DOG","dog and elephant","Right","None","11-8-16_10.csv","X.XandY","X","XandY","Children",3,4.07671232876712
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_10.csv","XY.XandY","XY","XandY","Children",3,4.07671232876712
+"CAT-ELE","cat or elephant","Right","None","11-8-16_10.csv","XY.XorY","XY","XorY","Children",3,4.07671232876712
+"DOG-ELE","elephant","Kinda Right","Judgement","11-8-16_10.csv","XY.X","XY","X","Children",3,4.07671232876712
+"ELE","cat and elephant","Right","Judgement","11-8-16_10.csv","X.XandY","X","XandY","Children",3,4.07671232876712
+"DOG-ELE","dog or elephant","Right","Judgement","11-8-16_10.csv","XY.XorY","XY","XorY","Children",3,4.07671232876712
+"DOG","cat","Wrong","Judgement","11-8-16_10.csv","X.Z","X","Z","Children",3,4.07671232876712
+"ELE","dog or elephant","Right","None","11-8-16_10.csv","X.XorY","X","XorY","Children",3,4.07671232876712
+"CAT","cat","Right","None","11-8-16_10.csv","X.X","X","X","Children",3,4.07671232876712
+"CAT-ELE","cat and elephant","Right","Judgement","11-8-16_10.csv","XY.XandY","XY","XandY","Children",3,4.07671232876712
+"CAT-DOG","elephant","Wrong","Judgement","11-8-16_10.csv","XY.Z","XY","Z","Children",3,4.07671232876712
+"ELE","dog","Wrong","Judgement","11-8-16_2.csv","X.Z","X","Z","Children",3,5.15890410958904
+"ELE","elephant","Right","Judgement","11-8-16_2.csv","X.X","X","X","Children",3,5.15890410958904
+"DOG-ELE","elephant","Kinda Right","Correction","11-8-16_2.csv","XY.X","XY","X","Children",3,5.15890410958904
+"DOG","dog or elephant","Kinda Right","Description","11-8-16_2.csv","X.XorY","X","XorY","Children",3,5.15890410958904
+"CAT-ELE","cat and elephant","Right","Correction","11-8-16_2.csv","XY.XandY","XY","XandY","Children",3,5.15890410958904
+"CAT-ELE","dog","Wrong","Judgement","11-8-16_2.csv","XY.Z","XY","Z","Children",3,5.15890410958904
+"CAT-DOG","cat or dog","Right","Correction","11-8-16_2.csv","XY.XorY","XY","XorY","Children",3,5.15890410958904
+"ELE","cat and elephant","Kinda Right","Description","11-8-16_2.csv","X.XandY","X","XandY","Children",3,5.15890410958904
+"CAT-ELE","cat or elephant","Right","Correction","11-8-16_2.csv","XY.XorY","XY","XorY","Children",3,5.15890410958904
+"ELE","dog or elephant","Kinda Right","Description","11-8-16_2.csv","X.XorY","X","XorY","Children",3,5.15890410958904
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_2.csv","XY.XandY","XY","XandY","Children",3,5.15890410958904
+"CAT","cat and elephant","Kinda Right","Description","11-8-16_2.csv","X.XandY","X","XandY","Children",3,5.15890410958904
+"DOG","dog","Right","Judgement","11-8-16_2.csv","X.X","X","X","Children",3,5.15890410958904
+"CAT-ELE","cat","Kinda Right","Description","11-8-16_2.csv","XY.X","XY","X","Children",3,5.15890410958904
+"CAT","dog","Kinda Right","Description","11-8-16_2.csv","X.Z","X","Z","Children",3,5.15890410958904
+"CAT-DOG","elephant","Kinda Right","Description","11-8-16_2.csv","XY.Z","XY","Z","Children",3,5.15890410958904
+"DOG","dog","Right","Judgement","11-8-16_3.csv","X.X","X","X","Children",3,4.48219178082192
+"CAT-ELE","cat","Kinda Right","Description","11-8-16_3.csv","XY.X","XY","X","Children",3,4.48219178082192
+"CAT","elephant","Wrong","Judgement","11-8-16_3.csv","X.Z","X","Z","Children",3,4.48219178082192
+"ELE","dog and elephant","Kinda Right","Judgement","11-8-16_3.csv","X.XandY","X","XandY","Children",3,4.48219178082192
+"CAT-DOG","cat or dog","Right","Description","11-8-16_3.csv","XY.XorY","XY","XorY","Children",3,4.48219178082192
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_3.csv","XY.XandY","XY","XandY","Children",3,4.48219178082192
+"CAT","cat or dog","Kinda Right","Description","11-8-16_3.csv","X.XorY","X","XorY","Children",3,4.48219178082192
+"DOG-ELE","cat","Wrong","Judgement","11-8-16_3.csv","XY.Z","XY","Z","Children",3,4.48219178082192
+"ELE","cat or elephant","Kinda Right","Description","11-8-16_3.csv","X.XorY","X","XorY","Children",3,4.48219178082192
+"CAT","cat","Right","Judgement","11-8-16_3.csv","X.X","X","X","Children",3,4.48219178082192
+"CAT-DOG","cat","Kinda Right","Judgement","11-8-16_3.csv","XY.X","XY","X","Children",3,4.48219178082192
+"DOG","dog and elephant","Kinda Right","Judgement","11-8-16_3.csv","X.XandY","X","XandY","Children",3,4.48219178082192
+"ELE","cat","Wrong","Judgement","11-8-16_3.csv","X.Z","X","Z","Children",3,4.48219178082192
+"CAT-ELE","cat or elephant","Right","Description","11-8-16_3.csv","XY.XorY","XY","XorY","Children",3,4.48219178082192
+"CAT-ELE","dog","Wrong","Judgement","11-8-16_3.csv","XY.Z","XY","Z","Children",3,4.48219178082192
+"CAT-ELE","cat and elephant","Right","Judgement","11-8-16_3.csv","XY.XandY","XY","XandY","Children",3,4.48219178082192
+"DOG-ELE","dog","Kinda Right","Description","11-8-16_4.csv","XY.X","XY","X","Children",3,3.2958904109589
+"CAT","dog","Wrong","Judgement","11-8-16_4.csv","X.Z","X","Z","Children",3,3.2958904109589
+"ELE","elephant","Right","None","11-8-16_4.csv","X.X","X","X","Children",3,3.2958904109589
+"DOG","cat and dog","Wrong","None","11-8-16_4.csv","X.XandY","X","XandY","Children",3,3.2958904109589
+"CAT-DOG","cat and dog","Right","Judgement","11-8-16_4.csv","XY.XandY","XY","XandY","Children",3,3.2958904109589
+"CAT-DOG","elephant","Wrong","None","11-8-16_4.csv","XY.Z","XY","Z","Children",3,3.2958904109589
+"DOG-ELE","dog or elephant","Right","Description","11-8-16_4.csv","XY.XorY","XY","XorY","Children",3,3.2958904109589
+"DOG","cat or dog","Wrong","None","11-8-16_4.csv","X.XorY","X","XorY","Children",3,3.2958904109589
+"DOG-ELE","dog or elephant","Right","Description","11-8-16_4.csv","XY.XorY","XY","XorY","Children",3,3.2958904109589
+"CAT","cat and dog","Wrong","None","11-8-16_4.csv","X.XandY","X","XandY","Children",3,3.2958904109589
+"ELE","elephant","Right","Description","11-8-16_4.csv","X.X","X","X","Children",3,3.2958904109589
+"CAT","cat or elephant","Wrong","None","11-8-16_4.csv","X.XorY","X","XorY","Children",3,3.2958904109589
+"CAT-DOG","elephant","Wrong","None","11-8-16_4.csv","XY.Z","XY","Z","Children",3,3.2958904109589
+"ELE","dog","Wrong","None","11-8-16_4.csv","X.Z","X","Z","Children",3,3.2958904109589
+"CAT-DOG","cat and dog","Right","Judgement","11-8-16_4.csv","XY.XandY","XY","XandY","Children",3,3.2958904109589
+"CAT-ELE","elephant","Wrong","Judgement","11-8-16_4.csv","XY.X","XY","X","Children",3,3.2958904109589
+"DOG","cat","Wrong","Description","11-8-16_5.csv","X.Z","X","Z","Children",3,4.63835616438356
+"DOG-ELE","elephant","Kinda Right","Correction","11-8-16_5.csv","XY.X","XY","X","Children",3,4.63835616438356
+"DOG","dog","Right","Judgement","11-8-16_5.csv","X.X","X","X","Children",3,4.63835616438356
+"CAT-ELE","dog","Wrong","Description","11-8-16_5.csv","XY.Z","XY","Z","Children",3,4.63835616438356
+"ELE","cat and elephant","Kinda Right","Correction","11-8-16_5.csv","X.XandY","X","XandY","Children",3,4.63835616438356
+"CAT-ELE","cat and elephant","Right","Judgement","11-8-16_5.csv","XY.XandY","XY","XandY","Children",3,4.63835616438356
+"ELE","dog or elephant","Right","Description","11-8-16_5.csv","X.XorY","X","XorY","Children",3,4.63835616438356
+"CAT-ELE","cat or elephant","Right","Correction","11-8-16_5.csv","XY.XorY","XY","XorY","Children",3,4.63835616438356
+"DOG","dog or elephant","Right","Description","11-8-16_5.csv","X.XorY","X","XorY","Children",3,4.63835616438356
+"CAT-DOG","cat or dog","Right","Correction","11-8-16_5.csv","XY.XorY","XY","XorY","Children",3,4.63835616438356
+"CAT-DOG","dog","Kinda Right","Correction","11-8-16_5.csv","XY.X","XY","X","Children",3,4.63835616438356
+"DOG-ELE","cat","Wrong","Judgement","11-8-16_5.csv","XY.Z","XY","Z","Children",3,4.63835616438356
+"CAT","cat","Right","Judgement","11-8-16_5.csv","X.X","X","X","Children",3,4.63835616438356
+"CAT","cat and elephant","Kinda Right","Correction","11-8-16_5.csv","X.XandY","X","XandY","Children",3,4.63835616438356
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_5.csv","XY.XandY","XY","XandY","Children",3,4.63835616438356
+"DOG","elephant","Wrong","Description","11-8-16_5.csv","X.Z","X","Z","Children",3,4.63835616438356
+"ELE","elephant","Right","Judgement","11-8-16_6.csv","X.X","X","X","Children",3,4.53150684931507
+"ELE","dog","Wrong","Description","11-8-16_6.csv","X.Z","X","Z","Children",3,4.53150684931507
+"CAT-ELE","cat","Kinda Right","Description","11-8-16_6.csv","XY.X","XY","X","Children",3,4.53150684931507
+"DOG-ELE","cat","Wrong","Description","11-8-16_6.csv","XY.Z","XY","Z","Children",3,4.53150684931507
+"CAT-ELE","cat and elephant","Right","Judgement","11-8-16_6.csv","XY.XandY","XY","XandY","Children",3,4.53150684931507
+"ELE","cat and elephant","Kinda Right","Correction","11-8-16_6.csv","X.XandY","X","XandY","Children",3,4.53150684931507
+"CAT","cat or dog","Kinda Right","Correction","11-8-16_6.csv","X.XorY","X","XorY","Children",3,4.53150684931507
+"CAT-DOG","cat or dog","Right","Judgement","11-8-16_6.csv","XY.XorY","XY","XorY","Children",3,4.53150684931507
+"CAT","cat or dog","Kinda Right","Correction","11-8-16_6.csv","X.XorY","X","XorY","Children",3,4.53150684931507
+"CAT-DOG","dog","Kinda Right","Correction","11-8-16_6.csv","XY.X","XY","X","Children",3,4.53150684931507
+"DOG","dog","Right","Judgement","11-8-16_6.csv","X.X","X","X","Children",3,4.53150684931507
+"ELE","dog and elephant","Kinda Right","Correction","11-8-16_6.csv","X.XandY","X","XandY","Children",3,4.53150684931507
+"CAT-ELE","dog","Wrong","Description","11-8-16_6.csv","XY.Z","XY","Z","Children",3,4.53150684931507
+"CAT","elephant","Wrong","Description","11-8-16_6.csv","X.Z","X","Z","Children",3,4.53150684931507
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_6.csv","XY.XandY","XY","XandY","Children",3,4.53150684931507
+"CAT-ELE","cat or elephant","Right","Judgement","11-8-16_6.csv","XY.XorY","XY","XorY","Children",3,4.53150684931507
+"CAT-DOG","cat","Wrong","Description","11-8-16_7.csv","XY.X","XY","X","Children",3,4.52876712328767
+"CAT","cat","Kinda Right","None","11-8-16_7.csv","X.X","X","X","Children",3,4.52876712328767
+"DOG","elephant","Kinda Right","None","11-8-16_7.csv","X.Z","X","Z","Children",3,4.52876712328767
+"ELE","dog or elephant","Right","Description","11-8-16_7.csv","X.XorY","X","XorY","Children",3,4.52876712328767
+"DOG-ELE","dog or elephant","Right","Description","11-8-16_7.csv","XY.XorY","XY","XorY","Children",3,4.52876712328767
+"DOG","dog and elephant","Wrong","None","11-8-16_7.csv","X.XandY","X","XandY","Children",3,4.52876712328767
+"CAT-DOG","cat and dog","Right","None","11-8-16_7.csv","XY.XandY","XY","XandY","Children",3,4.52876712328767
+"CAT-DOG","elephant","Wrong","Description","11-8-16_7.csv","XY.Z","XY","Z","Children",3,4.52876712328767
+"DOG-ELE","elephant","Kinda Right","Description","11-8-16_7.csv","XY.X","XY","X","Children",3,4.52876712328767
+"CAT-DOG","elephant","Right","Description","11-8-16_7.csv","XY.Z","XY","Z","Children",3,4.52876712328767
+"CAT-DOG","cat or dog","Kinda Right","Description","11-8-16_7.csv","XY.XorY","XY","XorY","Children",3,4.52876712328767
+"DOG","cat or dog","Right","Description","11-8-16_7.csv","X.XorY","X","XorY","Children",3,4.52876712328767
+"ELE","cat","Wrong","Description","11-8-16_7.csv","X.Z","X","Z","Children",3,4.52876712328767
+"CAT-ELE","cat and elephant","Right","Description","11-8-16_7.csv","XY.XandY","XY","XandY","Children",3,4.52876712328767
+"DOG","cat and dog","Right","Description","11-8-16_7.csv","X.XandY","X","XandY","Children",3,4.52876712328767
+"CAT","cat","Right","Description","11-8-16_7.csv","X.X","X","X","Children",3,4.52876712328767
+"CAT","dog","Wrong","Judgement","11-8-16_8.csv","X.Z","X","Z","Children",3,4.38356164383562
+"DOG","dog","Right","None","11-8-16_8.csv","X.X","X","X","Children",3,4.38356164383562
+"CAT-ELE","elephant","Kinda Right","Description","11-8-16_8.csv","XY.X","XY","X","Children",3,4.38356164383562
+"CAT","cat and dog","Kinda Right","Correction","11-8-16_8.csv","X.XandY","X","XandY","Children",3,4.38356164383562
+"CAT-ELE","cat or elephant","Right","Correction","11-8-16_8.csv","XY.XorY","XY","XorY","Children",3,4.38356164383562
+"DOG","dog or elephant","Kinda Right","Description","11-8-16_8.csv","X.XorY","X","XorY","Children",3,4.38356164383562
+"CAT-ELE","dog","Wrong","Judgement","11-8-16_8.csv","XY.Z","XY","Z","Children",3,4.38356164383562
+"DOG-ELE","dog and elephant","Right","Judgement","11-8-16_8.csv","XY.XandY","XY","XandY","Children",3,4.38356164383562
+"CAT-DOG","cat and dog","Right","Judgement","11-8-16_8.csv","XY.XandY","XY","XandY","Children",3,4.38356164383562
+"DOG-ELE","cat","Wrong","Judgement","11-8-16_8.csv","XY.Z","XY","Z","Children",3,4.38356164383562
+"DOG-ELE","dog or elephant","Right","None","11-8-16_8.csv","XY.XorY","XY","XorY","Children",3,4.38356164383562
+"ELE","elephant","Right","Judgement","11-8-16_8.csv","X.X","X","X","Children",3,4.38356164383562
+"ELE","cat or elephant","Kinda Right","Description","11-8-16_8.csv","X.XorY","X","XorY","Children",3,4.38356164383562
+"DOG-ELE","dog","Kinda Right","Description","11-8-16_8.csv","XY.X","XY","X","Children",3,4.38356164383562
+"DOG","cat","Wrong","Description","11-8-16_8.csv","X.Z","X","Z","Children",3,4.38356164383562
+"CAT","cat and elephant","Kinda Right","Correction","11-8-16_8.csv","X.XandY","X","XandY","Children",3,4.38356164383562
+"ELE","elephant","Right","None","11-8-16_9.csv","X.X","X","X","Children",3,4.58904109589041
+"ELE","cat","Wrong","Judgement","11-8-16_9.csv","X.Z","X","Z","Children",3,4.58904109589041
+"DOG-ELE","dog","Kinda Right","None","11-8-16_9.csv","XY.X","XY","X","Children",3,4.58904109589041
+"DOG","dog or elephant","Right","Description","11-8-16_9.csv","X.XorY","X","XorY","Children",3,4.58904109589041
+"DOG","cat and dog","Kinda Right","Correction","11-8-16_9.csv","X.XandY","X","XandY","Children",3,4.58904109589041
+"CAT-DOG","elephant","Wrong","Description","11-8-16_9.csv","XY.Z","XY","Z","Children",3,4.58904109589041
+"CAT-ELE","cat and elephant","Right","None","11-8-16_9.csv","XY.XandY","XY","XandY","Children",3,4.58904109589041
+"CAT-DOG","cat or dog","Right","Description","11-8-16_9.csv","XY.XorY","XY","XorY","Children",3,4.58904109589041
+"CAT","cat or dog","Kinda Right","Correction","11-8-16_9.csv","X.XorY","X","XorY","Children",3,4.58904109589041
+"CAT","cat and dog",NA,NA,"11-8-16_9.csv","X.XandY","X","XandY","Children",3,4.58904109589041
+"DOG-ELE","dog or elephant","Kinda Right","Correction","11-8-16_9.csv","XY.XorY","XY","XorY","Children",3,4.58904109589041
+"ELE","dog","Wrong","Judgement","11-8-16_9.csv","X.Z","X","Z","Children",3,4.58904109589041
+"DOG","dog","Right","None","11-8-16_9.csv","X.X","X","X","Children",3,4.58904109589041
+"CAT-DOG","cat","Kinda Right","None","11-8-16_9.csv","XY.X","XY","X","Children",3,4.58904109589041
+"DOG-ELE","cat","Wrong","None","11-8-16_9.csv","XY.Z","XY","Z","Children",3,4.58904109589041
+"CAT-DOG","cat and dog","Right","None","11-8-16_9.csv","XY.XandY","XY","XandY","Children",3,4.58904109589041
+"CAT","dog","Wrong","None","11-9-16_1.csv","X.Z","X","Z","Children",3,4.55342465753425
+"CAT-ELE","cat","Kinda Right","None","11-9-16_1.csv","XY.X","XY","X","Children",3,4.55342465753425
+"DOG","dog","Right","None","11-9-16_1.csv","X.X","X","X","Children",3,4.55342465753425
+"CAT","cat and elephant","Kinda Right","None","11-9-16_1.csv","X.XandY","X","XandY","Children",3,4.55342465753425
+"DOG-ELE","dog and elephant","Right","None","11-9-16_1.csv","XY.XandY","XY","XandY","Children",3,4.55342465753425
+"DOG-ELE","cat","Wrong","Judgement","11-9-16_1.csv","XY.Z","XY","Z","Children",3,4.55342465753425
+"CAT-DOG","cat or dog","Kinda Right","Correction","11-9-16_1.csv","XY.XorY","XY","XorY","Children",3,4.55342465753425
+"ELE","cat or elephant","Right","None","11-9-16_1.csv","X.XorY","X","XorY","Children",3,4.55342465753425
+"ELE","elephant","Right","None","11-9-16_1.csv","X.X","X","X","Children",3,4.55342465753425
+"DOG","cat or dog","Kinda Right","None","11-9-16_1.csv","X.XorY","X","XorY","Children",3,4.55342465753425
+"CAT-ELE","dog","Wrong","Judgement","11-9-16_1.csv","XY.Z","XY","Z","Children",3,4.55342465753425
+"CAT-DOG","cat and dog","Right","None","11-9-16_1.csv","XY.XandY","XY","XandY","Children",3,4.55342465753425
+"CAT-ELE","elephant","Kinda Right","None","11-9-16_1.csv","XY.X","XY","X","Children",3,4.55342465753425
+"CAT","elephant","Wrong","None","11-9-16_1.csv","X.Z","X","Z","Children",3,4.55342465753425
+"CAT-ELE","cat or elephant","Right","None","11-9-16_1.csv","XY.XorY","XY","XorY","Children",3,4.55342465753425
+"ELE","dog and elephant","Wrong","None","11-9-16_1.csv","X.XandY","X","XandY","Children",3,4.55342465753425
+"ELE","dog","Wrong","Judgement","11-9-16_2.csv","X.Z","X","Z","Children",3,4.46027397260274
+"CAT-DOG","dog","Kinda Right","None","11-9-16_2.csv","XY.X","XY","X","Children",3,4.46027397260274
+"ELE","elephant","Right","Judgement","11-9-16_2.csv","X.X","X","X","Children",3,4.46027397260274
+"CAT-ELE","cat and elephant","Right","Judgement","11-9-16_2.csv","XY.XandY","XY","XandY","Children",3,4.46027397260274
+"CAT-ELE","cat or elephant","Right","None","11-9-16_2.csv","XY.XorY","XY","XorY","Children",3,4.46027397260274
+"CAT-ELE","dog","Wrong","None","11-9-16_2.csv","XY.Z","XY","Z","Children",3,4.46027397260274
+"ELE","dog and elephant","Wrong","None","11-9-16_2.csv","X.XandY","X","XandY","Children",3,4.46027397260274
+"DOG","dog or elephant","Right","Description","11-9-16_2.csv","X.XorY","X","XorY","Children",3,4.46027397260274
+"DOG","cat and dog","Wrong","None","11-9-16_2.csv","X.XandY","X","XandY","Children",3,4.46027397260274
+"CAT","cat or elephant","Right","None","11-9-16_2.csv","X.XorY","X","XorY","Children",3,4.46027397260274
+"ELE","cat","Wrong","None","11-9-16_2.csv","X.Z","X","Z","Children",3,4.46027397260274
+"DOG","dog","Right","None","11-9-16_2.csv","X.X","X","X","Children",3,4.46027397260274
+"DOG-ELE","elephant","Wrong","None","11-9-16_2.csv","XY.X","XY","X","Children",3,4.46027397260274
+"DOG-ELE","dog or elephant",NA,NA,"11-9-16_2.csv","XY.XorY","XY","XorY","Children",3,4.46027397260274
+"DOG-ELE","cat","Wrong","Judgement","11-9-16_2.csv","XY.Z","XY","Z","Children",3,4.46027397260274
+"DOG-ELE","dog and elephant","Right","Judgement","11-9-16_2.csv","XY.XandY","XY","XandY","Children",3,4.46027397260274
+"DOG","dog","Right","Judgement","11-9-16_3.csv","X.X","X","X","Children",3,5.05753424657534
+"CAT","dog","Wrong","Judgement","11-9-16_3.csv","X.Z","X","Z","Children",3,5.05753424657534
+"CAT-ELE","cat","Kinda Right","None","11-9-16_3.csv","XY.X","XY","X","Children",3,5.05753424657534
+"DOG-ELE","cat","Wrong","Judgement","11-9-16_3.csv","XY.Z","XY","Z","Children",3,5.05753424657534
+"DOG-ELE","dog and elephant","Right","None","11-9-16_3.csv","XY.XandY","XY","XandY","Children",3,5.05753424657534
+"CAT-DOG","cat or dog","Right","None","11-9-16_3.csv","XY.XorY","XY","XorY","Children",3,5.05753424657534
+"ELE","cat and elephant","Kinda Right","Correction","11-9-16_3.csv","X.XandY","X","XandY","Children",3,5.05753424657534
+"ELE","cat or elephant","Kinda Right","None","11-9-16_3.csv","X.XorY","X","XorY","Children",3,5.05753424657534
+"DOG-ELE","dog or elephant","Right","None","11-9-16_3.csv","XY.XorY","XY","XorY","Children",3,5.05753424657534
+"CAT-ELE","dog","Wrong","None","11-9-16_3.csv","XY.Z","XY","Z","Children",3,5.05753424657534
+"DOG-ELE","dog","Kinda Right","None","11-9-16_3.csv","XY.X","XY","X","Children",3,5.05753424657534
+"ELE","dog or elephant","Kinda Right","None","11-9-16_3.csv","X.XorY","X","XorY","Children",3,5.05753424657534
+"CAT-ELE","cat and elephant","Right","None","11-9-16_3.csv","XY.XandY","XY","XandY","Children",3,5.05753424657534
+"DOG","dog and elephant","Kinda Right","None","11-9-16_3.csv","X.XandY","X","XandY","Children",3,5.05753424657534
+"CAT","elephant","Wrong","None","11-9-16_3.csv","X.Z","X","Z","Children",3,5.05753424657534
+"ELE","elephant","Right","None","11-9-16_3.csv","X.X","X","X","Children",3,5.05753424657534
+"CAT-DOG","cat","Right","Description","11-9-16_4.csv","XY.X","XY","X","Children",3,3.14520547945205
+"ELE","dog","Wrong","Description","11-9-16_4.csv","X.Z","X","Z","Children",3,3.14520547945205
+"CAT","cat","Right","Judgement","11-9-16_4.csv","X.X","X","X","Children",3,3.14520547945205
+"CAT-ELE","cat and elephant","Kinda Right","Description","11-9-16_4.csv","XY.XandY","XY","XandY","Children",3,3.14520547945205
+"DOG","cat and dog","Wrong","Correction","11-9-16_4.csv","X.XandY","X","XandY","Children",3,3.14520547945205
+"CAT","cat or dog","Right","Correction","11-9-16_4.csv","X.XorY","X","XorY","Children",3,3.14520547945205
+"CAT-ELE","cat or elephant","Wrong","Description","11-9-16_4.csv","XY.XorY","XY","XorY","Children",3,3.14520547945205
+"CAT-ELE","dog","Kinda Right","Description","11-9-16_4.csv","XY.Z","XY","Z","Children",3,3.14520547945205
+"CAT-DOG","cat or dog","Right","Description","11-9-16_4.csv","XY.XorY","XY","XorY","Children",3,3.14520547945205
+"CAT","dog","Wrong","Description","11-9-16_4.csv","X.Z","X","Z","Children",3,3.14520547945205
+"CAT","cat and dog","Wrong","Description","11-9-16_4.csv","X.XandY","X","XandY","Children",3,3.14520547945205
+"DOG-ELE","cat","Wrong","Description","11-9-16_4.csv","XY.Z","XY","Z","Children",3,3.14520547945205
+"CAT-ELE","cat","Wrong","Description","11-9-16_4.csv","XY.X","XY","X","Children",3,3.14520547945205
+"DOG-ELE","dog and elephant","Wrong","Description","11-9-16_4.csv","XY.XandY","XY","XandY","Children",3,3.14520547945205
+"ELE","elephant","Wrong","Description","11-9-16_4.csv","X.X","X","X","Children",3,3.14520547945205
+"ELE","cat or elephant","Wrong","Description","11-9-16_4.csv","X.XorY","X","XorY","Children",3,3.14520547945205
